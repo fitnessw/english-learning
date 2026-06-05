@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Learning — Liangqi</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #1a1a2e; color: #e0e0e0; min-height: 100vh; padding: 30px 20px;
+  }
+  h1 { text-align: center; color: #a78bfa; font-size: 1.6rem; margin-bottom: 6px; }
+  .tagline { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 32px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px; max-width: 900px; margin: 0 auto;
+  }
+  .card {
+    background: #16213e; border-radius: 14px; padding: 20px;
+    text-decoration: none; color: inherit;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  .card-icon { font-size: 2rem; }
+  .card-title { font-size: 1.05rem; font-weight: 700; color: #f0f0f0; }
+  .card-meta { font-size: 0.8rem; color: #a78bfa; }
+  .card-desc { font-size: 0.85rem; color: #aaa; line-height: 1.5; }
+  .tag {
+    display: inline-block; background: #0f3460; color: #93c5fd;
+    font-size: 0.72rem; padding: 3px 8px; border-radius: 20px;
+  }
+  footer { text-align: center; color: #555; font-size: 0.75rem; margin-top: 40px; }
+</style>
+</head>
+<body>
+<h1>🎧 English Learning</h1>
+<p class="tagline">Bilingual audio lessons · 中英双语听力练习</p>
+
+<div class="grid">
+  <a class="card" href="trinity-county-road-trip/">
+    <div class="card-icon">🚗</div>
+    <div class="card-title">Trinity County Road Trip</div>
+    <div class="card-meta">42 min · Intermediate · Casual conversation</div>
+    <div class="card-desc">Road trip through the poorest county in California. Real locals talk about logging, cannabis, gold rush history, and small-town life.</div>
+    <div><span class="tag">Rural America</span> <span class="tag">Daily Life</span> <span class="tag">History</span></div>
+  </a>
+</div>
+
+<footer>Made with Hermes · More videos added as you learn</footer>
+</body>
+</html>
