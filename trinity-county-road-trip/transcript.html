@@ -3323,12 +3323,15 @@
 const audio = document.getElementById('audio');
 let activeRow = null;
 let currentEnd = null;
-let syncOffset = 0.5; // seconds to subtract from transcript timestamps
+let syncOffset = parseFloat(localStorage.getItem('syncOffset') ?? '0.5'); // seconds to subtract from transcript timestamps
 
 function adjustOffset(delta) {
   syncOffset = Math.round((syncOffset + delta) * 10) / 10;
+  localStorage.setItem('syncOffset', syncOffset);
   document.getElementById('offsetDisplay').textContent = (syncOffset >= 0 ? '+' : '') + syncOffset + 's';
 }
+// Init display from loaded value
+document.getElementById('offsetDisplay').textContent = (syncOffset >= 0 ? '+' : '') + syncOffset + 's';
 
 function toggleRow(start, end, row) {
   // If clicking the already-playing row, toggle pause/resume
