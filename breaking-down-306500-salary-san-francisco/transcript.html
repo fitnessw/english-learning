@@ -1,0 +1,3092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcript – Breaking Down My $306,500 Salary In San Francisco</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f0f0f; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  header { padding: 14px 20px; border-bottom: 1px solid #222; display: flex; flex-direction: column; gap: 4px; position: sticky; top: 0; background: #0f0f0f; z-index: 100; }
+  header h1 { font-size: 1rem; color: #fff; }
+  header .sub { color: #aaa; font-size: 0.8rem; }
+  .audio-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 20px; background: #141414; border-bottom: 1px solid #222; position: sticky; top: 60px; z-index: 99; }
+  audio { flex: 1; min-width: 200px; max-width: 500px; accent-color: #ff4444; }
+  .speed-btns { display: flex; gap: 5px; }
+  .speed-btn { background: #2a2a2a; border: 1px solid #444; color: #ccc; padding: 4px 10px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+  .speed-btn:hover, .speed-btn.active { background: #ff4444; border-color: #ff4444; color: #fff; }
+  .offset-wrap { display: flex; align-items: center; gap: 6px; }
+  .offset-wrap label { color: #aaa; font-size: 0.8rem; }
+  .offset-wrap input { width: 100px; accent-color: #ff4444; }
+  .offset-val { color: #ffcc00; font-size: 0.8rem; min-width: 44px; }
+  .search-wrap { display: flex; gap: 6px; margin-left: auto; }
+  .search-wrap input { background: #222; border: 1px solid #444; color: #fff; padding: 4px 10px; border-radius: 5px; font-size: 0.8rem; width: 180px; outline: none; }
+  .search-wrap input:focus { border-color: #ff4444; }
+  .transcript { padding: 10px 20px 40px; max-width: 900px; margin: 0 auto; }
+  .seg { display: grid; grid-template-columns: 36px 60px 1fr 1fr; gap: 8px; align-items: start; padding: 7px 8px; border-radius: 6px; cursor: pointer; transition: background 0.15s; }
+  .seg:hover { background: #1a1a1a; }
+  .seg.active { background: #1e2a1e; border-left: 3px solid #4caf50; }
+  .seg.highlight { background: #2a2200; }
+  .play-btn { background: none; border: none; color: #ff4444; cursor: pointer; font-size: 1rem; padding: 0; line-height: 1; }
+  .play-btn:hover { color: #ff6666; }
+  .ts { color: #666; font-size: 0.78rem; font-family: monospace; padding-top: 2px; }
+  .en { color: #fff; font-size: 0.95rem; line-height: 1.5; }
+  .zh { color: #ffcc00; font-size: 0.88rem; line-height: 1.5; }
+  .links { padding: 10px 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .links a { color: #58a6ff; text-decoration: none; font-size: 0.82rem; }
+  .links a:hover { text-decoration: underline; }
+  mark { background: #ff440066; color: inherit; border-radius: 2px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Breaking Down My $306,500 Salary In San Francisco | Cost Of Living</h1>
+  <div class="sub">互动文本 Interactive Transcript | 490 segments · ~16min</div>
+</header>
+<div class="audio-bar">
+  <audio id="audio" controls preload="metadata">
+    <source src="audio.mp3" type="audio/mpeg">
+  </audio>
+  <div class="speed-btns">
+    <button class="speed-btn" onclick="setSpeed(0.5)">0.5x</button>
+    <button class="speed-btn" onclick="setSpeed(0.75)">0.75x</button>
+    <button class="speed-btn active" onclick="setSpeed(1.0)">1.0x</button>
+    <button class="speed-btn" onclick="setSpeed(1.25)">1.25x</button>
+    <button class="speed-btn" onclick="setSpeed(1.5)">1.5x</button>
+  </div>
+  <div class="offset-wrap">
+    <label>Offset 偏移:</label>
+    <input type="range" id="offsetSlider" min="-2" max="2" step="0.1" value="0.5">
+    <span class="offset-val" id="offsetVal">+0.5s</span>
+  </div>
+  <div class="search-wrap">
+    <input type="text" id="searchBox" placeholder="Search 搜索..." oninput="doSearch(this.value)">
+  </div>
+</div>
+<div class="links">
+  <a href="index.html">🎵 Player 播放器</a>
+  <a href="https://www.youtube.com/watch?v=7VwEOyAcvJM" target="_blank">▶ YouTube</a>
+</div>
+<div class="transcript" id="transcript">
+<div class="seg" id="seg0" data-idx="0">
+  <button class="play-btn" onclick="jumpTo(0)">▶</button>
+  <span class="ts">0:00.00</span>
+  <span class="en">I'm Raymond Zeng. I work as a software</span>
+  <span class="zh">我是曾雷蒙德。我是做软件的</span>
+</div>
+<div class="seg" id="seg1" data-idx="1">
+  <button class="play-btn" onclick="jumpTo(1)">▶</button>
+  <span class="ts">0:02.00</span>
+  <span class="en">engineer making $306,500</span>
+  <span class="zh">工程师年薪 306,500 美元</span>
+</div>
+<div class="seg" id="seg2" data-idx="2">
+  <button class="play-btn" onclick="jumpTo(2)">▶</button>
+  <span class="ts">0:04.88</span>
+  <span class="en">and I live in the San Francisco Bay</span>
+  <span class="zh">我住在旧金山湾</span>
+</div>
+<div class="seg" id="seg3" data-idx="3">
+  <button class="play-btn" onclick="jumpTo(3)">▶</button>
+  <span class="ts">0:06.24</span>
+  <span class="en">Area. I'm going to be sharing all of my</span>
+  <span class="zh">区域。我将分享我的所有</span>
+</div>
+<div class="seg" id="seg4" data-idx="4">
+  <button class="play-btn" onclick="jumpTo(4)">▶</button>
+  <span class="ts">0:08.20</span>
+  <span class="en">finances between my bills and my</span>
+  <span class="zh">我的账单和我的财务之间</span>
+</div>
+<div class="seg" id="seg5" data-idx="5">
+  <button class="play-btn" onclick="jumpTo(5)">▶</button>
+  <span class="ts">0:10.24</span>
+  <span class="en">investments. This is Cost of Living.</span>
+  <span class="zh">投资。这是生活成本。</span>
+</div>
+<div class="seg" id="seg6" data-idx="6">
+  <button class="play-btn" onclick="jumpTo(6)">▶</button>
+  <span class="ts">0:14.48</span>
+  <span class="en">I'm a software engineer working at Meta.</span>
+  <span class="zh">我是一名在 Meta 工作的软件工程师。</span>
+</div>
+<div class="seg" id="seg7" data-idx="7">
+  <button class="play-btn" onclick="jumpTo(7)">▶</button>
+  <span class="ts">0:17.04</span>
+  <span class="en">In terms of my role, I earn $306,500</span>
+  <span class="zh">就我的角色而言，我的收入为 306,500 美元</span>
+</div>
+<div class="seg" id="seg8" data-idx="8">
+  <button class="play-btn" onclick="jumpTo(8)">▶</button>
+  <span class="ts">0:20.48</span>
+  <span class="en">on average.</span>
+  <span class="zh">平均而言。</span>
+</div>
+<div class="seg" id="seg9" data-idx="9">
+  <button class="play-btn" onclick="jumpTo(9)">▶</button>
+  <span class="ts">0:22.00</span>
+  <span class="en">After taxes and retirement</span>
+  <span class="zh">税后和退休后</span>
+</div>
+<div class="seg" id="seg10" data-idx="10">
+  <button class="play-btn" onclick="jumpTo(10)">▶</button>
+  <span class="ts">0:23.40</span>
+  <span class="en">contributions, I am currently taking</span>
+  <span class="zh">贡献，我目前正在接受</span>
+</div>
+<div class="seg" id="seg11" data-idx="11">
+  <button class="play-btn" onclick="jumpTo(11)">▶</button>
+  <span class="ts">0:25.00</span>
+  <span class="en">home about $4,000 a month.</span>
+  <span class="zh">家里每月大约4000美元。</span>
+</div>
+<div class="seg" id="seg12" data-idx="12">
+  <button class="play-btn" onclick="jumpTo(12)">▶</button>
+  <span class="ts">0:27.60</span>
+  <span class="en">I currently do not have any other</span>
+  <span class="zh">我目前没有任何其他</span>
+</div>
+<div class="seg" id="seg13" data-idx="13">
+  <button class="play-btn" onclick="jumpTo(13)">▶</button>
+  <span class="ts">0:28.92</span>
+  <span class="en">sources of income.</span>
+  <span class="zh">收入来源。</span>
+</div>
+<div class="seg" id="seg14" data-idx="14">
+  <button class="play-btn" onclick="jumpTo(14)">▶</button>
+  <span class="ts">0:30.79</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg15" data-idx="15">
+  <button class="play-btn" onclick="jumpTo(15)">▶</button>
+  <span class="ts">0:33.28</span>
+  <span class="en">&gt;&gt; I work anywhere between 40 to 50 hours a</span>
+  <span class="zh">&gt;&gt; 我每年在任何地方工作 40 到 50 小时</span>
+</div>
+<div class="seg" id="seg16" data-idx="16">
+  <button class="play-btn" onclick="jumpTo(16)">▶</button>
+  <span class="ts">0:35.36</span>
+  <span class="en">week on average. In terms of my</span>
+  <span class="zh">平均一周。就我而言</span>
+</div>
+<div class="seg" id="seg17" data-idx="17">
+  <button class="play-btn" onclick="jumpTo(17)">▶</button>
+  <span class="ts">0:37.04</span>
+  <span class="en">day-to-day, it can be really anything.</span>
+  <span class="zh">日常生活中，它可以是任何事情。</span>
+</div>
+<div class="seg" id="seg18" data-idx="18">
+  <button class="play-btn" onclick="jumpTo(18)">▶</button>
+  <span class="ts">0:39.40</span>
+  <span class="en">My role is fairly dynamic, so I could be</span>
+  <span class="zh">我的角色相当动态，所以我可以</span>
+</div>
+<div class="seg" id="seg19" data-idx="19">
+  <button class="play-btn" onclick="jumpTo(19)">▶</button>
+  <span class="ts">0:41.56</span>
+  <span class="en">doing anything from software engineering</span>
+  <span class="zh">做任何软件工程方面的事情</span>
+</div>
+<div class="seg" id="seg20" data-idx="20">
+  <button class="play-btn" onclick="jumpTo(20)">▶</button>
+  <span class="ts">0:43.32</span>
+  <span class="en">and actual coding to some of the more</span>
+  <span class="zh">以及一些更多的实际编码</span>
+</div>
+<div class="seg" id="seg21" data-idx="21">
+  <button class="play-btn" onclick="jumpTo(21)">▶</button>
+  <span class="ts">0:45.96</span>
+  <span class="en">sort of project management or product</span>
+  <span class="zh">项目管理或产品类型</span>
+</div>
+<div class="seg" id="seg22" data-idx="22">
+  <button class="play-btn" onclick="jumpTo(22)">▶</button>
+  <span class="ts">0:47.76</span>
+  <span class="en">management stuff, as well as some data</span>
+  <span class="zh">管理的东西，以及一些数据</span>
+</div>
+<div class="seg" id="seg23" data-idx="23">
+  <button class="play-btn" onclick="jumpTo(23)">▶</button>
+  <span class="ts">0:50.60</span>
+  <span class="en">science [music] sort of analysis.</span>
+  <span class="zh">科学[音乐]类型的分析。</span>
+</div>
+<div class="seg" id="seg24" data-idx="24">
+  <button class="play-btn" onclick="jumpTo(24)">▶</button>
+  <span class="ts">0:53.80</span>
+  <span class="en">Prior to joining my current company, I'd</span>
+  <span class="zh">在加入现在的公司之前，我会</span>
+</div>
+<div class="seg" id="seg25" data-idx="25">
+  <button class="play-btn" onclick="jumpTo(25)">▶</button>
+  <span class="ts">0:55.56</span>
+  <span class="en">spent 2 years living in Dallas and I</span>
+  <span class="zh">我在达拉斯生活了两年</span>
+</div>
+<div class="seg" id="seg26" data-idx="26">
+  <button class="play-btn" onclick="jumpTo(26)">▶</button>
+  <span class="ts">0:57.36</span>
+  <span class="en">moved here about 7 or 8 months ago back</span>
+  <span class="zh">大约七八个月前搬到这里</span>
+</div>
+<div class="seg" id="seg27" data-idx="27">
+  <button class="play-btn" onclick="jumpTo(27)">▶</button>
+  <span class="ts">0:59.92</span>
+  <span class="en">in July of 2025. In terms of base rent,</span>
+  <span class="zh">2025 年 7 月。就基本租金而言，</span>
+</div>
+<div class="seg" id="seg28" data-idx="28">
+  <button class="play-btn" onclick="jumpTo(28)">▶</button>
+  <span class="ts">1:02.44</span>
+  <span class="en">I am paying $2,600 a month. Amenity fees</span>
+  <span class="zh">我每月支付 2,600 美元。便利设施费</span>
+</div>
+<div class="seg" id="seg29" data-idx="29">
+  <button class="play-btn" onclick="jumpTo(29)">▶</button>
+  <span class="ts">1:05.84</span>
+  <span class="en">are included in the base rent. Utilities</span>
+  <span class="zh">均包含在基本租金中。公用事业</span>
+</div>
+<div class="seg" id="seg30" data-idx="30">
+  <button class="play-btn" onclick="jumpTo(30)">▶</button>
+  <span class="ts">1:08.32</span>
+  <span class="en">will cost anywhere between $150 to $170</span>
+  <span class="zh">费用在 150 美元到 170 美元之间</span>
+</div>
+<div class="seg" id="seg31" data-idx="31">
+  <button class="play-btn" onclick="jumpTo(31)">▶</button>
+  <span class="ts">1:11.72</span>
+  <span class="en">a month. My electricity bill here is</span>
+  <span class="zh">一个月。我这里的电费单是</span>
+</div>
+<div class="seg" id="seg32" data-idx="32">
+  <button class="play-btn" onclick="jumpTo(32)">▶</button>
+  <span class="ts">1:13.80</span>
+  <span class="en">about 50% higher than it was in Dallas</span>
+  <span class="zh">比达拉斯高出约 50%</span>
+</div>
+<div class="seg" id="seg33" data-idx="33">
+  <button class="play-btn" onclick="jumpTo(33)">▶</button>
+  <span class="ts">1:16.60</span>
+  <span class="en">from about $20 to $30 per month to about</span>
+  <span class="zh">每月约 20 至 30 美元</span>
+</div>
+<div class="seg" id="seg34" data-idx="34">
+  <button class="play-btn" onclick="jumpTo(34)">▶</button>
+  <span class="ts">1:19.24</span>
+  <span class="en">$50 a month.</span>
+  <span class="zh">每月 50 美元。</span>
+</div>
+<div class="seg" id="seg35" data-idx="35">
+  <button class="play-btn" onclick="jumpTo(35)">▶</button>
+  <span class="ts">1:20.76</span>
+  <span class="en">I feel like I am getting good value. A</span>
+  <span class="zh">我觉得我得到了很好的价值。一个</span>
+</div>
+<div class="seg" id="seg36" data-idx="36">
+  <button class="play-btn" onclick="jumpTo(36)">▶</button>
+  <span class="ts">1:22.60</span>
+  <span class="en">lot of the comparable areas that are</span>
+  <span class="zh">许多可比较的领域</span>
+</div>
+<div class="seg" id="seg37" data-idx="37">
+  <button class="play-btn" onclick="jumpTo(37)">▶</button>
+  <span class="ts">1:24.64</span>
+  <span class="en">closer to my work could run anywhere</span>
+  <span class="zh">离我工作地点较近的地方可以跑</span>
+</div>
+<div class="seg" id="seg38" data-idx="38">
+  <button class="play-btn" onclick="jumpTo(38)">▶</button>
+  <span class="ts">1:26.40</span>
+  <span class="en">between $3,500 to $3,700 per month and</span>
+  <span class="zh">每月 3,500 至 3,700 美元之间，并且</span>
+</div>
+<div class="seg" id="seg39" data-idx="39">
+  <button class="play-btn" onclick="jumpTo(39)">▶</button>
+  <span class="ts">1:30.40</span>
+  <span class="en">I'm getting everything that I wanted out</span>
+  <span class="zh">我得到了我想要的一切</span>
+</div>
+<div class="seg" id="seg40" data-idx="40">
+  <button class="play-btn" onclick="jumpTo(40)">▶</button>
+  <span class="ts">1:32.40</span>
+  <span class="en">of this apartment. I live a little bit</span>
+  <span class="zh">这间公寓的。我住一点点</span>
+</div>
+<div class="seg" id="seg41" data-idx="41">
+  <button class="play-btn" onclick="jumpTo(41)">▶</button>
+  <span class="ts">1:34.20</span>
+  <span class="en">further away from either the major</span>
+  <span class="zh">远离主要</span>
+</div>
+<div class="seg" id="seg42" data-idx="42">
+  <button class="play-btn" onclick="jumpTo(42)">▶</button>
+  <span class="ts">1:36.12</span>
+  <span class="en">cities of San Francisco or San Jose or</span>
+  <span class="zh">旧金山或圣何塞等城市或</span>
+</div>
+<div class="seg" id="seg43" data-idx="43">
+  <button class="play-btn" onclick="jumpTo(43)">▶</button>
+  <span class="ts">1:38.04</span>
+  <span class="en">Oakland, but still within commutable</span>
+  <span class="zh">奥克兰，但仍在通勤范围内</span>
+</div>
+<div class="seg" id="seg44" data-idx="44">
+  <button class="play-btn" onclick="jumpTo(44)">▶</button>
+  <span class="ts">1:39.92</span>
+  <span class="en">distance of all three.</span>
+  <span class="zh">三者的距离。</span>
+</div>
+<div class="seg" id="seg45" data-idx="45">
+  <button class="play-btn" onclick="jumpTo(45)">▶</button>
+  <span class="ts">1:41.56</span>
+  <span class="en">Even though I had access to a relocation</span>
+  <span class="zh">尽管我有机会搬迁</span>
+</div>
+<div class="seg" id="seg46" data-idx="46">
+  <button class="play-btn" onclick="jumpTo(46)">▶</button>
+  <span class="ts">1:44.28</span>
+  <span class="en">expert, I decided to do a lot of the</span>
+  <span class="zh">专家，我决定做很多</span>
+</div>
+<div class="seg" id="seg47" data-idx="47">
+  <button class="play-btn" onclick="jumpTo(47)">▶</button>
+  <span class="ts">1:46.68</span>
+  <span class="en">research on my own taking a look at all</span>
+  <span class="zh">我自己研究看看所有</span>
+</div>
+<div class="seg" id="seg48" data-idx="48">
+  <button class="play-btn" onclick="jumpTo(48)">▶</button>
+  <span class="ts">1:49.92</span>
+  <span class="en">the things that I wanted to focus on</span>
+  <span class="zh">我想关注的事情</span>
+</div>
+<div class="seg" id="seg49" data-idx="49">
+  <button class="play-btn" onclick="jumpTo(49)">▶</button>
+  <span class="ts">1:51.72</span>
+  <span class="en">from a living perspective and after</span>
+  <span class="zh">从生活的角度和之后</span>
+</div>
+<div class="seg" id="seg50" data-idx="50">
+  <button class="play-btn" onclick="jumpTo(50)">▶</button>
+  <span class="ts">1:54.80</span>
+  <span class="en">making the decisions, I decided to sign</span>
+  <span class="zh">做出决定后，我决定签字</span>
+</div>
+<div class="seg" id="seg51" data-idx="51">
+  <button class="play-btn" onclick="jumpTo(51)">▶</button>
+  <span class="ts">1:56.60</span>
+  <span class="en">the lease sight unseen without actually</span>
+  <span class="zh">未实际看到的租赁景象</span>
+</div>
+<div class="seg" id="seg52" data-idx="52">
+  <button class="play-btn" onclick="jumpTo(52)">▶</button>
+  <span class="ts">1:58.60</span>
+  <span class="en">having seen the place in person. Hey,</span>
+  <span class="zh">亲眼见过这个地方。嘿，</span>
+</div>
+<div class="seg" id="seg53" data-idx="53">
+  <button class="play-btn" onclick="jumpTo(53)">▶</button>
+  <span class="ts">2:00.84</span>
+  <span class="en">welcome to my apartment.</span>
+  <span class="zh">欢迎来到我的公寓。</span>
+</div>
+<div class="seg" id="seg54" data-idx="54">
+  <button class="play-btn" onclick="jumpTo(54)">▶</button>
+  <span class="ts">2:02.92</span>
+  <span class="en">So, this is the main kitchen area.</span>
+  <span class="zh">所以，这是主要的厨房区域。</span>
+</div>
+<div class="seg" id="seg55" data-idx="55">
+  <button class="play-btn" onclick="jumpTo(55)">▶</button>
+  <span class="ts">2:04.45</span>
+  <span class="en">[music]</span>
+  <span class="zh">[音乐]</span>
+</div>
+<div class="seg" id="seg56" data-idx="56">
+  <button class="play-btn" onclick="jumpTo(56)">▶</button>
+  <span class="ts">2:05.52</span>
+  <span class="en">It's</span>
+  <span class="zh">它是</span>
+</div>
+<div class="seg" id="seg57" data-idx="57">
+  <button class="play-btn" onclick="jumpTo(57)">▶</button>
+  <span class="ts">2:06.48</span>
+  <span class="en">quite spacious compared to my last</span>
+  <span class="zh">与我上次相比相当宽敞</span>
+</div>
+<div class="seg" id="seg58" data-idx="58">
+  <button class="play-btn" onclick="jumpTo(58)">▶</button>
+  <span class="ts">2:08.08</span>
+  <span class="en">apartment. The only complaint that I</span>
+  <span class="zh">公寓。我唯一的抱怨</span>
+</div>
+<div class="seg" id="seg59" data-idx="59">
+  <button class="play-btn" onclick="jumpTo(59)">▶</button>
+  <span class="ts">2:09.80</span>
+  <span class="en">really have are these uh the countertops</span>
+  <span class="zh">真的有这些呃台面</span>
+</div>
+<div class="seg" id="seg60" data-idx="60">
+  <button class="play-btn" onclick="jumpTo(60)">▶</button>
+  <span class="ts">2:12.32</span>
+  <span class="en">aren't exactly ideal for the amount that</span>
+  <span class="zh">并不完全理想</span>
+</div>
+<div class="seg" id="seg61" data-idx="61">
+  <button class="play-btn" onclick="jumpTo(61)">▶</button>
+  <span class="ts">2:14.64</span>
+  <span class="en">I'm paying, but</span>
+  <span class="zh">我付钱了，但是</span>
+</div>
+<div class="seg" id="seg62" data-idx="62">
+  <button class="play-btn" onclick="jumpTo(62)">▶</button>
+  <span class="ts">2:15.59</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg63" data-idx="63">
+  <button class="play-btn" onclick="jumpTo(63)">▶</button>
+  <span class="ts">2:15.80</span>
+  <span class="en">&gt;&gt; it's all right.</span>
+  <span class="zh">&gt;&gt; 没关系。</span>
+</div>
+<div class="seg" id="seg64" data-idx="64">
+  <button class="play-btn" onclick="jumpTo(64)">▶</button>
+  <span class="ts">2:17.56</span>
+  <span class="en">In terms of fridge and freezer,</span>
+  <span class="zh">就冰箱和冰柜而言，</span>
+</div>
+<div class="seg" id="seg65" data-idx="65">
+  <button class="play-btn" onclick="jumpTo(65)">▶</button>
+  <span class="ts">2:20.32</span>
+  <span class="en">I got some meal prep stuff from the</span>
+  <span class="zh">我从那里得到了一些准备饭菜的东西</span>
+</div>
+<div class="seg" id="seg66" data-idx="66">
+  <button class="play-btn" onclick="jumpTo(66)">▶</button>
+  <span class="ts">2:21.52</span>
+  <span class="en">night before as well as a whole host of</span>
+  <span class="zh">前一天晚上以及一大堆</span>
+</div>
+<div class="seg" id="seg67" data-idx="67">
+  <button class="play-btn" onclick="jumpTo(67)">▶</button>
+  <span class="ts">2:24.28</span>
+  <span class="en">uh drinks</span>
+  <span class="zh">呃饮料</span>
+</div>
+<div class="seg" id="seg68" data-idx="68">
+  <button class="play-btn" onclick="jumpTo(68)">▶</button>
+  <span class="ts">2:25.48</span>
+  <span class="en">and mixers.</span>
+  <span class="zh">和搅拌机。</span>
+</div>
+<div class="seg" id="seg69" data-idx="69">
+  <button class="play-btn" onclick="jumpTo(69)">▶</button>
+  <span class="ts">2:26.72</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg70" data-idx="70">
+  <button class="play-btn" onclick="jumpTo(70)">▶</button>
+  <span class="ts">2:26.76</span>
+  <span class="en">&gt;&gt; Um</span>
+  <span class="zh">&gt;&gt; 嗯</span>
+</div>
+<div class="seg" id="seg71" data-idx="71">
+  <button class="play-btn" onclick="jumpTo(71)">▶</button>
+  <span class="ts">2:27.88</span>
+  <span class="en">in the freezer,</span>
+  <span class="zh">在冰箱里，</span>
+</div>
+<div class="seg" id="seg72" data-idx="72">
+  <button class="play-btn" onclick="jumpTo(72)">▶</button>
+  <span class="ts">2:29.28</span>
+  <span class="en">very similar thing where I've got a</span>
+  <span class="zh">非常相似的事情，我有一个</span>
+</div>
+<div class="seg" id="seg73" data-idx="73">
+  <button class="play-btn" onclick="jumpTo(73)">▶</button>
+  <span class="ts">2:31.00</span>
+  <span class="en">couple of frozen things as well as some</span>
+  <span class="zh">一些冷冻的东西以及一些</span>
+</div>
+<div class="seg" id="seg74" data-idx="74">
+  <button class="play-btn" onclick="jumpTo(74)">▶</button>
+  <span class="ts">2:33.20</span>
+  <span class="en">dumplings that I actually wrapped myself</span>
+  <span class="zh">自己包的饺子</span>
+</div>
+<div class="seg" id="seg75" data-idx="75">
+  <button class="play-btn" onclick="jumpTo(75)">▶</button>
+  <span class="ts">2:34.76</span>
+  <span class="en">when I was really bored one day.</span>
+  <span class="zh">当有一天我真的很无聊的时候。</span>
+</div>
+<div class="seg" id="seg76" data-idx="76">
+  <button class="play-btn" onclick="jumpTo(76)">▶</button>
+  <span class="ts">2:37.40</span>
+  <span class="en">Over here, we have my main sort of</span>
+  <span class="zh">在这里，我们有我的主要类型</span>
+</div>
+<div class="seg" id="seg77" data-idx="77">
+  <button class="play-btn" onclick="jumpTo(77)">▶</button>
+  <span class="ts">2:39.40</span>
+  <span class="en">living {slash} workshop area. This is</span>
+  <span class="zh">生活{slash}车间区域。这是</span>
+</div>
+<div class="seg" id="seg78" data-idx="78">
+  <button class="play-btn" onclick="jumpTo(78)">▶</button>
+  <span class="ts">2:41.28</span>
+  <span class="en">where I get all my work done as well as</span>
+  <span class="zh">我在那里完成所有工作</span>
+</div>
+<div class="seg" id="seg79" data-idx="79">
+  <button class="play-btn" onclick="jumpTo(79)">▶</button>
+  <span class="ts">2:43.16</span>
+  <span class="en">my personal projects. The decision to do</span>
+  <span class="zh">我的个人项目。要做的决定</span>
+</div>
+<div class="seg" id="seg80" data-idx="80">
+  <button class="play-btn" onclick="jumpTo(80)">▶</button>
+  <span class="ts">2:46.28</span>
+  <span class="en">without a couch and a TV is really just</span>
+  <span class="zh">没有沙发和电视真的只是</span>
+</div>
+<div class="seg" id="seg81" data-idx="81">
+  <button class="play-btn" onclick="jumpTo(81)">▶</button>
+  <span class="ts">2:48.48</span>
+  <span class="en">based on my own needs. I don't really</span>
+  <span class="zh">根据我自己的需要。我真的不知道</span>
+</div>
+<div class="seg" id="seg82" data-idx="82">
+  <button class="play-btn" onclick="jumpTo(82)">▶</button>
+  <span class="ts">2:51.04</span>
+  <span class="en">watch a whole lot of TV. I just use my</span>
+  <span class="zh">看很多电视。我只是用我的</span>
+</div>
+<div class="seg" id="seg83" data-idx="83">
+  <button class="play-btn" onclick="jumpTo(83)">▶</button>
+  <span class="ts">2:53.08</span>
+  <span class="en">computer. I don't host people in my</span>
+  <span class="zh">电脑。我不接待别人</span>
+</div>
+<div class="seg" id="seg84" data-idx="84">
+  <button class="play-btn" onclick="jumpTo(84)">▶</button>
+  <span class="ts">2:54.88</span>
+  <span class="en">apartment, obviously. If I do decide to</span>
+  <span class="zh">公寓，显然。如果我决定</span>
+</div>
+<div class="seg" id="seg85" data-idx="85">
+  <button class="play-btn" onclick="jumpTo(85)">▶</button>
+  <span class="ts">2:57.28</span>
+  <span class="en">hang out with friends, I'll usually go</span>
+  <span class="zh">和朋友出去玩，我通常会去</span>
+</div>
+<div class="seg" id="seg86" data-idx="86">
+  <button class="play-btn" onclick="jumpTo(86)">▶</button>
+  <span class="ts">2:58.56</span>
+  <span class="en">to their place or maybe a third place.</span>
+  <span class="zh">到他们的地方或者第三个地方。</span>
+</div>
+<div class="seg" id="seg87" data-idx="87">
+  <button class="play-btn" onclick="jumpTo(87)">▶</button>
+  <span class="ts">3:01.20</span>
+  <span class="en">And in the case of hanging out with my</span>
+  <span class="zh">如果和我一起出去玩的话</span>
+</div>
+<div class="seg" id="seg88" data-idx="88">
+  <button class="play-btn" onclick="jumpTo(88)">▶</button>
+  <span class="ts">3:02.68</span>
+  <span class="en">friends in virtual reality, well,</span>
+  <span class="zh">虚拟现实中的朋友，嗯，</span>
+</div>
+<div class="seg" id="seg89" data-idx="89">
+  <button class="play-btn" onclick="jumpTo(89)">▶</button>
+  <span class="ts">3:04.48</span>
+  <span class="en">everyone sort of split off in their own</span>
+  <span class="zh">每个人都各自分裂</span>
+</div>
+<div class="seg" id="seg90" data-idx="90">
+  <button class="play-btn" onclick="jumpTo(90)">▶</button>
+  <span class="ts">3:06.44</span>
+  <span class="en">physical space. We've also got a couple</span>
+  <span class="zh">物理空间。我们还有一对</span>
+</div>
+<div class="seg" id="seg91" data-idx="91">
+  <button class="play-btn" onclick="jumpTo(91)">▶</button>
+  <span class="ts">3:08.64</span>
+  <span class="en">of other things over here, just uh</span>
+  <span class="zh">这里还有其他的事情，只是呃</span>
+</div>
+<div class="seg" id="seg92" data-idx="92">
+  <button class="play-btn" onclick="jumpTo(92)">▶</button>
+  <span class="ts">3:11.20</span>
+  <span class="en">the DJ controller because I really don't</span>
+  <span class="zh">DJ 控制器，因为我真的没有</span>
+</div>
+<div class="seg" id="seg93" data-idx="93">
+  <button class="play-btn" onclick="jumpTo(93)">▶</button>
+  <span class="ts">3:13.04</span>
+  <span class="en">have a lot of other space to put it, as</span>
+  <span class="zh">还有很多其他空间可以放置它，例如</span>
+</div>
+<div class="seg" id="seg94" data-idx="94">
+  <button class="play-btn" onclick="jumpTo(94)">▶</button>
+  <span class="ts">3:15.24</span>
+  <span class="en">well as my robot cleaner which gets the</span>
+  <span class="zh">以及我的扫地机器人</span>
+</div>
+<div class="seg" id="seg95" data-idx="95">
+  <button class="play-btn" onclick="jumpTo(95)">▶</button>
+  <span class="ts">3:17.68</span>
+  <span class="en">job done. It's not perfect, but it</span>
+  <span class="zh">工作完成了。它并不完美，但它</span>
+</div>
+<div class="seg" id="seg96" data-idx="96">
+  <button class="play-btn" onclick="jumpTo(96)">▶</button>
+  <span class="ts">3:19.72</span>
+  <span class="en">definitely helps out uh in terms of</span>
+  <span class="zh">绝对有帮助呃</span>
+</div>
+<div class="seg" id="seg97" data-idx="97">
+  <button class="play-btn" onclick="jumpTo(97)">▶</button>
+  <span class="ts">3:22.24</span>
+  <span class="en">having to clean.</span>
+  <span class="zh">必须清洁。</span>
+</div>
+<div class="seg" id="seg98" data-idx="98">
+  <button class="play-btn" onclick="jumpTo(98)">▶</button>
+  <span class="ts">3:23.92</span>
+  <span class="en">Over here, we've got just the bedroom.</span>
+  <span class="zh">在这里，我们只有卧室。</span>
+</div>
+<div class="seg" id="seg99" data-idx="99">
+  <button class="play-btn" onclick="jumpTo(99)">▶</button>
+  <span class="ts">3:26.24</span>
+  <span class="en">Haha.</span>
+  <span class="zh">哈哈。</span>
+</div>
+<div class="seg" id="seg100" data-idx="100">
+  <button class="play-btn" onclick="jumpTo(100)">▶</button>
+  <span class="ts">3:27.72</span>
+  <span class="en">I mean, there's really not much to my</span>
+  <span class="zh">我的意思是，我的东西真的不多</span>
+</div>
+<div class="seg" id="seg101" data-idx="101">
+  <button class="play-btn" onclick="jumpTo(101)">▶</button>
+  <span class="ts">3:29.52</span>
+  <span class="en">bedroom. It gets the job done for me. I</span>
+  <span class="zh">卧室。它帮我完成了工作。我</span>
+</div>
+<div class="seg" id="seg102" data-idx="102">
+  <button class="play-btn" onclick="jumpTo(102)">▶</button>
+  <span class="ts">3:31.44</span>
+  <span class="en">have my blanket, my pillow,</span>
+  <span class="zh">有我的毯子，我的枕头，</span>
+</div>
+<div class="seg" id="seg103" data-idx="103">
+  <button class="play-btn" onclick="jumpTo(103)">▶</button>
+  <span class="ts">3:34.16</span>
+  <span class="en">um</span>
+  <span class="zh">嗯</span>
+</div>
+<div class="seg" id="seg104" data-idx="104">
+  <button class="play-btn" onclick="jumpTo(104)">▶</button>
+  <span class="ts">3:35.12</span>
+  <span class="en">a filing cabinet doubling as a</span>
+  <span class="zh">一个文件柜兼作一个</span>
+</div>
+<div class="seg" id="seg105" data-idx="105">
+  <button class="play-btn" onclick="jumpTo(105)">▶</button>
+  <span class="ts">3:36.64</span>
+  <span class="en">nightstand as well as my charger there.</span>
+  <span class="zh">床头柜还有我的充电器。</span>
+</div>
+<div class="seg" id="seg106" data-idx="106">
+  <button class="play-btn" onclick="jumpTo(106)">▶</button>
+  <span class="ts">3:39.32</span>
+  <span class="en">It's all that I really need at this</span>
+  <span class="zh">这就是我真正需要的一切</span>
+</div>
+<div class="seg" id="seg107" data-idx="107">
+  <button class="play-btn" onclick="jumpTo(107)">▶</button>
+  <span class="ts">3:40.52</span>
+  <span class="en">point.</span>
+  <span class="zh">观点。</span>
+</div>
+<div class="seg" id="seg108" data-idx="108">
+  <button class="play-btn" onclick="jumpTo(108)">▶</button>
+  <span class="ts">3:42.64</span>
+  <span class="en">And this is my bathroom. The highlight</span>
+  <span class="zh">这是我的浴室。亮点</span>
+</div>
+<div class="seg" id="seg109" data-idx="109">
+  <button class="play-btn" onclick="jumpTo(109)">▶</button>
+  <span class="ts">3:44.48</span>
+  <span class="en">of this is really the bidet that I</span>
+  <span class="zh">这真的是我的坐浴盆</span>
+</div>
+<div class="seg" id="seg110" data-idx="110">
+  <button class="play-btn" onclick="jumpTo(110)">▶</button>
+  <span class="ts">3:46.16</span>
+  <span class="en">installed. It was about $400 or so, but</span>
+  <span class="zh">安装。大约是 400 美元左右，但是</span>
+</div>
+<div class="seg" id="seg111" data-idx="111">
+  <button class="play-btn" onclick="jumpTo(111)">▶</button>
+  <span class="ts">3:49.28</span>
+  <span class="en">it was a really, really nice quality of</span>
+  <span class="zh">这是一种非常非常好的品质</span>
+</div>
+<div class="seg" id="seg112" data-idx="112">
+  <button class="play-btn" onclick="jumpTo(112)">▶</button>
+  <span class="ts">3:51.08</span>
+  <span class="en">life improvement for myself.</span>
+  <span class="zh">为自己改善生活。</span>
+</div>
+<div class="seg" id="seg113" data-idx="113">
+  <button class="play-btn" onclick="jumpTo(113)">▶</button>
+  <span class="ts">3:54.12</span>
+  <span class="en">And outside over here, we've got a</span>
+  <span class="zh">在外面，我们有一个</span>
+</div>
+<div class="seg" id="seg114" data-idx="114">
+  <button class="play-btn" onclick="jumpTo(114)">▶</button>
+  <span class="ts">3:55.72</span>
+  <span class="en">little bit of a balcony.</span>
+  <span class="zh">一个小阳台。</span>
+</div>
+<div class="seg" id="seg115" data-idx="115">
+  <button class="play-btn" onclick="jumpTo(115)">▶</button>
+  <span class="ts">3:57.52</span>
+  <span class="en">I don't spend a lot of time out here as</span>
+  <span class="zh">我不会在这里花很多时间</span>
+</div>
+<div class="seg" id="seg116" data-idx="116">
+  <button class="play-btn" onclick="jumpTo(116)">▶</button>
+  <span class="ts">3:59.44</span>
+  <span class="en">you may be able to tell, but it is a</span>
+  <span class="zh">你也许能看出来，但这是一个</span>
+</div>
+<div class="seg" id="seg117" data-idx="117">
+  <button class="play-btn" onclick="jumpTo(117)">▶</button>
+  <span class="ts">4:01.32</span>
+  <span class="en">nice way to get some fresh air in.</span>
+  <span class="zh">呼吸新鲜空气的好方法。</span>
+</div>
+<div class="seg" id="seg118" data-idx="118">
+  <button class="play-btn" onclick="jumpTo(118)">▶</button>
+  <span class="ts">4:03.88</span>
+  <span class="en">I've been told by many of my friends</span>
+  <span class="zh">很多朋友都告诉我</span>
+</div>
+<div class="seg" id="seg119" data-idx="119">
+  <button class="play-btn" onclick="jumpTo(119)">▶</button>
+  <span class="ts">4:05.36</span>
+  <span class="en">that my living situation is very</span>
+  <span class="zh">我的生活状况很</span>
+</div>
+<div class="seg" id="seg120" data-idx="120">
+  <button class="play-btn" onclick="jumpTo(120)">▶</button>
+  <span class="ts">4:07.60</span>
+  <span class="en">spartan, but really it's an intentional</span>
+  <span class="zh">斯巴达，但实际上这是故意的</span>
+</div>
+<div class="seg" id="seg121" data-idx="121">
+  <button class="play-btn" onclick="jumpTo(121)">▶</button>
+  <span class="ts">4:09.80</span>
+  <span class="en">choice to pick and choose parts of my</span>
+  <span class="zh">选择挑选我的部分</span>
+</div>
+<div class="seg" id="seg122" data-idx="122">
+  <button class="play-btn" onclick="jumpTo(122)">▶</button>
+  <span class="ts">4:11.64</span>
+  <span class="en">life that I decide to spend more or less</span>
+  <span class="zh">我决定或多或少度过的生活</span>
+</div>
+<div class="seg" id="seg123" data-idx="123">
+  <button class="play-btn" onclick="jumpTo(123)">▶</button>
+  <span class="ts">4:13.44</span>
+  <span class="en">money on. So, even though my living</span>
+  <span class="zh">钱上。所以，尽管我的生活</span>
+</div>
+<div class="seg" id="seg124" data-idx="124">
+  <button class="play-btn" onclick="jumpTo(124)">▶</button>
+  <span class="ts">4:15.76</span>
+  <span class="en">situation right now is fairly sparse,</span>
+  <span class="zh">现在的情况相当稀疏，</span>
+</div>
+<div class="seg" id="seg125" data-idx="125">
+  <button class="play-btn" onclick="jumpTo(125)">▶</button>
+  <span class="ts">4:17.84</span>
+  <span class="en">that doesn't mean that it's going to</span>
+  <span class="zh">这并不意味着它会</span>
+</div>
+<div class="seg" id="seg126" data-idx="126">
+  <button class="play-btn" onclick="jumpTo(126)">▶</button>
+  <span class="ts">4:18.96</span>
+  <span class="en">stay that way say if I decide to have a</span>
+  <span class="zh">保持这种方式说如果我决定有一个</span>
+</div>
+<div class="seg" id="seg127" data-idx="127">
+  <button class="play-btn" onclick="jumpTo(127)">▶</button>
+  <span class="ts">4:21.00</span>
+  <span class="en">partner or have kids.</span>
+  <span class="zh">伴侣或有孩子。</span>
+</div>
+<div class="seg" id="seg128" data-idx="128">
+  <button class="play-btn" onclick="jumpTo(128)">▶</button>
+  <span class="ts">4:26.48</span>
+  <span class="en">Between ride sharing and public transit,</span>
+  <span class="zh">在拼车和公共交通之间，</span>
+</div>
+<div class="seg" id="seg129" data-idx="129">
+  <button class="play-btn" onclick="jumpTo(129)">▶</button>
+  <span class="ts">4:28.44</span>
+  <span class="en">I will sometimes spend around $30 per</span>
+  <span class="zh">我有时会花费大约 30 美元/次</span>
+</div>
+<div class="seg" id="seg130" data-idx="130">
+  <button class="play-btn" onclick="jumpTo(130)">▶</button>
+  <span class="ts">4:30.64</span>
+  <span class="en">month, but most of the time it's zero.</span>
+  <span class="zh">月，但大多数时候为零。</span>
+</div>
+<div class="seg" id="seg131" data-idx="131">
+  <button class="play-btn" onclick="jumpTo(131)">▶</button>
+  <span class="ts">4:33.14</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg132" data-idx="132">
+  <button class="play-btn" onclick="jumpTo(132)">▶</button>
+  <span class="ts">4:33.32</span>
+  <span class="en">&gt;&gt; I live in the Bay Area without a car,</span>
+  <span class="zh">&gt;&gt; 我住在湾区没有车，</span>
+</div>
+<div class="seg" id="seg133" data-idx="133">
+  <button class="play-btn" onclick="jumpTo(133)">▶</button>
+  <span class="ts">4:35.84</span>
+  <span class="en">and so I think one of the big things to</span>
+  <span class="zh">所以我认为最重要的事情之一</span>
+</div>
+<div class="seg" id="seg134" data-idx="134">
+  <button class="play-btn" onclick="jumpTo(134)">▶</button>
+  <span class="ts">4:37.92</span>
+  <span class="en">me is [music] the accessibility to</span>
+  <span class="zh">我是[音乐]的可访问性</span>
+</div>
+<div class="seg" id="seg135" data-idx="135">
+  <button class="play-btn" onclick="jumpTo(135)">▶</button>
+  <span class="ts">4:39.48</span>
+  <span class="en">public transit. I live about 5 minutes</span>
+  <span class="zh">公共交通。我住5分钟左右</span>
+</div>
+<div class="seg" id="seg136" data-idx="136">
+  <button class="play-btn" onclick="jumpTo(136)">▶</button>
+  <span class="ts">4:41.68</span>
+  <span class="en">away from the nearest Bay Area rapid</span>
+  <span class="zh">距离最近的湾区快速</span>
+</div>
+<div class="seg" id="seg137" data-idx="137">
+  <button class="play-btn" onclick="jumpTo(137)">▶</button>
+  <span class="ts">4:43.80</span>
+  <span class="en">transit station. [music]</span>
+  <span class="zh">中转站。 [音乐]</span>
+</div>
+<div class="seg" id="seg138" data-idx="138">
+  <button class="play-btn" onclick="jumpTo(138)">▶</button>
+  <span class="ts">4:45.32</span>
+  <span class="en">I'm actually quite used to living</span>
+  <span class="zh">我其实已经习惯了生活</span>
+</div>
+<div class="seg" id="seg139" data-idx="139">
+  <button class="play-btn" onclick="jumpTo(139)">▶</button>
+  <span class="ts">4:46.84</span>
+  <span class="en">car-free. I had lived previously in</span>
+  <span class="zh">无车。我以前住过</span>
+</div>
+<div class="seg" id="seg140" data-idx="140">
+  <button class="play-btn" onclick="jumpTo(140)">▶</button>
+  <span class="ts">4:48.60</span>
+  <span class="en">Dallas for 2 years without a car and got</span>
+  <span class="zh">达拉斯 2 年没有车，得到了</span>
+</div>
+<div class="seg" id="seg141" data-idx="141">
+  <button class="play-btn" onclick="jumpTo(141)">▶</button>
+  <span class="ts">4:50.80</span>
+  <span class="en">around</span>
+  <span class="zh">大约</span>
+</div>
+<div class="seg" id="seg142" data-idx="142">
+  <button class="play-btn" onclick="jumpTo(142)">▶</button>
+  <span class="ts">4:51.48</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg143" data-idx="143">
+  <button class="play-btn" onclick="jumpTo(143)">▶</button>
+  <span class="ts">4:51.52</span>
+  <span class="en">&gt;&gt; in very similar ways. I picked out this</span>
+  <span class="zh">&gt;&gt; 以非常相似的方式。我选了这个</span>
+</div>
+<div class="seg" id="seg144" data-idx="144">
+  <button class="play-btn" onclick="jumpTo(144)">▶</button>
+  <span class="ts">4:53.72</span>
+  <span class="en">apartment also specifically for its</span>
+  <span class="zh">公寓还专门为其</span>
+</div>
+<div class="seg" id="seg145" data-idx="145">
+  <button class="play-btn" onclick="jumpTo(145)">▶</button>
+  <span class="ts">4:55.68</span>
+  <span class="en">proximity to all of the things that I</span>
+  <span class="zh">靠近我所接触到的所有事物</span>
+</div>
+<div class="seg" id="seg146" data-idx="146">
+  <button class="play-btn" onclick="jumpTo(146)">▶</button>
+  <span class="ts">4:57.84</span>
+  <span class="en">would really want to go to [music] on a</span>
+  <span class="zh">真的很想去听[音乐]</span>
+</div>
+<div class="seg" id="seg147" data-idx="147">
+  <button class="play-btn" onclick="jumpTo(147)">▶</button>
+  <span class="ts">4:59.20</span>
+  <span class="en">regular basis. So, that would be cafe,</span>
+  <span class="zh">定期。那么，那就是咖啡馆，</span>
+</div>
+<div class="seg" id="seg148" data-idx="148">
+  <button class="play-btn" onclick="jumpTo(148)">▶</button>
+  <span class="ts">5:01.44</span>
+  <span class="en">boba shops, as well as the grocery</span>
+  <span class="zh">波巴店以及杂货店</span>
+</div>
+<div class="seg" id="seg149" data-idx="149">
+  <button class="play-btn" onclick="jumpTo(149)">▶</button>
+  <span class="ts">5:03.16</span>
+  <span class="en">store. [music]</span>
+  <span class="zh">店铺。 [音乐]</span>
+</div>
+<div class="seg" id="seg150" data-idx="150">
+  <button class="play-btn" onclick="jumpTo(150)">▶</button>
+  <span class="ts">5:04.00</span>
+  <span class="en">For those, I just walk and for anything</span>
+  <span class="zh">对于那些，我只是步行，为任何事情</span>
+</div>
+<div class="seg" id="seg151" data-idx="151">
+  <button class="play-btn" onclick="jumpTo(151)">▶</button>
+  <span class="ts">5:06.40</span>
+  <span class="en">else, I would either take the public</span>
+  <span class="zh">否则，我要么采取公众</span>
+</div>
+<div class="seg" id="seg152" data-idx="152">
+  <button class="play-btn" onclick="jumpTo(152)">▶</button>
+  <span class="ts">5:08.24</span>
+  <span class="en">transit or in certain cases [music] take</span>
+  <span class="zh">过境或在某些情况下[音乐]采取</span>
+</div>
+<div class="seg" id="seg153" data-idx="153">
+  <button class="play-btn" onclick="jumpTo(153)">▶</button>
+  <span class="ts">5:10.76</span>
+  <span class="en">ride sharing.</span>
+  <span class="zh">乘车共享。</span>
+</div>
+<div class="seg" id="seg154" data-idx="154">
+  <button class="play-btn" onclick="jumpTo(154)">▶</button>
+  <span class="ts">5:11.96</span>
+  <span class="en">Our company, like many other companies</span>
+  <span class="zh">我们公司和许多其他公司一样</span>
+</div>
+<div class="seg" id="seg155" data-idx="155">
+  <button class="play-btn" onclick="jumpTo(155)">▶</button>
+  <span class="ts">5:13.68</span>
+  <span class="en">around the Bay Area, have shuttles that</span>
+  <span class="zh">湾区周边有班车</span>
+</div>
+<div class="seg" id="seg156" data-idx="156">
+  <button class="play-btn" onclick="jumpTo(156)">▶</button>
+  <span class="ts">5:15.64</span>
+  <span class="en">go around the area and I utilize those</span>
+  <span class="zh">绕过该地区，我利用这些</span>
+</div>
+<div class="seg" id="seg157" data-idx="157">
+  <button class="play-btn" onclick="jumpTo(157)">▶</button>
+  <span class="ts">5:18.44</span>
+  <span class="en">to get to and from work.</span>
+  <span class="zh">上下班。</span>
+</div>
+<div class="seg" id="seg158" data-idx="158">
+  <button class="play-btn" onclick="jumpTo(158)">▶</button>
+  <span class="ts">5:23.56</span>
+  <span class="en">I spend about $300 per month on</span>
+  <span class="zh">我每月花费大约 300 美元</span>
+</div>
+<div class="seg" id="seg159" data-idx="159">
+  <button class="play-btn" onclick="jumpTo(159)">▶</button>
+  <span class="ts">5:25.36</span>
+  <span class="en">groceries.</span>
+  <span class="zh">杂货。</span>
+</div>
+<div class="seg" id="seg160" data-idx="160">
+  <button class="play-btn" onclick="jumpTo(160)">▶</button>
+  <span class="ts">5:26.56</span>
+  <span class="en">I usually budget $75 per month for</span>
+  <span class="zh">我通常每月预算 75 美元</span>
+</div>
+<div class="seg" id="seg161" data-idx="161">
+  <button class="play-btn" onclick="jumpTo(161)">▶</button>
+  <span class="ts">5:28.52</span>
+  <span class="en">eating out, but I usually don't hit that</span>
+  <span class="zh">出去吃饭，但我通常不这么做</span>
+</div>
+<div class="seg" id="seg162" data-idx="162">
+  <button class="play-btn" onclick="jumpTo(162)">▶</button>
+  <span class="ts">5:30.64</span>
+  <span class="en">maximum.</span>
+  <span class="zh">最大限度。</span>
+</div>
+<div class="seg" id="seg163" data-idx="163">
+  <button class="play-btn" onclick="jumpTo(163)">▶</button>
+  <span class="ts">5:32.12</span>
+  <span class="en">I used to get online delivery for my</span>
+  <span class="zh">我以前都是通过网上送货的</span>
+</div>
+<div class="seg" id="seg164" data-idx="164">
+  <button class="play-btn" onclick="jumpTo(164)">▶</button>
+  <span class="ts">5:34.16</span>
+  <span class="en">groceries, but not anymore given that</span>
+  <span class="zh">杂货，但鉴于此不再</span>
+</div>
+<div class="seg" id="seg165" data-idx="165">
+  <button class="play-btn" onclick="jumpTo(165)">▶</button>
+  <span class="ts">5:36.28</span>
+  <span class="en">it's so close to my apartment. I should</span>
+  <span class="zh">它离我的公寓很近。我应该</span>
+</div>
+<div class="seg" id="seg166" data-idx="166">
+  <button class="play-btn" onclick="jumpTo(166)">▶</button>
+  <span class="ts">5:38.76</span>
+  <span class="en">I should stock up on some more instant</span>
+  <span class="zh">我应该多储备一些即食的</span>
+</div>
+<div class="seg" id="seg167" data-idx="167">
+  <button class="play-btn" onclick="jumpTo(167)">▶</button>
+  <span class="ts">5:40.20</span>
+  <span class="en">noodles.</span>
+  <span class="zh">面条。</span>
+</div>
+<div class="seg" id="seg168" data-idx="168">
+  <button class="play-btn" onclick="jumpTo(168)">▶</button>
+  <span class="ts">5:41.24</span>
+  <span class="en">In terms of what I cook on a daily</span>
+  <span class="zh">就我每天做的菜而言</span>
+</div>
+<div class="seg" id="seg169" data-idx="169">
+  <button class="play-btn" onclick="jumpTo(169)">▶</button>
+  <span class="ts">5:42.56</span>
+  <span class="en">basis, I don't really have a set plan</span>
+  <span class="zh">基本上，我并没有一个固定的计划</span>
+</div>
+<div class="seg" id="seg170" data-idx="170">
+  <button class="play-btn" onclick="jumpTo(170)">▶</button>
+  <span class="ts">5:44.76</span>
+  <span class="en">because of the fact that my company</span>
+  <span class="zh">因为我的公司</span>
+</div>
+<div class="seg" id="seg171" data-idx="171">
+  <button class="play-btn" onclick="jumpTo(171)">▶</button>
+  <span class="ts">5:46.28</span>
+  <span class="en">subsidizes both my breakfast and my</span>
+  <span class="zh">补贴我的早餐和我的</span>
+</div>
+<div class="seg" id="seg172" data-idx="172">
+  <button class="play-btn" onclick="jumpTo(172)">▶</button>
+  <span class="ts">5:48.08</span>
+  <span class="en">lunch.</span>
+  <span class="zh">午餐。</span>
+</div>
+<div class="seg" id="seg173" data-idx="173">
+  <button class="play-btn" onclick="jumpTo(173)">▶</button>
+  <span class="ts">5:49.28</span>
+  <span class="en">But yes, beef short rib, 1434</span>
+  <span class="zh">但是，是的，牛小排，1434</span>
+</div>
+<div class="seg" id="seg174" data-idx="174">
+  <button class="play-btn" onclick="jumpTo(174)">▶</button>
+  <span class="ts">5:52.08</span>
+  <span class="en">or $10.99 per pound. This is a cut that</span>
+  <span class="zh">或每磅 10.99 美元。这是一个剪裁</span>
+</div>
+<div class="seg" id="seg175" data-idx="175">
+  <button class="play-btn" onclick="jumpTo(175)">▶</button>
+  <span class="ts">5:55.12</span>
+  <span class="en">usually isn't super widely available in</span>
+  <span class="zh">通常在以下领域并不广泛使用</span>
+</div>
+<div class="seg" id="seg176" data-idx="176">
+  <button class="play-btn" onclick="jumpTo(176)">▶</button>
+  <span class="ts">5:58.40</span>
+  <span class="en">western grocery stores. So, always nice</span>
+  <span class="zh">西方杂货店。所以，永远美好</span>
+</div>
+<div class="seg" id="seg177" data-idx="177">
+  <button class="play-btn" onclick="jumpTo(177)">▶</button>
+  <span class="ts">6:00.20</span>
+  <span class="en">to pick some up from the Asian grocery</span>
+  <span class="zh">从亚洲杂货店买一些</span>
+</div>
+<div class="seg" id="seg178" data-idx="178">
+  <button class="play-btn" onclick="jumpTo(178)">▶</button>
+  <span class="ts">6:01.60</span>
+  <span class="en">store.</span>
+  <span class="zh">店铺。</span>
+</div>
+<div class="seg" id="seg179" data-idx="179">
+  <button class="play-btn" onclick="jumpTo(179)">▶</button>
+  <span class="ts">6:03.04</span>
+  <span class="en">In terms of dinner, I'll usually meal</span>
+  <span class="zh">晚餐方面，我通常会吃</span>
+</div>
+<div class="seg" id="seg180" data-idx="180">
+  <button class="play-btn" onclick="jumpTo(180)">▶</button>
+  <span class="ts">6:04.72</span>
+  <span class="en">prep some sort of protein as well as</span>
+  <span class="zh">准备某种蛋白质以及</span>
+</div>
+<div class="seg" id="seg181" data-idx="181">
+  <button class="play-btn" onclick="jumpTo(181)">▶</button>
+  <span class="ts">6:06.96</span>
+  <span class="en">vegetables. So, it that could be</span>
+  <span class="zh">蔬菜。所以，这可能是</span>
+</div>
+<div class="seg" id="seg182" data-idx="182">
+  <button class="play-btn" onclick="jumpTo(182)">▶</button>
+  <span class="ts">6:08.40</span>
+  <span class="en">chicken, it could be some fish. Um it</span>
+  <span class="zh">鸡肉，也可能是一些鱼。嗯它</span>
+</div>
+<div class="seg" id="seg183" data-idx="183">
+  <button class="play-btn" onclick="jumpTo(183)">▶</button>
+  <span class="ts">6:10.80</span>
+  <span class="en">really just depends on my mood.</span>
+  <span class="zh">真的只取决于我的心情。</span>
+</div>
+<div class="seg" id="seg184" data-idx="184">
+  <button class="play-btn" onclick="jumpTo(184)">▶</button>
+  <span class="ts">6:13.28</span>
+  <span class="en">This herbal tea.</span>
+  <span class="zh">这花草茶。</span>
+</div>
+<div class="seg" id="seg185" data-idx="185">
+  <button class="play-btn" onclick="jumpTo(185)">▶</button>
+  <span class="ts">6:15.20</span>
+  <span class="en">This stuff This stuff is gas. Uh</span>
+  <span class="zh">这个东西这个东西是气体。呃</span>
+</div>
+<div class="seg" id="seg186" data-idx="186">
+  <button class="play-btn" onclick="jumpTo(186)">▶</button>
+  <span class="ts">6:18.28</span>
+  <span class="en">Also also a ton of sugar in there, but</span>
+  <span class="zh">里面还有一吨糖，但是</span>
+</div>
+<div class="seg" id="seg187" data-idx="187">
+  <button class="play-btn" onclick="jumpTo(187)">▶</button>
+  <span class="ts">6:20.52</span>
+  <span class="en">really really good.</span>
+  <span class="zh">真的真的很好。</span>
+</div>
+<div class="seg" id="seg188" data-idx="188">
+  <button class="play-btn" onclick="jumpTo(188)">▶</button>
+  <span class="ts">6:22.20</span>
+  <span class="en">Uh so, a pack of six for $3.99.</span>
+  <span class="zh">嗯，一包 6 个，售价 3.99 美元。</span>
+</div>
+<div class="seg" id="seg189" data-idx="189">
+  <button class="play-btn" onclick="jumpTo(189)">▶</button>
+  <span class="ts">6:25.60</span>
+  <span class="en">I'm lucky enough to be in a situation</span>
+  <span class="zh">我很幸运能够处于这样的境地</span>
+</div>
+<div class="seg" id="seg190" data-idx="190">
+  <button class="play-btn" onclick="jumpTo(190)">▶</button>
+  <span class="ts">6:27.40</span>
+  <span class="en">where food prices have not really</span>
+  <span class="zh">那里的食品价格还没有真正上涨</span>
+</div>
+<div class="seg" id="seg191" data-idx="191">
+  <button class="play-btn" onclick="jumpTo(191)">▶</button>
+  <span class="ts">6:28.68</span>
+  <span class="en">affected how I socialize or make these</span>
+  <span class="zh">影响了我的社交或制作这些的方式</span>
+</div>
+<div class="seg" id="seg192" data-idx="192">
+  <button class="play-btn" onclick="jumpTo(192)">▶</button>
+  <span class="ts">6:31.32</span>
+  <span class="en">decisions around food choices.</span>
+  <span class="zh">围绕食物选择的决定。</span>
+</div>
+<div class="seg" id="seg193" data-idx="193">
+  <button class="play-btn" onclick="jumpTo(193)">▶</button>
+  <span class="ts">6:35.00</span>
+  <span class="en">All righty. Let's go ahead and make our</span>
+  <span class="zh">好吧。让我们继续做我们的</span>
+</div>
+<div class="seg" id="seg194" data-idx="194">
+  <button class="play-btn" onclick="jumpTo(194)">▶</button>
+  <span class="ts">6:36.84</span>
+  <span class="en">way to the other grocery store.</span>
+  <span class="zh">去另一家杂货店的路。</span>
+</div>
+<div class="seg" id="seg195" data-idx="195">
+  <button class="play-btn" onclick="jumpTo(195)">▶</button>
+  <span class="ts">6:39.48</span>
+  <span class="en">Round two. Let's go.</span>
+  <span class="zh">第二轮。我们走吧。</span>
+</div>
+<div class="seg" id="seg196" data-idx="196">
+  <button class="play-btn" onclick="jumpTo(196)">▶</button>
+  <span class="ts">6:41.44</span>
+  <span class="en">In terms of cooking versus eating out, I</span>
+  <span class="zh">就做饭和外出就餐而言，我</span>
+</div>
+<div class="seg" id="seg197" data-idx="197">
+  <button class="play-btn" onclick="jumpTo(197)">▶</button>
+  <span class="ts">6:42.92</span>
+  <span class="en">am almost always cooking at home. I very</span>
+  <span class="zh">我几乎总是在家做饭。我很</span>
+</div>
+<div class="seg" id="seg198" data-idx="198">
+  <button class="play-btn" onclick="jumpTo(198)">▶</button>
+  <span class="ts">6:45.44</span>
+  <span class="en">rarely dine out.</span>
+  <span class="zh">很少出去吃饭。</span>
+</div>
+<div class="seg" id="seg199" data-idx="199">
+  <button class="play-btn" onclick="jumpTo(199)">▶</button>
+  <span class="ts">6:47.48</span>
+  <span class="en">Man, people are feening for the Coke</span>
+  <span class="zh">伙计，人们都在为可口可乐而烦恼</span>
+</div>
+<div class="seg" id="seg200" data-idx="200">
+  <button class="play-btn" onclick="jumpTo(200)">▶</button>
+  <span class="ts">6:49.60</span>
+  <span class="en">Zeros. They ran out of the of the large</span>
+  <span class="zh">零。他们跑出了大</span>
+</div>
+<div class="seg" id="seg201" data-idx="201">
+  <button class="play-btn" onclick="jumpTo(201)">▶</button>
+  <span class="ts">6:52.32</span>
+  <span class="en">ones.</span>
+  <span class="zh">那些。</span>
+</div>
+<div class="seg" id="seg202" data-idx="202">
+  <button class="play-btn" onclick="jumpTo(202)">▶</button>
+  <span class="ts">6:54.20</span>
+  <span class="en">Here's what I got at [music] the western</span>
+  <span class="zh">这是我在西部片[音乐]中得到的</span>
+</div>
+<div class="seg" id="seg203" data-idx="203">
+  <button class="play-btn" onclick="jumpTo(203)">▶</button>
+  <span class="ts">6:55.92</span>
+  <span class="en">supermarket. A loaf of white bread,</span>
+  <span class="zh">超级市场。一条白面包，</span>
+</div>
+<div class="seg" id="seg204" data-idx="204">
+  <button class="play-btn" onclick="jumpTo(204)">▶</button>
+  <span class="ts">7:00.48</span>
+  <span class="en">a bag of white rice,</span>
+  <span class="zh">一袋白米，</span>
+</div>
+<div class="seg" id="seg205" data-idx="205">
+  <button class="play-btn" onclick="jumpTo(205)">▶</button>
+  <span class="ts">7:04.44</span>
+  <span class="en">a dozen eggs,</span>
+  <span class="zh">鸡蛋一打，</span>
+</div>
+<div class="seg" id="seg206" data-idx="206">
+  <button class="play-btn" onclick="jumpTo(206)">▶</button>
+  <span class="ts">7:07.36</span>
+  <span class="en">a bottle of Coke,</span>
+  <span class="zh">一瓶可乐，</span>
+</div>
+<div class="seg" id="seg207" data-idx="207">
+  <button class="play-btn" onclick="jumpTo(207)">▶</button>
+  <span class="ts">7:10.20</span>
+  <span class="en">and</span>
+  <span class="zh">和</span>
+</div>
+<div class="seg" id="seg208" data-idx="208">
+  <button class="play-btn" onclick="jumpTo(208)">▶</button>
+  <span class="ts">7:11.40</span>
+  <span class="en">a gallon of whole milk. In total, this</span>
+  <span class="zh">一加仑全脂牛奶。总共，这</span>
+</div>
+<div class="seg" id="seg209" data-idx="209">
+  <button class="play-btn" onclick="jumpTo(209)">▶</button>
+  <span class="ts">7:13.92</span>
+  <span class="en">came out to [snorts] be $22.34.</span>
+  <span class="zh">结果[哼哼]是22.34美元。</span>
+</div>
+<div class="seg" id="seg210" data-idx="210">
+  <button class="play-btn" onclick="jumpTo(210)">▶</button>
+  <span class="ts">7:16.36</span>
+  <span class="en">Now, this isn't necessarily what I would</span>
+  <span class="zh">现在，这不一定是我想要的</span>
+</div>
+<div class="seg" id="seg211" data-idx="211">
+  <button class="play-btn" onclick="jumpTo(211)">▶</button>
+  <span class="ts">7:18.32</span>
+  <span class="en">get on a regular basis, but it's just to</span>
+  <span class="zh">定期进行，但这只是为了</span>
+</div>
+<div class="seg" id="seg212" data-idx="212">
+  <button class="play-btn" onclick="jumpTo(212)">▶</button>
+  <span class="ts">7:20.68</span>
+  <span class="en">give an idea of how things how much</span>
+  <span class="zh">大致了解一下事情有多少</span>
+</div>
+<div class="seg" id="seg213" data-idx="213">
+  <button class="play-btn" onclick="jumpTo(213)">▶</button>
+  <span class="ts">7:22.40</span>
+  <span class="en">things cost in my area.</span>
+  <span class="zh">我所在地区的东西很贵。</span>
+</div>
+<div class="seg" id="seg214" data-idx="214">
+  <button class="play-btn" onclick="jumpTo(214)">▶</button>
+  <span class="ts">7:24.44</span>
+  <span class="en">What do you do for fun in your free</span>
+  <span class="zh">闲暇时你会做哪些有趣的事情</span>
+</div>
+<div class="seg" id="seg215" data-idx="215">
+  <button class="play-btn" onclick="jumpTo(215)">▶</button>
+  <span class="ts">7:25.48</span>
+  <span class="en">time?</span>
+  <span class="zh">时间？</span>
+</div>
+<div class="seg" id="seg216" data-idx="216">
+  <button class="play-btn" onclick="jumpTo(216)">▶</button>
+  <span class="ts">7:27.56</span>
+  <span class="en">Uh that's an that's an excellent</span>
+  <span class="zh">呃，那是一个，那是一个极好的</span>
+</div>
+<div class="seg" id="seg217" data-idx="217">
+  <button class="play-btn" onclick="jumpTo(217)">▶</button>
+  <span class="ts">7:29.40</span>
+  <span class="en">question.</span>
+  <span class="zh">问题。</span>
+</div>
+<div class="seg" id="seg218" data-idx="218">
+  <button class="play-btn" onclick="jumpTo(218)">▶</button>
+  <span class="ts">7:29.99</span>
+  <span class="en">&gt;&gt; [laughter]</span>
+  <span class="zh">&gt;&gt; [笑声]</span>
+</div>
+<div class="seg" id="seg219" data-idx="219">
+  <button class="play-btn" onclick="jumpTo(219)">▶</button>
+  <span class="ts">7:31.04</span>
+  <span class="en">&gt;&gt; In terms of what I do in my free time,</span>
+  <span class="zh">&gt;&gt; 就我空闲时间所做的事情而言，</span>
+</div>
+<div class="seg" id="seg220" data-idx="220">
+  <button class="play-btn" onclick="jumpTo(220)">▶</button>
+  <span class="ts">7:33.12</span>
+  <span class="en">there are really three major areas that</span>
+  <span class="zh">实际上有三个主要领域</span>
+</div>
+<div class="seg" id="seg221" data-idx="221">
+  <button class="play-btn" onclick="jumpTo(221)">▶</button>
+  <span class="ts">7:34.88</span>
+  <span class="en">I spend my money on. The first is</span>
+  <span class="zh">我花我的钱。第一个是</span>
+</div>
+<div class="seg" id="seg222" data-idx="222">
+  <button class="play-btn" onclick="jumpTo(222)">▶</button>
+  <span class="ts">7:37.00</span>
+  <span class="en">finances, so really a lot about the</span>
+  <span class="zh">财务，所以真的有很多关于</span>
+</div>
+<div class="seg" id="seg223" data-idx="223">
+  <button class="play-btn" onclick="jumpTo(223)">▶</button>
+  <span class="ts">7:38.96</span>
+  <span class="en">credit cards and churning and that sort</span>
+  <span class="zh">信用卡和搅动之类的</span>
+</div>
+<div class="seg" id="seg224" data-idx="224">
+  <button class="play-btn" onclick="jumpTo(224)">▶</button>
+  <span class="ts">7:40.92</span>
+  <span class="en">of thing as well as my personal</span>
+  <span class="zh">事物以及我个人的</span>
+</div>
+<div class="seg" id="seg225" data-idx="225">
+  <button class="play-btn" onclick="jumpTo(225)">▶</button>
+  <span class="ts">7:42.12</span>
+  <span class="en">finances. There's also a big aspect of</span>
+  <span class="zh">财政。还有一个很大的方面</span>
+</div>
+<div class="seg" id="seg226" data-idx="226">
+  <button class="play-btn" onclick="jumpTo(226)">▶</button>
+  <span class="ts">7:44.28</span>
+  <span class="en">travel, whether that's domestic or</span>
+  <span class="zh">旅行，无论是国内旅行还是</span>
+</div>
+<div class="seg" id="seg227" data-idx="227">
+  <button class="play-btn" onclick="jumpTo(227)">▶</button>
+  <span class="ts">7:45.72</span>
+  <span class="en">international. And I am also an active</span>
+  <span class="zh">国际的。而且我也是一个活跃的人</span>
+</div>
+<div class="seg" id="seg228" data-idx="228">
+  <button class="play-btn" onclick="jumpTo(228)">▶</button>
+  <span class="ts">7:47.96</span>
+  <span class="en">participant in the furry community. I</span>
+  <span class="zh">毛茸茸社区的参与者。我</span>
+</div>
+<div class="seg" id="seg229" data-idx="229">
+  <button class="play-btn" onclick="jumpTo(229)">▶</button>
+  <span class="ts">7:50.00</span>
+  <span class="en">currently spend about $1,000 a year just</span>
+  <span class="zh">目前每年花费约1,000美元</span>
+</div>
+<div class="seg" id="seg230" data-idx="230">
+  <button class="play-btn" onclick="jumpTo(230)">▶</button>
+  <span class="ts">7:52.88</span>
+  <span class="en">for the privilege of owning the credit</span>
+  <span class="zh">为了拥有信用的特权</span>
+</div>
+<div class="seg" id="seg231" data-idx="231">
+  <button class="play-btn" onclick="jumpTo(231)">▶</button>
+  <span class="ts">7:54.36</span>
+  <span class="en">cards that I currently hold on to. In</span>
+  <span class="zh">我目前持有的卡片。在</span>
+</div>
+<div class="seg" id="seg232" data-idx="232">
+  <button class="play-btn" onclick="jumpTo(232)">▶</button>
+  <span class="ts">7:56.12</span>
+  <span class="en">terms of my hobbies, I generally spend</span>
+  <span class="zh">就我的爱好而言，我一般会花</span>
+</div>
+<div class="seg" id="seg233" data-idx="233">
+  <button class="play-btn" onclick="jumpTo(233)">▶</button>
+  <span class="ts">7:57.96</span>
+  <span class="en">between 4 and $500 a month across all of</span>
+  <span class="zh">每月 4 至 500 美元</span>
+</div>
+<div class="seg" id="seg234" data-idx="234">
+  <button class="play-btn" onclick="jumpTo(234)">▶</button>
+  <span class="ts">8:00.80</span>
+  <span class="en">them. Though in certain cases, I will</span>
+  <span class="zh">他们。尽管在某些情况下我会</span>
+</div>
+<div class="seg" id="seg235" data-idx="235">
+  <button class="play-btn" onclick="jumpTo(235)">▶</button>
+  <span class="ts">8:02.92</span>
+  <span class="en">spend a little bit more money and I'm</span>
+  <span class="zh">多花一点钱，我</span>
+</div>
+<div class="seg" id="seg236" data-idx="236">
+  <button class="play-btn" onclick="jumpTo(236)">▶</button>
+  <span class="ts">8:04.52</span>
+  <span class="en">currently saving up for a fursuit. On</span>
+  <span class="zh">目前正在攒钱买一件兽装。在</span>
+</div>
+<div class="seg" id="seg237" data-idx="237">
+  <button class="play-btn" onclick="jumpTo(237)">▶</button>
+  <span class="ts">8:06.56</span>
+  <span class="en">average, depending on where your maker</span>
+  <span class="zh">平均，取决于你的制造商在哪里</span>
+</div>
+<div class="seg" id="seg238" data-idx="238">
+  <button class="play-btn" onclick="jumpTo(238)">▶</button>
+  <span class="ts">8:08.24</span>
+  <span class="en">is as well as how reputable they are, a</span>
+  <span class="zh">以及他们的信誉如何，</span>
+</div>
+<div class="seg" id="seg239" data-idx="239">
+  <button class="play-btn" onclick="jumpTo(239)">▶</button>
+  <span class="ts">8:10.56</span>
+  <span class="en">fursuit will generally cost between 4 to</span>
+  <span class="zh">兽装通常花费 4 至</span>
+</div>
+<div class="seg" id="seg240" data-idx="240">
+  <button class="play-btn" onclick="jumpTo(240)">▶</button>
+  <span class="ts">8:12.28</span>
+  <span class="en">$7,000.</span>
+  <span class="zh">7,000 美元。</span>
+</div>
+<div class="seg" id="seg241" data-idx="241">
+  <button class="play-btn" onclick="jumpTo(241)">▶</button>
+  <span class="ts">8:14.32</span>
+  <span class="en">The furry community means a lot of</span>
+  <span class="zh">毛茸茸的社区意味着很多</span>
+</div>
+<div class="seg" id="seg242" data-idx="242">
+  <button class="play-btn" onclick="jumpTo(242)">▶</button>
+  <span class="ts">8:15.80</span>
+  <span class="en">different things to various [music]</span>
+  <span class="zh">不同的事物有不同的[音乐]</span>
+</div>
+<div class="seg" id="seg243" data-idx="243">
+  <button class="play-btn" onclick="jumpTo(243)">▶</button>
+  <span class="ts">8:17.36</span>
+  <span class="en">people. To some people, it's a way of</span>
+  <span class="zh">人们。对某些人来说，这是一种方式</span>
+</div>
+<div class="seg" id="seg244" data-idx="244">
+  <button class="play-btn" onclick="jumpTo(244)">▶</button>
+  <span class="ts">8:19.24</span>
+  <span class="en">expressing themselves, sometimes in</span>
+  <span class="zh">表达自己，有时</span>
+</div>
+<div class="seg" id="seg245" data-idx="245">
+  <button class="play-btn" onclick="jumpTo(245)">▶</button>
+  <span class="ts">8:20.92</span>
+  <span class="en">adult ways, and other times it's just a</span>
+  <span class="zh">成人的方式，而其他时候这只是</span>
+</div>
+<div class="seg" id="seg246" data-idx="246">
+  <button class="play-btn" onclick="jumpTo(246)">▶</button>
+  <span class="ts">8:23.12</span>
+  <span class="en">way of designing a fictional character</span>
+  <span class="zh">设计虚构人物的方法</span>
+</div>
+<div class="seg" id="seg247" data-idx="247">
+  <button class="play-btn" onclick="jumpTo(247)">▶</button>
+  <span class="ts">8:25.24</span>
+  <span class="en">and sort of</span>
+  <span class="zh">和有点</span>
+</div>
+<div class="seg" id="seg248" data-idx="248">
+  <button class="play-btn" onclick="jumpTo(248)">▶</button>
+  <span class="ts">8:26.32</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg249" data-idx="249">
+  <button class="play-btn" onclick="jumpTo(249)">▶</button>
+  <span class="ts">8:26.76</span>
+  <span class="en">&gt;&gt; living in a bit of a mascot costume for</span>
+  <span class="zh">&gt;&gt; 穿着有点吉祥物服装的生活</span>
+</div>
+<div class="seg" id="seg250" data-idx="250">
+  <button class="play-btn" onclick="jumpTo(250)">▶</button>
+  <span class="ts">8:29.04</span>
+  <span class="en">a while.</span>
+  <span class="zh">一会儿。</span>
+</div>
+<div class="seg" id="seg251" data-idx="251">
+  <button class="play-btn" onclick="jumpTo(251)">▶</button>
+  <span class="ts">8:30.20</span>
+  <span class="en">To me, being part of this community</span>
+  <span class="zh">对我来说，成为这个社区的一部分</span>
+</div>
+<div class="seg" id="seg252" data-idx="252">
+  <button class="play-btn" onclick="jumpTo(252)">▶</button>
+  <span class="ts">8:31.88</span>
+  <span class="en">really means designing my own</span>
+  <span class="zh">真正意味着设计我自己的</span>
+</div>
+<div class="seg" id="seg253" data-idx="253">
+  <button class="play-btn" onclick="jumpTo(253)">▶</button>
+  <span class="ts">8:33.28</span>
+  <span class="en">characters, as well as embodying them in</span>
+  <span class="zh">人物，以及将他们体现在</span>
+</div>
+<div class="seg" id="seg254" data-idx="254">
+  <button class="play-btn" onclick="jumpTo(254)">▶</button>
+  <span class="ts">8:35.84</span>
+  <span class="en">the form of either commissioning art or</span>
+  <span class="zh">委托艺术的形式或</span>
+</div>
+<div class="seg" id="seg255" data-idx="255">
+  <button class="play-btn" onclick="jumpTo(255)">▶</button>
+  <span class="ts">8:38.04</span>
+  <span class="en">in some extreme cases, commissioning</span>
+  <span class="zh">在某些极端情况下，调试</span>
+</div>
+<div class="seg" id="seg256" data-idx="256">
+  <button class="play-btn" onclick="jumpTo(256)">▶</button>
+  <span class="ts">8:39.92</span>
+  <span class="en">fursuits.</span>
+  <span class="zh">兽装。</span>
+</div>
+<div class="seg" id="seg257" data-idx="257">
+  <button class="play-btn" onclick="jumpTo(257)">▶</button>
+  <span class="ts">8:41.08</span>
+  <span class="en">And all of this faux fur, or at least</span>
+  <span class="zh">所有这些人造毛皮，或者至少</span>
+</div>
+<div class="seg" id="seg258" data-idx="258">
+  <button class="play-btn" onclick="jumpTo(258)">▶</button>
+  <span class="ts">8:43.16</span>
+  <span class="en">part of it, will eventually end up on</span>
+  <span class="zh">它的一部分，最终将结束于</span>
+</div>
+<div class="seg" id="seg259" data-idx="259">
+  <button class="play-btn" onclick="jumpTo(259)">▶</button>
+  <span class="ts">8:44.60</span>
+  <span class="en">the head.</span>
+  <span class="zh">头。</span>
+</div>
+<div class="seg" id="seg260" data-idx="260">
+  <button class="play-btn" onclick="jumpTo(260)">▶</button>
+  <span class="ts">8:45.76</span>
+  <span class="en">Um [music] this is a bigger part of the</span>
+  <span class="zh">嗯[音乐]这是更大的一部分</span>
+</div>
+<div class="seg" id="seg261" data-idx="261">
+  <button class="play-btn" onclick="jumpTo(261)">▶</button>
+  <span class="ts">8:48.28</span>
+  <span class="en">project, especially since I'm not super</span>
+  <span class="zh">项目，特别是因为我不是超级</span>
+</div>
+<div class="seg" id="seg262" data-idx="262">
+  <button class="play-btn" onclick="jumpTo(262)">▶</button>
+  <span class="ts">8:50.16</span>
+  <span class="en">familiar with sewing, but it'll</span>
+  <span class="zh">熟悉缝纫，但它会</span>
+</div>
+<div class="seg" id="seg263" data-idx="263">
+  <button class="play-btn" onclick="jumpTo(263)">▶</button>
+  <span class="ts">8:52.00</span>
+  <span class="en">eventually end up on there. So, my</span>
+  <span class="zh">最终到达那里。所以，我的</span>
+</div>
+<div class="seg" id="seg264" data-idx="264">
+  <button class="play-btn" onclick="jumpTo(264)">▶</button>
+  <span class="ts">8:53.60</span>
+  <span class="en">character currently is a bit of a cyborg</span>
+  <span class="zh">目前的角色有点像机器人</span>
+</div>
+<div class="seg" id="seg265" data-idx="265">
+  <button class="play-btn" onclick="jumpTo(265)">▶</button>
+  <span class="ts">8:55.64</span>
+  <span class="en">hybrid between a canine as well as a</span>
+  <span class="zh">犬科动物和</span>
+</div>
+<div class="seg" id="seg266" data-idx="266">
+  <button class="play-btn" onclick="jumpTo(266)">▶</button>
+  <span class="ts">8:57.56</span>
+  <span class="en">robot, known in the community</span>
+  <span class="zh">机器人，在社区中众所周知</span>
+</div>
+<div class="seg" id="seg267" data-idx="267">
+  <button class="play-btn" onclick="jumpTo(267)">▶</button>
+  <span class="ts">8:59.28</span>
+  <span class="en">colloquially as a protogen.</span>
+  <span class="zh">通俗地称为质原。</span>
+</div>
+<div class="seg" id="seg268" data-idx="268">
+  <button class="play-btn" onclick="jumpTo(268)">▶</button>
+  <span class="ts">9:01.68</span>
+  <span class="en">I think</span>
+  <span class="zh">我认为</span>
+</div>
+<div class="seg" id="seg269" data-idx="269">
+  <button class="play-btn" onclick="jumpTo(269)">▶</button>
+  <span class="ts">9:03.12</span>
+  <span class="en">for for really anything mentioning</span>
+  <span class="zh">对于任何提及的事情</span>
+</div>
+<div class="seg" id="seg270" data-idx="270">
+  <button class="play-btn" onclick="jumpTo(270)">▶</button>
+  <span class="ts">9:04.97</span>
+  <span class="en">[music] furry in in the furry community</span>
+  <span class="zh">[音乐] 毛茸茸的社区里的毛茸茸</span>
+</div>
+<div class="seg" id="seg271" data-idx="271">
+  <button class="play-btn" onclick="jumpTo(271)">▶</button>
+  <span class="ts">9:07.28</span>
+  <span class="en">as well, because of it being a sort of</span>
+  <span class="zh">同样，因为它是一种</span>
+</div>
+<div class="seg" id="seg272" data-idx="272">
+  <button class="play-btn" onclick="jumpTo(272)">▶</button>
+  <span class="ts">9:09.72</span>
+  <span class="en">historically marginalized community in</span>
+  <span class="zh">历史上被边缘化的社区</span>
+</div>
+<div class="seg" id="seg273" data-idx="273">
+  <button class="play-btn" onclick="jumpTo(273)">▶</button>
+  <span class="ts">9:12.00</span>
+  <span class="en">the social space, there are a lot of</span>
+  <span class="zh">社交空间，有很多</span>
+</div>
+<div class="seg" id="seg274" data-idx="274">
+  <button class="play-btn" onclick="jumpTo(274)">▶</button>
+  <span class="ts">9:13.92</span>
+  <span class="en">concerns around um doxxing as well as in</span>
+  <span class="zh">围绕嗯人肉搜索以及</span>
+</div>
+<div class="seg" id="seg275" data-idx="275">
+  <button class="play-btn" onclick="jumpTo(275)">▶</button>
+  <span class="ts">9:16.96</span>
+  <span class="en">general people not necessarily being</span>
+  <span class="zh">一般人不一定是</span>
+</div>
+<div class="seg" id="seg276" data-idx="276">
+  <button class="play-btn" onclick="jumpTo(276)">▶</button>
+  <span class="ts">9:18.64</span>
+  <span class="en">super comfortable with being public with</span>
+  <span class="zh">与公众相处超级舒服</span>
+</div>
+<div class="seg" id="seg277" data-idx="277">
+  <button class="play-btn" onclick="jumpTo(277)">▶</button>
+  <span class="ts">9:20.80</span>
+  <span class="en">this. I just happen to be one of the</span>
+  <span class="zh">这。我只是碰巧是其中之一</span>
+</div>
+<div class="seg" id="seg278" data-idx="278">
+  <button class="play-btn" onclick="jumpTo(278)">▶</button>
+  <span class="ts">9:23.08</span>
+  <span class="en">stupid people that decided to go public</span>
+  <span class="zh">愚蠢的人决定公开</span>
+</div>
+<div class="seg" id="seg279" data-idx="279">
+  <button class="play-btn" onclick="jumpTo(279)">▶</button>
+  <span class="ts">9:24.68</span>
+  <span class="en">with this.</span>
+  <span class="zh">有了这个。</span>
+</div>
+<div class="seg" id="seg280" data-idx="280">
+  <button class="play-btn" onclick="jumpTo(280)">▶</button>
+  <span class="ts">9:25.88</span>
+  <span class="en">I don't really spend a lot of money on</span>
+  <span class="zh">我真的没有花很多钱</span>
+</div>
+<div class="seg" id="seg281" data-idx="281">
+  <button class="play-btn" onclick="jumpTo(281)">▶</button>
+  <span class="ts">9:27.40</span>
+  <span class="en">improving my finances. It's more so of a</span>
+  <span class="zh">改善我的财务状况。这更像是一个</span>
+</div>
+<div class="seg" id="seg282" data-idx="282">
+  <button class="play-btn" onclick="jumpTo(282)">▶</button>
+  <span class="ts">9:29.92</span>
+  <span class="en">lifestyle choice to take a look at</span>
+  <span class="zh">生活方式选择看看</span>
+</div>
+<div class="seg" id="seg283" data-idx="283">
+  <button class="play-btn" onclick="jumpTo(283)">▶</button>
+  <span class="ts">9:32.48</span>
+  <span class="en">credit cards and the perks that they</span>
+  <span class="zh">信用卡及其福利</span>
+</div>
+<div class="seg" id="seg284" data-idx="284">
+  <button class="play-btn" onclick="jumpTo(284)">▶</button>
+  <span class="ts">9:34.36</span>
+  <span class="en">offer and whether or not it's really</span>
+  <span class="zh">报价以及是否真的</span>
+</div>
+<div class="seg" id="seg285" data-idx="285">
+  <button class="play-btn" onclick="jumpTo(285)">▶</button>
+  <span class="ts">9:35.84</span>
+  <span class="en">worth it to me. In terms of maximizing</span>
+  <span class="zh">对我来说值得。在最大化方面</span>
+</div>
+<div class="seg" id="seg286" data-idx="286">
+  <button class="play-btn" onclick="jumpTo(286)">▶</button>
+  <span class="ts">9:37.80</span>
+  <span class="en">your value for the points, this is</span>
+  <span class="zh">您的积分价值是</span>
+</div>
+<div class="seg" id="seg287" data-idx="287">
+  <button class="play-btn" onclick="jumpTo(287)">▶</button>
+  <span class="ts">9:39.28</span>
+  <span class="en">really a process of trying to earn those</span>
+  <span class="zh">这确实是一个努力赢得这些的过程</span>
+</div>
+<div class="seg" id="seg288" data-idx="288">
+  <button class="play-btn" onclick="jumpTo(288)">▶</button>
+  <span class="ts">9:41.48</span>
+  <span class="en">points in the most efficient way and</span>
+  <span class="zh">以最有效的方式进行积分</span>
+</div>
+<div class="seg" id="seg289" data-idx="289">
+  <button class="play-btn" onclick="jumpTo(289)">▶</button>
+  <span class="ts">9:43.36</span>
+  <span class="en">spending [music] those points in the</span>
+  <span class="zh">花费[音乐]这些点</span>
+</div>
+<div class="seg" id="seg290" data-idx="290">
+  <button class="play-btn" onclick="jumpTo(290)">▶</button>
+  <span class="ts">9:44.36</span>
+  <span class="en">most efficient way. Generally, in terms</span>
+  <span class="zh">最有效的方式。一般来说，就</span>
+</div>
+<div class="seg" id="seg291" data-idx="291">
+  <button class="play-btn" onclick="jumpTo(291)">▶</button>
+  <span class="ts">9:46.44</span>
+  <span class="en">of earning, you're going to be getting</span>
+  <span class="zh">的收入，你将会得到</span>
+</div>
+<div class="seg" id="seg292" data-idx="292">
+  <button class="play-btn" onclick="jumpTo(292)">▶</button>
+  <span class="ts">9:47.80</span>
+  <span class="en">those from sign-up bonuses rather than</span>
+  <span class="zh">那些来自注册奖金而不是</span>
+</div>
+<div class="seg" id="seg293" data-idx="293">
+  <button class="play-btn" onclick="jumpTo(293)">▶</button>
+  <span class="ts">9:49.60</span>
+  <span class="en">everyday spend. And in terms of actually</span>
+  <span class="zh">日常花费。而就实际而言</span>
+</div>
+<div class="seg" id="seg294" data-idx="294">
+  <button class="play-btn" onclick="jumpTo(294)">▶</button>
+  <span class="ts">9:51.84</span>
+  <span class="en">cashing in those points, you're going to</span>
+  <span class="zh">兑现这些积分，您将</span>
+</div>
+<div class="seg" id="seg295" data-idx="295">
+  <button class="play-btn" onclick="jumpTo(295)">▶</button>
+  <span class="ts">9:53.56</span>
+  <span class="en">be trying to look for value where, say,</span>
+  <span class="zh">试图寻找价值，比如说，</span>
+</div>
+<div class="seg" id="seg296" data-idx="296">
+  <button class="play-btn" onclick="jumpTo(296)">▶</button>
+  <span class="ts">9:55.84</span>
+  <span class="en">maybe a business class ticket might be</span>
+  <span class="zh">也许商务舱机票可能是</span>
+</div>
+<div class="seg" id="seg297" data-idx="297">
+  <button class="play-btn" onclick="jumpTo(297)">▶</button>
+  <span class="ts">9:57.36</span>
+  <span class="en">$5,000 but only $2,500 worth of points.</span>
+  <span class="zh">5,000 美元，但积分仅价值 2,500 美元。</span>
+</div>
+<div class="seg" id="seg298" data-idx="298">
+  <button class="play-btn" onclick="jumpTo(298)">▶</button>
+  <span class="ts">10:00.64</span>
+  <span class="en">[music]</span>
+  <span class="zh">[音乐]</span>
+</div>
+<div class="seg" id="seg299" data-idx="299">
+  <button class="play-btn" onclick="jumpTo(299)">▶</button>
+  <span class="ts">10:01.60</span>
+  <span class="en">I was fortunate enough to grow up in a</span>
+  <span class="zh">我很幸运能够成长在一个</span>
+</div>
+<div class="seg" id="seg300" data-idx="300">
+  <button class="play-btn" onclick="jumpTo(300)">▶</button>
+  <span class="ts">10:03.04</span>
+  <span class="en">household where my mother was very</span>
+  <span class="zh">我母亲非常喜欢的家庭</span>
+</div>
+<div class="seg" id="seg301" data-idx="301">
+  <button class="play-btn" onclick="jumpTo(301)">▶</button>
+  <span class="ts">10:04.48</span>
+  <span class="en">financially illiterate. And she was</span>
+  <span class="zh">财务文盲。而她是</span>
+</div>
+<div class="seg" id="seg302" data-idx="302">
+  <button class="play-btn" onclick="jumpTo(302)">▶</button>
+  <span class="ts">10:06.08</span>
+  <span class="en">actually the one that got me interested</span>
+  <span class="zh">实际上是让我感兴趣的</span>
+</div>
+<div class="seg" id="seg303" data-idx="303">
+  <button class="play-btn" onclick="jumpTo(303)">▶</button>
+  <span class="ts">10:07.40</span>
+  <span class="en">in credit cards and churning in the</span>
+  <span class="zh">在信用卡和搅动</span>
+</div>
+<div class="seg" id="seg304" data-idx="304">
+  <button class="play-btn" onclick="jumpTo(304)">▶</button>
+  <span class="ts">10:08.96</span>
+  <span class="en">first place. The most recent trip that I</span>
+  <span class="zh">首位。我最近的一次旅行</span>
+</div>
+<div class="seg" id="seg305" data-idx="305">
+  <button class="play-btn" onclick="jumpTo(305)">▶</button>
+  <span class="ts">10:10.92</span>
+  <span class="en">did was to Southeast Asia, so Singapore</span>
+  <span class="zh">去了东南亚，所以新加坡</span>
+</div>
+<div class="seg" id="seg306" data-idx="306">
+  <button class="play-btn" onclick="jumpTo(306)">▶</button>
+  <span class="ts">10:13.12</span>
+  <span class="en">as well as Malaysia. I was fortunate</span>
+  <span class="zh">还有马来西亚。我很幸运</span>
+</div>
+<div class="seg" id="seg307" data-idx="307">
+  <button class="play-btn" onclick="jumpTo(307)">▶</button>
+  <span class="ts">10:15.16</span>
+  <span class="en">enough to bring my dad along as well as</span>
+  <span class="zh">足够带我爸爸一起去</span>
+</div>
+<div class="seg" id="seg308" data-idx="308">
+  <button class="play-btn" onclick="jumpTo(308)">▶</button>
+  <span class="ts">10:17.08</span>
+  <span class="en">my sister.</span>
+  <span class="zh">我的姐妹。</span>
+</div>
+<div class="seg" id="seg309" data-idx="309">
+  <button class="play-btn" onclick="jumpTo(309)">▶</button>
+  <span class="ts">10:19.56</span>
+  <span class="en">I have health insurance provided by my</span>
+  <span class="zh">我有我的健康保险</span>
+</div>
+<div class="seg" id="seg310" data-idx="310">
+  <button class="play-btn" onclick="jumpTo(310)">▶</button>
+  <span class="ts">10:20.88</span>
+  <span class="en">employer. I am currently paying for a</span>
+  <span class="zh">雇主。我目前正在支付</span>
+</div>
+<div class="seg" id="seg311" data-idx="311">
+  <button class="play-btn" onclick="jumpTo(311)">▶</button>
+  <span class="ts">10:22.72</span>
+  <span class="en">high deductible plan and I spend about</span>
+  <span class="zh">高免赔额计划，我花费大约</span>
+</div>
+<div class="seg" id="seg312" data-idx="312">
+  <button class="play-btn" onclick="jumpTo(312)">▶</button>
+  <span class="ts">10:24.60</span>
+  <span class="en">$17 per month. I currently do not have</span>
+  <span class="zh">每月 17 美元。我目前没有</span>
+</div>
+<div class="seg" id="seg313" data-idx="313">
+  <button class="play-btn" onclick="jumpTo(313)">▶</button>
+  <span class="ts">10:27.44</span>
+  <span class="en">any recurring health care costs. In</span>
+  <span class="zh">任何经常性的医疗保健费用。在</span>
+</div>
+<div class="seg" id="seg314" data-idx="314">
+  <button class="play-btn" onclick="jumpTo(314)">▶</button>
+  <span class="ts">10:29.40</span>
+  <span class="en">terms of staying fit, my apartment has a</span>
+  <span class="zh">就保持健康而言，我的公寓有一个</span>
+</div>
+<div class="seg" id="seg315" data-idx="315">
+  <button class="play-btn" onclick="jumpTo(315)">▶</button>
+  <span class="ts">10:31.52</span>
+  <span class="en">gym, but in case I'm lazy to do that, I</span>
+  <span class="zh">健身房，但以防万一我懒得这么做，我</span>
+</div>
+<div class="seg" id="seg316" data-idx="316">
+  <button class="play-btn" onclick="jumpTo(316)">▶</button>
+  <span class="ts">10:34.00</span>
+  <span class="en">also do body weight fitness. And for</span>
+  <span class="zh">也做体重健身。而对于</span>
+</div>
+<div class="seg" id="seg317" data-idx="317">
+  <button class="play-btn" onclick="jumpTo(317)">▶</button>
+  <span class="ts">10:36.16</span>
+  <span class="en">cardio and aerobics, I do dancing.</span>
+  <span class="zh">有氧运动和有氧运动，我跳舞。</span>
+</div>
+<div class="seg" id="seg318" data-idx="318">
+  <button class="play-btn" onclick="jumpTo(318)">▶</button>
+  <span class="ts">10:42.12</span>
+  <span class="en">One of the big parts about the furry</span>
+  <span class="zh">关于毛茸茸的重要部分之一</span>
+</div>
+<div class="seg" id="seg319" data-idx="319">
+  <button class="play-btn" onclick="jumpTo(319)">▶</button>
+  <span class="ts">10:44.00</span>
+  <span class="en">conventions are as well are the the</span>
+  <span class="zh">惯例也是</span>
+</div>
+<div class="seg" id="seg320" data-idx="320">
+  <button class="play-btn" onclick="jumpTo(320)">▶</button>
+  <span class="ts">10:46.24</span>
+  <span class="en">raves that happen in person. And there</span>
+  <span class="zh">亲自发生的狂欢。还有那里</span>
+</div>
+<div class="seg" id="seg321" data-idx="321">
+  <button class="play-btn" onclick="jumpTo(321)">▶</button>
+  <span class="ts">10:48.84</span>
+  <span class="en">are some people there are that know how</span>
+  <span class="zh">有人知道如何做吗</span>
+</div>
+<div class="seg" id="seg322" data-idx="322">
+  <button class="play-btn" onclick="jumpTo(322)">▶</button>
+  <span class="ts">10:50.80</span>
+  <span class="en">to dance.</span>
+  <span class="zh">跳舞。</span>
+</div>
+<div class="seg" id="seg323" data-idx="323">
+  <button class="play-btn" onclick="jumpTo(323)">▶</button>
+  <span class="ts">10:57.63</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg324" data-idx="324">
+  <button class="play-btn" onclick="jumpTo(324)">▶</button>
+  <span class="ts">10:58.60</span>
+  <span class="en">&gt;&gt; In any given month, I will save anywhere</span>
+  <span class="zh">&gt;&gt; 在任何特定的月份，我都会​​在任何地方存钱</span>
+</div>
+<div class="seg" id="seg325" data-idx="325">
+  <button class="play-btn" onclick="jumpTo(325)">▶</button>
+  <span class="ts">11:00.24</span>
+  <span class="en">between $5,000 to $20,000. In terms of</span>
+  <span class="zh">5,000 美元至 20,000 美元之间。按照</span>
+</div>
+<div class="seg" id="seg326" data-idx="326">
+  <button class="play-btn" onclick="jumpTo(326)">▶</button>
+  <span class="ts">11:03.32</span>
+  <span class="en">that large range, it really depends on</span>
+  <span class="zh">这么大的范围，这实际上取决于</span>
+</div>
+<div class="seg" id="seg327" data-idx="327">
+  <button class="play-btn" onclick="jumpTo(327)">▶</button>
+  <span class="ts">11:05.84</span>
+  <span class="en">whether or not my 401k is maxed out,</span>
+  <span class="zh">无论我的 401k 是否已满，</span>
+</div>
+<div class="seg" id="seg328" data-idx="328">
+  <button class="play-btn" onclick="jumpTo(328)">▶</button>
+  <span class="ts">11:07.96</span>
+  <span class="en">whether or not I have any stock vesting,</span>
+  <span class="zh">无论我是否有任何股票归属，</span>
+</div>
+<div class="seg" id="seg329" data-idx="329">
+  <button class="play-btn" onclick="jumpTo(329)">▶</button>
+  <span class="ts">11:10.07</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg330" data-idx="330">
+  <button class="play-btn" onclick="jumpTo(330)">▶</button>
+  <span class="ts">11:10.16</span>
+  <span class="en">&gt;&gt; and whether or not I have any bonuses.</span>
+  <span class="zh">&gt;&gt; 以及我是否有任何奖金。</span>
+</div>
+<div class="seg" id="seg331" data-idx="331">
+  <button class="play-btn" onclick="jumpTo(331)">▶</button>
+  <span class="ts">11:12.32</span>
+  <span class="en">In terms of maxing out my 401k with my</span>
+  <span class="zh">就用我的 401k 最大化而言</span>
+</div>
+<div class="seg" id="seg332" data-idx="332">
+  <button class="play-btn" onclick="jumpTo(332)">▶</button>
+  <span class="ts">11:14.04</span>
+  <span class="en">employer, I contribute $24,500</span>
+  <span class="zh">雇主，我贡献 $24,500</span>
+</div>
+<div class="seg" id="seg333" data-idx="333">
+  <button class="play-btn" onclick="jumpTo(333)">▶</button>
+  <span class="ts">11:17.28</span>
+  <span class="en">up to the maximum limit that I can</span>
+  <span class="zh">达到我能做到的最大限制</span>
+</div>
+<div class="seg" id="seg334" data-idx="334">
+  <button class="play-btn" onclick="jumpTo(334)">▶</button>
+  <span class="ts">11:18.96</span>
+  <span class="en">contribute alongside my employer</span>
+  <span class="zh">与我的雇主一起做出贡献</span>
+</div>
+<div class="seg" id="seg335" data-idx="335">
+  <button class="play-btn" onclick="jumpTo(335)">▶</button>
+  <span class="ts">11:21.04</span>
+  <span class="en">contributions.</span>
+  <span class="zh">贡献。</span>
+</div>
+<div class="seg" id="seg336" data-idx="336">
+  <button class="play-btn" onclick="jumpTo(336)">▶</button>
+  <span class="ts">11:21.86</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg337" data-idx="337">
+  <button class="play-btn" onclick="jumpTo(337)">▶</button>
+  <span class="ts">11:22.12</span>
+  <span class="en">&gt;&gt; In addition to that, I make after-tax</span>
+  <span class="zh">&gt;&gt; 除此之外，我还做税后</span>
+</div>
+<div class="seg" id="seg338" data-idx="338">
+  <button class="play-btn" onclick="jumpTo(338)">▶</button>
+  <span class="ts">11:23.84</span>
+  <span class="en">contributions all the way up to the IRS</span>
+  <span class="zh">一直到美国国税局 (IRS) 的捐款</span>
+</div>
+<div class="seg" id="seg339" data-idx="339">
+  <button class="play-btn" onclick="jumpTo(339)">▶</button>
+  <span class="ts">11:26.04</span>
+  <span class="en">limit of $72,000. [music] So, in total,</span>
+  <span class="zh">限额为 72,000 美元。 [音乐] 所以，总的来说，</span>
+</div>
+<div class="seg" id="seg340" data-idx="340">
+  <button class="play-btn" onclick="jumpTo(340)">▶</button>
+  <span class="ts">11:28.72</span>
+  <span class="en">about 1/6 of my compensation is going</span>
+  <span class="zh">我的报酬的大约 1/6 用于</span>
+</div>
+<div class="seg" id="seg341" data-idx="341">
+  <button class="play-btn" onclick="jumpTo(341)">▶</button>
+  <span class="ts">11:31.44</span>
+  <span class="en">towards my 401k. In terms of my other</span>
+  <span class="zh">迈向我的401k。就我的其他方面而言</span>
+</div>
+<div class="seg" id="seg342" data-idx="342">
+  <button class="play-btn" onclick="jumpTo(342)">▶</button>
+  <span class="ts">11:33.48</span>
+  <span class="en">investments, I also max out my Roth IRA</span>
+  <span class="zh">投资，我也最大化了我的 Roth IRA</span>
+</div>
+<div class="seg" id="seg343" data-idx="343">
+  <button class="play-btn" onclick="jumpTo(343)">▶</button>
+  <span class="ts">11:35.84</span>
+  <span class="en">and HSA every single year, and then any</span>
+  <span class="zh">和 HSA 每年，然后任何</span>
+</div>
+<div class="seg" id="seg344" data-idx="344">
+  <button class="play-btn" onclick="jumpTo(344)">▶</button>
+  <span class="ts">11:38.16</span>
+  <span class="en">additional money goes into my brokerage</span>
+  <span class="zh">额外的钱进入我的经纪业务</span>
+</div>
+<div class="seg" id="seg345" data-idx="345">
+  <button class="play-btn" onclick="jumpTo(345)">▶</button>
+  <span class="ts">11:39.88</span>
+  <span class="en">account. I'm currently about 80%</span>
+  <span class="zh">帐户。我目前大约80%</span>
+</div>
+<div class="seg" id="seg346" data-idx="346">
+  <button class="play-btn" onclick="jumpTo(346)">▶</button>
+  <span class="ts">11:42.40</span>
+  <span class="en">invested in the US stock market and 20%</span>
+  <span class="zh">投资美国股市20%</span>
+</div>
+<div class="seg" id="seg347" data-idx="347">
+  <button class="play-btn" onclick="jumpTo(347)">▶</button>
+  <span class="ts">11:45.40</span>
+  <span class="en">internationally.</span>
+  <span class="zh">国际上。</span>
+</div>
+<div class="seg" id="seg348" data-idx="348">
+  <button class="play-btn" onclick="jumpTo(348)">▶</button>
+  <span class="ts">11:47.12</span>
+  <span class="en">I think like with many other parts of my</span>
+  <span class="zh">我认为就像我的许多其他部分一样</span>
+</div>
+<div class="seg" id="seg349" data-idx="349">
+  <button class="play-btn" onclick="jumpTo(349)">▶</button>
+  <span class="ts">11:49.16</span>
+  <span class="en">generation, there is very much a big</span>
+  <span class="zh">一代人，有很大</span>
+</div>
+<div class="seg" id="seg350" data-idx="350">
+  <button class="play-btn" onclick="jumpTo(350)">▶</button>
+  <span class="ts">11:51.16</span>
+  <span class="en">split in terms of financial literacy</span>
+  <span class="zh">金融知识方面的分歧</span>
+</div>
+<div class="seg" id="seg351" data-idx="351">
+  <button class="play-btn" onclick="jumpTo(351)">▶</button>
+  <span class="ts">11:53.48</span>
+  <span class="en">among other things. There's a swath of</span>
+  <span class="zh">除其他事项外。有一大片</span>
+</div>
+<div class="seg" id="seg352" data-idx="352">
+  <button class="play-btn" onclick="jumpTo(352)">▶</button>
+  <span class="ts">11:56.16</span>
+  <span class="en">people who are fairly well educated in</span>
+  <span class="zh">受过良好教育的人</span>
+</div>
+<div class="seg" id="seg353" data-idx="353">
+  <button class="play-btn" onclick="jumpTo(353)">▶</button>
+  <span class="ts">11:58.56</span>
+  <span class="en">terms of personal finances, and there</span>
+  <span class="zh">个人财务方面，还有</span>
+</div>
+<div class="seg" id="seg354" data-idx="354">
+  <button class="play-btn" onclick="jumpTo(354)">▶</button>
+  <span class="ts">12:00.64</span>
+  <span class="en">are a lot of those who are just getting</span>
+  <span class="zh">很多人刚刚获得</span>
+</div>
+<div class="seg" id="seg355" data-idx="355">
+  <button class="play-btn" onclick="jumpTo(355)">▶</button>
+  <span class="ts">12:02.64</span>
+  <span class="en">by. I view personal finance in a very</span>
+  <span class="zh">经过。我非常看重个人理财</span>
+</div>
+<div class="seg" id="seg356" data-idx="356">
+  <button class="play-btn" onclick="jumpTo(356)">▶</button>
+  <span class="ts">12:04.96</span>
+  <span class="en">similar way as I do personal fitness. A</span>
+  <span class="zh">与我个人健身的方式类似。一个</span>
+</div>
+<div class="seg" id="seg357" data-idx="357">
+  <button class="play-btn" onclick="jumpTo(357)">▶</button>
+  <span class="ts">12:07.32</span>
+  <span class="en">lot of the core concepts are fairly</span>
+  <span class="zh">很多核心概念都相当</span>
+</div>
+<div class="seg" id="seg358" data-idx="358">
+  <button class="play-btn" onclick="jumpTo(358)">▶</button>
+  <span class="ts">12:09.12</span>
+  <span class="en">simple, but it doesn't mean that it's</span>
+  <span class="zh">很简单，但这并不意味着它是</span>
+</div>
+<div class="seg" id="seg359" data-idx="359">
+  <button class="play-btn" onclick="jumpTo(359)">▶</button>
+  <span class="ts">12:10.76</span>
+  <span class="en">easy to follow and there are a lot of</span>
+  <span class="zh">很容易遵循并且有很多</span>
+</div>
+<div class="seg" id="seg360" data-idx="360">
+  <button class="play-btn" onclick="jumpTo(360)">▶</button>
+  <span class="ts">12:12.48</span>
+  <span class="en">traps along the way. I'm aiming to</span>
+  <span class="zh">一路上的陷阱。我的目标是</span>
+</div>
+<div class="seg" id="seg361" data-idx="361">
+  <button class="play-btn" onclick="jumpTo(361)">▶</button>
+  <span class="ts">12:14.52</span>
+  <span class="en">retire by the age of 30, in which case</span>
+  <span class="zh">30岁之前退休，在这种情况下</span>
+</div>
+<div class="seg" id="seg362" data-idx="362">
+  <button class="play-btn" onclick="jumpTo(362)">▶</button>
+  <span class="ts">12:16.72</span>
+  <span class="en">I'll need about 1.6 million dollars to</span>
+  <span class="zh">我需要大约 160 万美元</span>
+</div>
+<div class="seg" id="seg363" data-idx="363">
+  <button class="play-btn" onclick="jumpTo(363)">▶</button>
+  <span class="ts">12:18.60</span>
+  <span class="en">do so. In terms of why I decided to</span>
+  <span class="zh">这样做。至于我决定的原因</span>
+</div>
+<div class="seg" id="seg364" data-idx="364">
+  <button class="play-btn" onclick="jumpTo(364)">▶</button>
+  <span class="ts">12:21.08</span>
+  <span class="en">start pursuing the path of financial</span>
+  <span class="zh">开始走金融之路</span>
+</div>
+<div class="seg" id="seg365" data-idx="365">
+  <button class="play-btn" onclick="jumpTo(365)">▶</button>
+  <span class="ts">12:22.64</span>
+  <span class="en">independence and retiring early, I</span>
+  <span class="zh">独立并提前退休，我</span>
+</div>
+<div class="seg" id="seg366" data-idx="366">
+  <button class="play-btn" onclick="jumpTo(366)">▶</button>
+  <span class="ts">12:24.24</span>
+  <span class="en">wanted to build a life for myself where</span>
+  <span class="zh">想为自己创造一种生活</span>
+</div>
+<div class="seg" id="seg367" data-idx="367">
+  <button class="play-btn" onclick="jumpTo(367)">▶</button>
+  <span class="ts">12:25.72</span>
+  <span class="en">I wouldn't have to work for money all</span>
+  <span class="zh">我不必为了钱而工作</span>
+</div>
+<div class="seg" id="seg368" data-idx="368">
+  <button class="play-btn" onclick="jumpTo(368)">▶</button>
+  <span class="ts">12:28.20</span>
+  <span class="en">the way up until 65.</span>
+  <span class="zh">一直到65。</span>
+</div>
+<div class="seg" id="seg369" data-idx="369">
+  <button class="play-btn" onclick="jumpTo(369)">▶</button>
+  <span class="ts">12:29.98</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg370" data-idx="370">
+  <button class="play-btn" onclick="jumpTo(370)">▶</button>
+  <span class="ts">12:30.16</span>
+  <span class="en">&gt;&gt; There's a lot of moving parts when it</span>
+  <span class="zh">&gt;&gt; 有很多活动部件</span>
+</div>
+<div class="seg" id="seg371" data-idx="371">
+  <button class="play-btn" onclick="jumpTo(371)">▶</button>
+  <span class="ts">12:31.44</span>
+  <span class="en">comes to retirement planning and even</span>
+  <span class="zh">涉及退休计划，甚至</span>
+</div>
+<div class="seg" id="seg372" data-idx="372">
+  <button class="play-btn" onclick="jumpTo(372)">▶</button>
+  <span class="ts">12:33.80</span>
+  <span class="en">establishing a goal number is a bit of a</span>
+  <span class="zh">设定一个目标数字有点困难</span>
+</div>
+<div class="seg" id="seg373" data-idx="373">
+  <button class="play-btn" onclick="jumpTo(373)">▶</button>
+  <span class="ts">12:35.88</span>
+  <span class="en">moving goal post in general. The rule of</span>
+  <span class="zh">一般情况下移动球门柱。的规则</span>
+</div>
+<div class="seg" id="seg374" data-idx="374">
+  <button class="play-btn" onclick="jumpTo(374)">▶</button>
+  <span class="ts">12:38.20</span>
+  <span class="en">thumb in the community is to multiply</span>
+  <span class="zh">社区中的大拇指就是倍增</span>
+</div>
+<div class="seg" id="seg375" data-idx="375">
+  <button class="play-btn" onclick="jumpTo(375)">▶</button>
+  <span class="ts">12:40.08</span>
+  <span class="en">your expenses by 25, or otherwise known</span>
+  <span class="zh">您的开支 25 岁或以其他方式已知</span>
+</div>
+<div class="seg" id="seg376" data-idx="376">
+  <button class="play-btn" onclick="jumpTo(376)">▶</button>
+  <span class="ts">12:42.84</span>
+  <span class="en">as the 4% rule, and if you're retiring</span>
+  <span class="zh">按照 4% 规则，如果你要退休</span>
+</div>
+<div class="seg" id="seg377" data-idx="377">
+  <button class="play-btn" onclick="jumpTo(377)">▶</button>
+  <span class="ts">12:45.56</span>
+  <span class="en">earlier than say around 40 or so, you</span>
+  <span class="zh">早于说大约 40 左右，你</span>
+</div>
+<div class="seg" id="seg378" data-idx="378">
+  <button class="play-btn" onclick="jumpTo(378)">▶</button>
+  <span class="ts">12:48.16</span>
+  <span class="en">might want to add some leeway to that.</span>
+  <span class="zh">可能想为此添加一些余地。</span>
+</div>
+<div class="seg" id="seg379" data-idx="379">
+  <button class="play-btn" onclick="jumpTo(379)">▶</button>
+  <span class="ts">12:50.28</span>
+  <span class="en">And so my budget is a little bit greater</span>
+  <span class="zh">所以我的预算有点多</span>
+</div>
+<div class="seg" id="seg380" data-idx="380">
+  <button class="play-btn" onclick="jumpTo(380)">▶</button>
+  <span class="ts">12:52.32</span>
+  <span class="en">than the actual 4% rule.</span>
+  <span class="zh">比实际的 4% 规则。</span>
+</div>
+<div class="seg" id="seg381" data-idx="381">
+  <button class="play-btn" onclick="jumpTo(381)">▶</button>
+  <span class="ts">12:54.76</span>
+  <span class="en">There's a lot of different projections</span>
+  <span class="zh">有很多不同的预测</span>
+</div>
+<div class="seg" id="seg382" data-idx="382">
+  <button class="play-btn" onclick="jumpTo(382)">▶</button>
+  <span class="ts">12:56.28</span>
+  <span class="en">in terms of how much I'm going to be</span>
+  <span class="zh">就我将要达到的程度而言</span>
+</div>
+<div class="seg" id="seg383" data-idx="383">
+  <button class="play-btn" onclick="jumpTo(383)">▶</button>
+  <span class="ts">12:57.88</span>
+  <span class="en">contributing in the future, as well as</span>
+  <span class="zh">以及对未来的贡献</span>
+</div>
+<div class="seg" id="seg384" data-idx="384">
+  <button class="play-btn" onclick="jumpTo(384)">▶</button>
+  <span class="ts">12:59.80</span>
+  <span class="en">how well the stock market is going to do</span>
+  <span class="zh">股市表现如何</span>
+</div>
+<div class="seg" id="seg385" data-idx="385">
+  <button class="play-btn" onclick="jumpTo(385)">▶</button>
+  <span class="ts">13:01.24</span>
+  <span class="en">over that course of time.</span>
+  <span class="zh">在那段时间里。</span>
+</div>
+<div class="seg" id="seg386" data-idx="386">
+  <button class="play-btn" onclick="jumpTo(386)">▶</button>
+  <span class="ts">13:03.16</span>
+  <span class="en">I have way too many sheets in this uh in</span>
+  <span class="zh">我这里面有太多的床单了</span>
+</div>
+<div class="seg" id="seg387" data-idx="387">
+  <button class="play-btn" onclick="jumpTo(387)">▶</button>
+  <span class="ts">13:06.64</span>
+  <span class="en">this. So, every month I'll create a copy</span>
+  <span class="zh">这。所以，每个月我都会创建一个副本</span>
+</div>
+<div class="seg" id="seg388" data-idx="388">
+  <button class="play-btn" onclick="jumpTo(388)">▶</button>
+  <span class="ts">13:08.96</span>
+  <span class="en">of this sort of base spreadsheet. I</span>
+  <span class="zh">此类基本电子表格。我</span>
+</div>
+<div class="seg" id="seg389" data-idx="389">
+  <button class="play-btn" onclick="jumpTo(389)">▶</button>
+  <span class="ts">13:11.76</span>
+  <span class="en">designed it myself. I don't really have</span>
+  <span class="zh">我自己设计的。我真的没有</span>
+</div>
+<div class="seg" id="seg390" data-idx="390">
+  <button class="play-btn" onclick="jumpTo(390)">▶</button>
+  <span class="ts">13:13.96</span>
+  <span class="en">a template that I follow, and I prefer</span>
+  <span class="zh">我遵循并且更喜欢的模板</span>
+</div>
+<div class="seg" id="seg391" data-idx="391">
+  <button class="play-btn" onclick="jumpTo(391)">▶</button>
+  <span class="ts">13:16.24</span>
+  <span class="en">it this way. It's more of a DIY approach</span>
+  <span class="zh">就这样。这更像是一种 DIY 方法</span>
+</div>
+<div class="seg" id="seg392" data-idx="392">
+  <button class="play-btn" onclick="jumpTo(392)">▶</button>
+  <span class="ts">13:18.08</span>
+  <span class="en">of if I decide that there are certain</span>
+  <span class="zh">如果我决定有某些</span>
+</div>
+<div class="seg" id="seg393" data-idx="393">
+  <button class="play-btn" onclick="jumpTo(393)">▶</button>
+  <span class="ts">13:19.68</span>
+  <span class="en">categories that I don't want, or</span>
+  <span class="zh">我不想要的类别，或者</span>
+</div>
+<div class="seg" id="seg394" data-idx="394">
+  <button class="play-btn" onclick="jumpTo(394)">▶</button>
+  <span class="ts">13:21.84</span>
+  <span class="en">categories that I do need, then I'll</span>
+  <span class="zh">我确实需要的类别，然后我会</span>
+</div>
+<div class="seg" id="seg395" data-idx="395">
+  <button class="play-btn" onclick="jumpTo(395)">▶</button>
+  <span class="ts">13:23.69</span>
+  <span class="en">[music] just add it onto the spreadsheet</span>
+  <span class="zh">[音乐]只需将其添加到电子表格中即可</span>
+</div>
+<div class="seg" id="seg396" data-idx="396">
+  <button class="play-btn" onclick="jumpTo(396)">▶</button>
+  <span class="ts">13:25.20</span>
+  <span class="en">and it'll be copied over for the</span>
+  <span class="zh">它将被复制到</span>
+</div>
+<div class="seg" id="seg397" data-idx="397">
+  <button class="play-btn" onclick="jumpTo(397)">▶</button>
+  <span class="ts">13:26.72</span>
+  <span class="en">remainder of however long I decide to do</span>
+  <span class="zh">无论我决定做什么，剩下的时间</span>
+</div>
+<div class="seg" id="seg398" data-idx="398">
+  <button class="play-btn" onclick="jumpTo(398)">▶</button>
+  <span class="ts">13:29.20</span>
+  <span class="en">this budgeting. [music]</span>
+  <span class="zh">这个预算。 [音乐]</span>
+</div>
+<div class="seg" id="seg399" data-idx="399">
+  <button class="play-btn" onclick="jumpTo(399)">▶</button>
+  <span class="ts">13:30.12</span>
+  <span class="en">I actually do have a larger tax sheet</span>
+  <span class="zh">我实际上有一张更大的税表</span>
+</div>
+<div class="seg" id="seg400" data-idx="400">
+  <button class="play-btn" onclick="jumpTo(400)">▶</button>
+  <span class="ts">13:32.52</span>
+  <span class="en">that does track down in terms of like</span>
+  <span class="zh">这确实可以追踪类似的情况</span>
+</div>
+<div class="seg" id="seg401" data-idx="401">
+  <button class="play-btn" onclick="jumpTo(401)">▶</button>
+  <span class="ts">13:34.83</span>
+  <span class="en">&gt;&gt; [music]</span>
+  <span class="zh">&gt;&gt; [音乐]</span>
+</div>
+<div class="seg" id="seg402" data-idx="402">
+  <button class="play-btn" onclick="jumpTo(402)">▶</button>
+  <span class="ts">13:35.04</span>
+  <span class="en">&gt;&gt; taxes that I'm paying</span>
+  <span class="zh">&gt;&gt; 我缴纳的税款</span>
+</div>
+<div class="seg" id="seg403" data-idx="403">
+  <button class="play-btn" onclick="jumpTo(403)">▶</button>
+  <span class="ts">13:37.32</span>
+  <span class="en">in terms of the income that I'm getting,</span>
+  <span class="zh">就我获得的收入而言</span>
+</div>
+<div class="seg" id="seg404" data-idx="404">
+  <button class="play-btn" onclick="jumpTo(404)">▶</button>
+  <span class="ts">13:39.96</span>
+  <span class="en">the expected amount of paychecks, and</span>
+  <span class="zh">预期的薪水金额，以及</span>
+</div>
+<div class="seg" id="seg405" data-idx="405">
+  <button class="play-btn" onclick="jumpTo(405)">▶</button>
+  <span class="ts">13:42.08</span>
+  <span class="en">then over here I just have some pretty</span>
+  <span class="zh">然后我这里有一些漂亮的</span>
+</div>
+<div class="seg" id="seg406" data-idx="406">
+  <button class="play-btn" onclick="jumpTo(406)">▶</button>
+  <span class="ts">13:43.96</span>
+  <span class="en">straightforward projections in terms of</span>
+  <span class="zh">直接预测</span>
+</div>
+<div class="seg" id="seg407" data-idx="407">
+  <button class="play-btn" onclick="jumpTo(407)">▶</button>
+  <span class="ts">13:46.68</span>
+  <span class="en">actually where I'm going to be at</span>
+  <span class="zh">实际上我要去的地方</span>
+</div>
+<div class="seg" id="seg408" data-idx="408">
+  <button class="play-btn" onclick="jumpTo(408)">▶</button>
+  <span class="ts">13:47.96</span>
+  <span class="en">financially for a given year and age</span>
+  <span class="zh">特定年份和年龄的经济状况</span>
+</div>
+<div class="seg" id="seg409" data-idx="409">
+  <button class="play-btn" onclick="jumpTo(409)">▶</button>
+  <span class="ts">13:50.56</span>
+  <span class="en">assuming certain figures [music] for</span>
+  <span class="zh">假设某些数字[音乐]为</span>
+</div>
+<div class="seg" id="seg410" data-idx="410">
+  <button class="play-btn" onclick="jumpTo(410)">▶</button>
+  <span class="ts">13:52.64</span>
+  <span class="en">growth as well as investment outcome.</span>
+  <span class="zh">增长以及投资成果。</span>
+</div>
+<div class="seg" id="seg411" data-idx="411">
+  <button class="play-btn" onclick="jumpTo(411)">▶</button>
+  <span class="ts">13:55.00</span>
+  <span class="en">And yeah, so by age 30 assuming that all</span>
+  <span class="zh">是的，所以到 30 岁时，假设所有</span>
+</div>
+<div class="seg" id="seg412" data-idx="412">
+  <button class="play-btn" onclick="jumpTo(412)">▶</button>
+  <span class="ts">13:57.44</span>
+  <span class="en">goes well, I'm expecting that I might</span>
+  <span class="zh">进展顺利，我期待着我可能</span>
+</div>
+<div class="seg" id="seg413" data-idx="413">
+  <button class="play-btn" onclick="jumpTo(413)">▶</button>
+  <span class="ts">13:59.96</span>
+  <span class="en">have somewhere north of around $2</span>
+  <span class="zh">有大约 2 美元以北的地方</span>
+</div>
+<div class="seg" id="seg414" data-idx="414">
+  <button class="play-btn" onclick="jumpTo(414)">▶</button>
+  <span class="ts">14:01.92</span>
+  <span class="en">million invested.</span>
+  <span class="zh">投资万元。</span>
+</div>
+<div class="seg" id="seg415" data-idx="415">
+  <button class="play-btn" onclick="jumpTo(415)">▶</button>
+  <span class="ts">14:04.00</span>
+  <span class="en">And this is also tracking the active</span>
+  <span class="zh">这也在跟踪活跃的</span>
+</div>
+<div class="seg" id="seg416" data-idx="416">
+  <button class="play-btn" onclick="jumpTo(416)">▶</button>
+  <span class="ts">14:06.28</span>
+  <span class="en">price of some of my investments, and so</span>
+  <span class="zh">我的一些投资的价格等等</span>
+</div>
+<div class="seg" id="seg417" data-idx="417">
+  <button class="play-btn" onclick="jumpTo(417)">▶</button>
+  <span class="ts">14:08.40</span>
+  <span class="en">this will fluctuate over time. And by</span>
+  <span class="zh">这会随着时间的推移而波动。并由</span>
+</div>
+<div class="seg" id="seg418" data-idx="418">
+  <button class="play-btn" onclick="jumpTo(418)">▶</button>
+  <span class="ts">14:10.40</span>
+  <span class="en">age 40, I'm expected to be retired at</span>
+  <span class="zh">40岁，我预计退休年龄</span>
+</div>
+<div class="seg" id="seg419" data-idx="419">
+  <button class="play-btn" onclick="jumpTo(419)">▶</button>
+  <span class="ts">14:12.44</span>
+  <span class="en">that point, so I do have empty columns</span>
+  <span class="zh">那一点，所以我确实有空列</span>
+</div>
+<div class="seg" id="seg420" data-idx="420">
+  <button class="play-btn" onclick="jumpTo(420)">▶</button>
+  <span class="ts">14:15.04</span>
+  <span class="en">in terms [music] of my actual</span>
+  <span class="zh">就我实际的[音乐]而言</span>
+</div>
+<div class="seg" id="seg421" data-idx="421">
+  <button class="play-btn" onclick="jumpTo(421)">▶</button>
+  <span class="ts">14:16.44</span>
+  <span class="en">investments.</span>
+  <span class="zh">投资。</span>
+</div>
+<div class="seg" id="seg422" data-idx="422">
+  <button class="play-btn" onclick="jumpTo(422)">▶</button>
+  <span class="ts">14:17.80</span>
+  <span class="en">But at that point, I might have</span>
+  <span class="zh">但到那时，我可能会</span>
+</div>
+<div class="seg" id="seg423" data-idx="423">
+  <button class="play-btn" onclick="jumpTo(423)">▶</button>
+  <span class="ts">14:19.40</span>
+  <span class="en">somewhere in the north of $7 million</span>
+  <span class="zh">700万美元以上</span>
+</div>
+<div class="seg" id="seg424" data-idx="424">
+  <button class="play-btn" onclick="jumpTo(424)">▶</button>
+  <span class="ts">14:21.96</span>
+  <span class="en">invested.</span>
+  <span class="zh">投资。</span>
+</div>
+<div class="seg" id="seg425" data-idx="425">
+  <button class="play-btn" onclick="jumpTo(425)">▶</button>
+  <span class="ts">14:23.24</span>
+  <span class="en">I think a very interesting part of the</span>
+  <span class="zh">我认为其中一个非常有趣的部分</span>
+</div>
+<div class="seg" id="seg426" data-idx="426">
+  <button class="play-btn" onclick="jumpTo(426)">▶</button>
+  <span class="ts">14:24.48</span>
+  <span class="en">FIRE community is that it has splintered</span>
+  <span class="zh">FIRE 社区已经分裂</span>
+</div>
+<div class="seg" id="seg427" data-idx="427">
+  <button class="play-btn" onclick="jumpTo(427)">▶</button>
+  <span class="ts">14:26.80</span>
+  <span class="en">off into various groups and evolved from</span>
+  <span class="zh">分成不同的群体并演化而来</span>
+</div>
+<div class="seg" id="seg428" data-idx="428">
+  <button class="play-btn" onclick="jumpTo(428)">▶</button>
+  <span class="ts">14:29.88</span>
+  <span class="en">its original form around the 2010s that</span>
+  <span class="zh">它的最初形式是在2010年代左右</span>
+</div>
+<div class="seg" id="seg429" data-idx="429">
+  <button class="play-btn" onclick="jumpTo(429)">▶</button>
+  <span class="ts">14:32.72</span>
+  <span class="en">was largely focused on frugality at all</span>
+  <span class="zh">主要关注节俭</span>
+</div>
+<div class="seg" id="seg430" data-idx="430">
+  <button class="play-btn" onclick="jumpTo(430)">▶</button>
+  <span class="ts">14:35.20</span>
+  <span class="en">costs. [music] Now there are folks such</span>
+  <span class="zh">成本。 [音乐] 现在有这样的人</span>
+</div>
+<div class="seg" id="seg431" data-idx="431">
+  <button class="play-btn" onclick="jumpTo(431)">▶</button>
+  <span class="ts">14:36.92</span>
+  <span class="en">as myself that sort of can have their</span>
+  <span class="zh">像我这样的人可以有他们的</span>
+</div>
+<div class="seg" id="seg432" data-idx="432">
+  <button class="play-btn" onclick="jumpTo(432)">▶</button>
+  <span class="ts">14:39.24</span>
+  <span class="en">cake and eat it, too, where we are able</span>
+  <span class="zh">蛋糕也可以吃，只要我们有能力</span>
+</div>
+<div class="seg" id="seg433" data-idx="433">
+  <button class="play-btn" onclick="jumpTo(433)">▶</button>
+  <span class="ts">14:41.40</span>
+  <span class="en">to live a very fulfilling lifestyle and</span>
+  <span class="zh">过上非常充实的生活方式并且</span>
+</div>
+<div class="seg" id="seg434" data-idx="434">
+  <button class="play-btn" onclick="jumpTo(434)">▶</button>
+  <span class="ts">14:44.12</span>
+  <span class="en">save a lot for retirement. In terms of</span>
+  <span class="zh">为退休储蓄很多。按照</span>
+</div>
+<div class="seg" id="seg435" data-idx="435">
+  <button class="play-btn" onclick="jumpTo(435)">▶</button>
+  <span class="ts">14:46.32</span>
+  <span class="en">my lifestyle after retirement, I don't</span>
+  <span class="zh">我退休后的生活方式，我不</span>
+</div>
+<div class="seg" id="seg436" data-idx="436">
+  <button class="play-btn" onclick="jumpTo(436)">▶</button>
+  <span class="ts">14:47.84</span>
+  <span class="en">expect that I'm going to stop working</span>
+  <span class="zh">预计我会停止工作</span>
+</div>
+<div class="seg" id="seg437" data-idx="437">
+  <button class="play-btn" onclick="jumpTo(437)">▶</button>
+  <span class="ts">14:49.44</span>
+  <span class="en">entirely. I might pick up some odd jobs</span>
+  <span class="zh">完全。我可能会做一些零工</span>
+</div>
+<div class="seg" id="seg438" data-idx="438">
+  <button class="play-btn" onclick="jumpTo(438)">▶</button>
+  <span class="ts">14:51.52</span>
+  <span class="en">or contracting work every now and then</span>
+  <span class="zh">或时不时地承包工作</span>
+</div>
+<div class="seg" id="seg439" data-idx="439">
+  <button class="play-btn" onclick="jumpTo(439)">▶</button>
+  <span class="ts">14:53.60</span>
+  <span class="en">just if I decide that it's interesting</span>
+  <span class="zh">只要我认为这很有趣</span>
+</div>
+<div class="seg" id="seg440" data-idx="440">
+  <button class="play-btn" onclick="jumpTo(440)">▶</button>
+  <span class="ts">14:56.28</span>
+  <span class="en">to me. Other than that, it's really</span>
+  <span class="zh">大部头书。除此之外，真的是</span>
+</div>
+<div class="seg" id="seg441" data-idx="441">
+  <button class="play-btn" onclick="jumpTo(441)">▶</button>
+  <span class="ts">14:58.72</span>
+  <span class="en">going to be populated with travel as</span>
+  <span class="zh">将会充满旅行</span>
+</div>
+<div class="seg" id="seg442" data-idx="442">
+  <button class="play-btn" onclick="jumpTo(442)">▶</button>
+  <span class="ts">15:00.48</span>
+  <span class="en">well as attending conventions and just</span>
+  <span class="zh">以及参加会议和只是</span>
+</div>
+<div class="seg" id="seg443" data-idx="443">
+  <button class="play-btn" onclick="jumpTo(443)">▶</button>
+  <span class="ts">15:02.08</span>
+  <span class="en">being myself.</span>
+  <span class="zh">做我自己。</span>
+</div>
+<div class="seg" id="seg444" data-idx="444">
+  <button class="play-btn" onclick="jumpTo(444)">▶</button>
+  <span class="ts">15:04.00</span>
+  <span class="en">I think one of the biggest privileges</span>
+  <span class="zh">我认为最大的特权之一</span>
+</div>
+<div class="seg" id="seg445" data-idx="445">
+  <button class="play-btn" onclick="jumpTo(445)">▶</button>
+  <span class="ts">15:05.22</span>
+  <span class="en">[music] for myself is that I am able to</span>
+  <span class="zh">[音乐]对于我自己来说，我能够</span>
+</div>
+<div class="seg" id="seg446" data-idx="446">
+  <button class="play-btn" onclick="jumpTo(446)">▶</button>
+  <span class="ts">15:07.20</span>
+  <span class="en">earn enough of an income where I could</span>
+  <span class="zh">尽我所能赚取足够的收入</span>
+</div>
+<div class="seg" id="seg447" data-idx="447">
+  <button class="play-btn" onclick="jumpTo(447)">▶</button>
+  <span class="ts">15:09.08</span>
+  <span class="en">reasonably support my family if they</span>
+  <span class="zh">合理地支持我的家人，如果他们</span>
+</div>
+<div class="seg" id="seg448" data-idx="448">
+  <button class="play-btn" onclick="jumpTo(448)">▶</button>
+  <span class="ts">15:10.92</span>
+  <span class="en">were ever in trouble, and in the case of</span>
+  <span class="zh">曾经遇到过麻烦，并且在这种情况下</span>
+</div>
+<div class="seg" id="seg449" data-idx="449">
+  <button class="play-btn" onclick="jumpTo(449)">▶</button>
+  <span class="ts">15:13.56</span>
+  <span class="en">a future family, that would be something</span>
+  <span class="zh">未来的家庭，那将是</span>
+</div>
+<div class="seg" id="seg450" data-idx="450">
+  <button class="play-btn" onclick="jumpTo(450)">▶</button>
+  <span class="ts">15:15.48</span>
+  <span class="en">that I would have to readjust over time.</span>
+  <span class="zh">随着时间的推移我必须重新调整。</span>
+</div>
+<div class="seg" id="seg451" data-idx="451">
+  <button class="play-btn" onclick="jumpTo(451)">▶</button>
+  <span class="ts">15:18.84</span>
+  <span class="en">Moving here has definitely been worth</span>
+  <span class="zh">搬到这里绝对是值得的</span>
+</div>
+<div class="seg" id="seg452" data-idx="452">
+  <button class="play-btn" onclick="jumpTo(452)">▶</button>
+  <span class="ts">15:20.28</span>
+  <span class="en">it. Even though the cost of living is</span>
+  <span class="zh">它。尽管生活成本</span>
+</div>
+<div class="seg" id="seg453" data-idx="453">
+  <button class="play-btn" onclick="jumpTo(453)">▶</button>
+  <span class="ts">15:22.00</span>
+  <span class="en">higher, the job compensation and the</span>
+  <span class="zh">更高的工作报酬和</span>
+</div>
+<div class="seg" id="seg454" data-idx="454">
+  <button class="play-btn" onclick="jumpTo(454)">▶</button>
+  <span class="ts">15:24.48</span>
+  <span class="en">opportunities available here are really</span>
+  <span class="zh">这里提供的机会确实很多</span>
+</div>
+<div class="seg" id="seg455" data-idx="455">
+  <button class="play-btn" onclick="jumpTo(455)">▶</button>
+  <span class="ts">15:26.48</span>
+  <span class="en">unmatched. In terms of staying here</span>
+  <span class="zh">无与伦比的。就住在这里而言</span>
+</div>
+<div class="seg" id="seg456" data-idx="456">
+  <button class="play-btn" onclick="jumpTo(456)">▶</button>
+  <span class="ts">15:28.36</span>
+  <span class="en">long-term, I'm</span>
+  <span class="zh">从长远来看，我</span>
+</div>
+<div class="seg" id="seg457" data-idx="457">
+  <button class="play-btn" onclick="jumpTo(457)">▶</button>
+  <span class="ts">15:31.92</span>
+  <span class="en">That's that that that's a that's an</span>
+  <span class="zh">那是那个 那是一个 那是一个</span>
+</div>
+<div class="seg" id="seg458" data-idx="458">
+  <button class="play-btn" onclick="jumpTo(458)">▶</button>
+  <span class="ts">15:33.20</span>
+  <span class="en">existential question.</span>
+  <span class="zh">存在主义问题。</span>
+</div>
+<div class="seg" id="seg459" data-idx="459">
+  <button class="play-btn" onclick="jumpTo(459)">▶</button>
+  <span class="ts">15:34.70</span>
+  <span class="en">&gt;&gt; [laughter]</span>
+  <span class="zh">&gt;&gt; [笑声]</span>
+</div>
+<div class="seg" id="seg460" data-idx="460">
+  <button class="play-btn" onclick="jumpTo(460)">▶</button>
+  <span class="ts">15:35.12</span>
+  <span class="en">&gt;&gt; Uh</span>
+  <span class="zh">&gt;&gt; 呃</span>
+</div>
+<div class="seg" id="seg461" data-idx="461">
+  <button class="play-btn" onclick="jumpTo(461)">▶</button>
+  <span class="ts">15:36.20</span>
+  <span class="en">I think in terms of long-term living, I</span>
+  <span class="zh">我认为从长期生活的角度来看，</span>
+</div>
+<div class="seg" id="seg462" data-idx="462">
+  <button class="play-btn" onclick="jumpTo(462)">▶</button>
+  <span class="ts">15:38.08</span>
+  <span class="en">plan to move back to the Los Angeles</span>
+  <span class="zh">计划搬回洛杉矶</span>
+</div>
+<div class="seg" id="seg463" data-idx="463">
+  <button class="play-btn" onclick="jumpTo(463)">▶</button>
+  <span class="ts">15:39.88</span>
+  <span class="en">area.</span>
+  <span class="zh">区域。</span>
+</div>
+<div class="seg" id="seg464" data-idx="464">
+  <button class="play-btn" onclick="jumpTo(464)">▶</button>
+  <span class="ts">15:41.44</span>
+  <span class="en">I could definitely see myself in the</span>
+  <span class="zh">我绝对可以在其中看到自己</span>
+</div>
+<div class="seg" id="seg465" data-idx="465">
+  <button class="play-btn" onclick="jumpTo(465)">▶</button>
+  <span class="ts">15:42.80</span>
+  <span class="en">position of starting a company in the</span>
+  <span class="zh">创办公司的职位</span>
+</div>
+<div class="seg" id="seg466" data-idx="466">
+  <button class="play-btn" onclick="jumpTo(466)">▶</button>
+  <span class="ts">15:44.40</span>
+  <span class="en">next couple of years or decades, but no</span>
+  <span class="zh">未来几年或几十年，但不会</span>
+</div>
+<div class="seg" id="seg467" data-idx="467">
+  <button class="play-btn" onclick="jumpTo(467)">▶</button>
+  <span class="ts">15:47.52</span>
+  <span class="en">plans for that currently.</span>
+  <span class="zh">目前的计划。</span>
+</div>
+<div class="seg" id="seg468" data-idx="468">
+  <button class="play-btn" onclick="jumpTo(468)">▶</button>
+  <span class="ts">15:49.36</span>
+  <span class="en">My biggest piece of advice is something</span>
+  <span class="zh">我最大的建议是</span>
+</div>
+<div class="seg" id="seg469" data-idx="469">
+  <button class="play-btn" onclick="jumpTo(469)">▶</button>
+  <span class="ts">15:50.76</span>
+  <span class="en">that's fairly widely shared among the</span>
+  <span class="zh">这是相当广泛的共享</span>
+</div>
+<div class="seg" id="seg470" data-idx="470">
+  <button class="play-btn" onclick="jumpTo(470)">▶</button>
+  <span class="ts">15:52.64</span>
+  <span class="en">folks in the FIRE community, and it's</span>
+  <span class="zh">FIRE 社区的人们，</span>
+</div>
+<div class="seg" id="seg471" data-idx="471">
+  <button class="play-btn" onclick="jumpTo(471)">▶</button>
+  <span class="ts">15:54.56</span>
+  <span class="en">build a life you want and then save for</span>
+  <span class="zh">建立你想要的生活，然后为之存钱</span>
+</div>
+<div class="seg" id="seg472" data-idx="472">
+  <button class="play-btn" onclick="jumpTo(472)">▶</button>
+  <span class="ts">15:56.28</span>
+  <span class="en">it.</span>
+  <span class="zh">它。</span>
+</div>
+<div class="seg" id="seg473" data-idx="473">
+  <button class="play-btn" onclick="jumpTo(473)">▶</button>
+  <span class="ts">15:57.20</span>
+  <span class="en">There may be a situation where you can't</span>
+  <span class="zh">可能有一种情况你不能</span>
+</div>
+<div class="seg" id="seg474" data-idx="474">
+  <button class="play-btn" onclick="jumpTo(474)">▶</button>
+  <span class="ts">15:59.56</span>
+  <span class="en">have everything all at once [music] now,</span>
+  <span class="zh">现在一切都齐备了[音乐]，</span>
+</div>
+<div class="seg" id="seg475" data-idx="475">
+  <button class="play-btn" onclick="jumpTo(475)">▶</button>
+  <span class="ts">16:01.96</span>
+  <span class="en">and you just kind of have to pick and</span>
+  <span class="zh">你只需要选择</span>
+</div>
+<div class="seg" id="seg476" data-idx="476">
+  <button class="play-btn" onclick="jumpTo(476)">▶</button>
+  <span class="ts">16:03.36</span>
+  <span class="en">choose whether or not you want to live</span>
+  <span class="zh">选择你是否想活下去</span>
+</div>
+<div class="seg" id="seg477" data-idx="477">
+  <button class="play-btn" onclick="jumpTo(477)">▶</button>
+  <span class="ts">16:05.08</span>
+  <span class="en">in a favorable location, or you decide</span>
+  <span class="zh">在一个有利的位置，或者你决定</span>
+</div>
+<div class="seg" id="seg478" data-idx="478">
+  <button class="play-btn" onclick="jumpTo(478)">▶</button>
+  <span class="ts">16:07.45</span>
+  <span class="en">[music] to spend more on say travel and</span>
+  <span class="zh">[音乐] 在旅行上花费更多</span>
+</div>
+<div class="seg" id="seg479" data-idx="479">
+  <button class="play-btn" onclick="jumpTo(479)">▶</button>
+  <span class="ts">16:09.68</span>
+  <span class="en">other experiences, or maybe on some of</span>
+  <span class="zh">其他经历，或者也许是某些</span>
+</div>
+<div class="seg" id="seg480" data-idx="480">
+  <button class="play-btn" onclick="jumpTo(480)">▶</button>
+  <span class="ts">16:12.04</span>
+  <span class="en">the other material goods that you're</span>
+  <span class="zh">你所拥有的其他物质商品</span>
+</div>
+<div class="seg" id="seg481" data-idx="481">
+  <button class="play-btn" onclick="jumpTo(481)">▶</button>
+  <span class="ts">16:13.72</span>
+  <span class="en">looking at.</span>
+  <span class="zh">看着。</span>
+</div>
+<div class="seg" id="seg482" data-idx="482">
+  <button class="play-btn" onclick="jumpTo(482)">▶</button>
+  <span class="ts">16:16.12</span>
+  <span class="en">Oh man.</span>
+  <span class="zh">噢，伙计。</span>
+</div>
+<div class="seg" id="seg483" data-idx="483">
+  <button class="play-btn" onclick="jumpTo(483)">▶</button>
+  <span class="ts">16:18.00</span>
+  <span class="en">I'm going to I'm going to get roasted by</span>
+  <span class="zh">我要被烤了</span>
+</div>
+<div class="seg" id="seg484" data-idx="484">
+  <button class="play-btn" onclick="jumpTo(484)">▶</button>
+  <span class="ts">16:19.68</span>
+  <span class="en">so many people. It's going to be the the</span>
+  <span class="zh">这么多人。这将是</span>
+</div>
+<div class="seg" id="seg485" data-idx="485">
+  <button class="play-btn" onclick="jumpTo(485)">▶</button>
+  <span class="ts">16:21.44</span>
+  <span class="en">people who who are going to comment on</span>
+  <span class="zh">即将发表评论的人</span>
+</div>
+<div class="seg" id="seg486" data-idx="486">
+  <button class="play-btn" onclick="jumpTo(486)">▶</button>
+  <span class="ts">16:23.04</span>
+  <span class="en">my forum, the people who are going to</span>
+  <span class="zh">我的论坛，那些要去的人</span>
+</div>
+<div class="seg" id="seg487" data-idx="487">
+  <button class="play-btn" onclick="jumpTo(487)">▶</button>
+  <span class="ts">16:24.32</span>
+  <span class="en">comment on the furry thing, the people</span>
+  <span class="zh">评论毛茸茸的东西，人们</span>
+</div>
+<div class="seg" id="seg488" data-idx="488">
+  <button class="play-btn" onclick="jumpTo(488)">▶</button>
+  <span class="ts">16:25.72</span>
+  <span class="en">that are going to comment on my</span>
+  <span class="zh">将对我的评论</span>
+</div>
+<div class="seg" id="seg489" data-idx="489">
+  <button class="play-btn" onclick="jumpTo(489)">▶</button>
+  <span class="ts">16:26.56</span>
+  <span class="en">apartment.</span>
+  <span class="zh">公寓。</span>
+</div>
+</div>
+<script>
+const SUBS = [{"start": 0.0, "duration": 4.88, "text": "I'm Raymond Zeng. I work as a software", "zh": "我是曾雷蒙德。我是做软件的"}, {"start": 2.0, "duration": 4.24, "text": "engineer making $306,500", "zh": "工程师年薪 306,500 美元"}, {"start": 4.88, "duration": 3.32, "text": "and I live in the San Francisco Bay", "zh": "我住在旧金山湾"}, {"start": 6.24, "duration": 4.0, "text": "Area. I'm going to be sharing all of my", "zh": "区域。我将分享我的所有"}, {"start": 8.2, "duration": 6.28, "text": "finances between my bills and my", "zh": "我的账单和我的财务之间"}, {"start": 10.24, "duration": 6.8, "text": "investments. This is Cost of Living.", "zh": "投资。这是生活成本。"}, {"start": 14.48, "duration": 6.0, "text": "I'm a software engineer working at Meta.", "zh": "我是一名在 Meta 工作的软件工程师。"}, {"start": 17.04, "duration": 4.96, "text": "In terms of my role, I earn $306,500", "zh": "就我的角色而言，我的收入为 306,500 美元"}, {"start": 20.48, "duration": 2.92, "text": "on average.", "zh": "平均而言。"}, {"start": 22.0, "duration": 3.0, "text": "After taxes and retirement", "zh": "税后和退休后"}, {"start": 23.4, "duration": 4.2, "text": "contributions, I am currently taking", "zh": "贡献，我目前正在接受"}, {"start": 25.0, "duration": 3.92, "text": "home about $4,000 a month.", "zh": "家里每月大约4000美元。"}, {"start": 27.6, "duration": 3.185, "text": "I currently do not have any other", "zh": "我目前没有任何其他"}, {"start": 28.92, "duration": 3.885, "text": "sources of income.", "zh": "收入来源。"}, {"start": 30.785, "duration": 2.02, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 33.28, "duration": 3.76, "text": ">> I work anywhere between 40 to 50 hours a", "zh": ">> 我每年在任何地方工作 40 到 50 小时"}, {"start": 35.36, "duration": 4.04, "text": "week on average. In terms of my", "zh": "平均一周。就我而言"}, {"start": 37.04, "duration": 4.52, "text": "day-to-day, it can be really anything.", "zh": "日常生活中，它可以是任何事情。"}, {"start": 39.4, "duration": 3.92, "text": "My role is fairly dynamic, so I could be", "zh": "我的角色相当动态，所以我可以"}, {"start": 41.56, "duration": 4.4, "text": "doing anything from software engineering", "zh": "做任何软件工程方面的事情"}, {"start": 43.32, "duration": 4.44, "text": "and actual coding to some of the more", "zh": "以及一些更多的实际编码"}, {"start": 45.96, "duration": 4.64, "text": "sort of project management or product", "zh": "项目管理或产品类型"}, {"start": 47.76, "duration": 6.04, "text": "management stuff, as well as some data", "zh": "管理的东西，以及一些数据"}, {"start": 50.6, "duration": 4.96, "text": "science [music] sort of analysis.", "zh": "科学[音乐]类型的分析。"}, {"start": 53.8, "duration": 3.56, "text": "Prior to joining my current company, I'd", "zh": "在加入现在的公司之前，我会"}, {"start": 55.56, "duration": 4.36, "text": "spent 2 years living in Dallas and I", "zh": "我在达拉斯生活了两年"}, {"start": 57.36, "duration": 5.08, "text": "moved here about 7 or 8 months ago back", "zh": "大约七八个月前搬到这里"}, {"start": 59.92, "duration": 5.92, "text": "in July of 2025. In terms of base rent,", "zh": "2025 年 7 月。就基本租金而言，"}, {"start": 62.44, "duration": 5.88, "text": "I am paying $2,600 a month. Amenity fees", "zh": "我每月支付 2,600 美元。便利设施费"}, {"start": 65.84, "duration": 5.88, "text": "are included in the base rent. Utilities", "zh": "均包含在基本租金中。公用事业"}, {"start": 68.32, "duration": 5.48, "text": "will cost anywhere between $150 to $170", "zh": "费用在 150 美元到 170 美元之间"}, {"start": 71.72, "duration": 4.88, "text": "a month. My electricity bill here is", "zh": "一个月。我这里的电费单是"}, {"start": 73.8, "duration": 5.44, "text": "about 50% higher than it was in Dallas", "zh": "比达拉斯高出约 50%"}, {"start": 76.6, "duration": 4.16, "text": "from about $20 to $30 per month to about", "zh": "每月约 20 至 30 美元"}, {"start": 79.24, "duration": 3.36, "text": "$50 a month.", "zh": "每月 50 美元。"}, {"start": 80.76, "duration": 3.88, "text": "I feel like I am getting good value. A", "zh": "我觉得我得到了很好的价值。一个"}, {"start": 82.6, "duration": 3.8, "text": "lot of the comparable areas that are", "zh": "许多可比较的领域"}, {"start": 84.64, "duration": 5.76, "text": "closer to my work could run anywhere", "zh": "离我工作地点较近的地方可以跑"}, {"start": 86.4, "duration": 6.0, "text": "between $3,500 to $3,700 per month and", "zh": "每月 3,500 至 3,700 美元之间，并且"}, {"start": 90.4, "duration": 3.8, "text": "I'm getting everything that I wanted out", "zh": "我得到了我想要的一切"}, {"start": 92.4, "duration": 3.72, "text": "of this apartment. I live a little bit", "zh": "这间公寓的。我住一点点"}, {"start": 94.2, "duration": 3.84, "text": "further away from either the major", "zh": "远离主要"}, {"start": 96.12, "duration": 3.8, "text": "cities of San Francisco or San Jose or", "zh": "旧金山或圣何塞等城市或"}, {"start": 98.04, "duration": 3.52, "text": "Oakland, but still within commutable", "zh": "奥克兰，但仍在通勤范围内"}, {"start": 99.92, "duration": 4.36, "text": "distance of all three.", "zh": "三者的距离。"}, {"start": 101.56, "duration": 5.12, "text": "Even though I had access to a relocation", "zh": "尽管我有机会搬迁"}, {"start": 104.28, "duration": 5.64, "text": "expert, I decided to do a lot of the", "zh": "专家，我决定做很多"}, {"start": 106.68, "duration": 5.04, "text": "research on my own taking a look at all", "zh": "我自己研究看看所有"}, {"start": 109.92, "duration": 4.88, "text": "the things that I wanted to focus on", "zh": "我想关注的事情"}, {"start": 111.72, "duration": 4.88, "text": "from a living perspective and after", "zh": "从生活的角度和之后"}, {"start": 114.8, "duration": 3.8, "text": "making the decisions, I decided to sign", "zh": "做出决定后，我决定签字"}, {"start": 116.6, "duration": 4.24, "text": "the lease sight unseen without actually", "zh": "未实际看到的租赁景象"}, {"start": 118.6, "duration": 4.32, "text": "having seen the place in person. Hey,", "zh": "亲眼见过这个地方。嘿，"}, {"start": 120.84, "duration": 3.611, "text": "welcome to my apartment.", "zh": "欢迎来到我的公寓。"}, {"start": 122.92, "duration": 2.6, "text": "So, this is the main kitchen area.", "zh": "所以，这是主要的厨房区域。"}, {"start": 124.451, "duration": 2.028, "text": "[music]", "zh": "[音乐]"}, {"start": 125.52, "duration": 2.56, "text": "It's", "zh": "它是"}, {"start": 126.479, "duration": 3.321, "text": "quite spacious compared to my last", "zh": "与我上次相比相当宽敞"}, {"start": 128.08, "duration": 4.24, "text": "apartment. The only complaint that I", "zh": "公寓。我唯一的抱怨"}, {"start": 129.8, "duration": 4.84, "text": "really have are these uh the countertops", "zh": "真的有这些呃台面"}, {"start": 132.32, "duration": 3.266, "text": "aren't exactly ideal for the amount that", "zh": "并不完全理想"}, {"start": 134.64, "duration": 1.16, "text": "I'm paying, but", "zh": "我付钱了，但是"}, {"start": 135.586, "duration": 1.974, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 135.8, "duration": 4.52, "text": ">> it's all right.", "zh": ">> 没关系。"}, {"start": 137.56, "duration": 3.96, "text": "In terms of fridge and freezer,", "zh": "就冰箱和冰柜而言，"}, {"start": 140.32, "duration": 3.96, "text": "I got some meal prep stuff from the", "zh": "我从那里得到了一些准备饭菜的东西"}, {"start": 141.52, "duration": 3.96, "text": "night before as well as a whole host of", "zh": "前一天晚上以及一大堆"}, {"start": 144.28, "duration": 2.441, "text": "uh drinks", "zh": "呃饮料"}, {"start": 145.48, "duration": 1.28, "text": "and mixers.", "zh": "和搅拌机。"}, {"start": 146.721, "duration": 1.159, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 146.76, "duration": 2.52, "text": ">> Um", "zh": ">> 嗯"}, {"start": 147.88, "duration": 3.12, "text": "in the freezer,", "zh": "在冰箱里，"}, {"start": 149.28, "duration": 3.92, "text": "very similar thing where I've got a", "zh": "非常相似的事情，我有一个"}, {"start": 151.0, "duration": 3.76, "text": "couple of frozen things as well as some", "zh": "一些冷冻的东西以及一些"}, {"start": 153.2, "duration": 4.2, "text": "dumplings that I actually wrapped myself", "zh": "自己包的饺子"}, {"start": 154.76, "duration": 4.64, "text": "when I was really bored one day.", "zh": "当有一天我真的很无聊的时候。"}, {"start": 157.4, "duration": 3.88, "text": "Over here, we have my main sort of", "zh": "在这里，我们有我的主要类型"}, {"start": 159.4, "duration": 3.76, "text": "living {slash} workshop area. This is", "zh": "生活{slash}车间区域。这是"}, {"start": 161.28, "duration": 5.0, "text": "where I get all my work done as well as", "zh": "我在那里完成所有工作"}, {"start": 163.16, "duration": 5.32, "text": "my personal projects. The decision to do", "zh": "我的个人项目。要做的决定"}, {"start": 166.28, "duration": 4.76, "text": "without a couch and a TV is really just", "zh": "没有沙发和电视真的只是"}, {"start": 168.48, "duration": 4.6, "text": "based on my own needs. I don't really", "zh": "根据我自己的需要。我真的不知道"}, {"start": 171.04, "duration": 3.84, "text": "watch a whole lot of TV. I just use my", "zh": "看很多电视。我只是用我的"}, {"start": 173.08, "duration": 4.2, "text": "computer. I don't host people in my", "zh": "电脑。我不接待别人"}, {"start": 174.88, "duration": 3.68, "text": "apartment, obviously. If I do decide to", "zh": "公寓，显然。如果我决定"}, {"start": 177.28, "duration": 3.92, "text": "hang out with friends, I'll usually go", "zh": "和朋友出去玩，我通常会去"}, {"start": 178.56, "duration": 4.12, "text": "to their place or maybe a third place.", "zh": "到他们的地方或者第三个地方。"}, {"start": 181.2, "duration": 3.28, "text": "And in the case of hanging out with my", "zh": "如果和我一起出去玩的话"}, {"start": 182.68, "duration": 3.76, "text": "friends in virtual reality, well,", "zh": "虚拟现实中的朋友，嗯，"}, {"start": 184.48, "duration": 4.16, "text": "everyone sort of split off in their own", "zh": "每个人都各自分裂"}, {"start": 186.44, "duration": 4.76, "text": "physical space. We've also got a couple", "zh": "物理空间。我们还有一对"}, {"start": 188.64, "duration": 4.4, "text": "of other things over here, just uh", "zh": "这里还有其他的事情，只是呃"}, {"start": 191.2, "duration": 4.039, "text": "the DJ controller because I really don't", "zh": "DJ 控制器，因为我真的没有"}, {"start": 193.04, "duration": 4.64, "text": "have a lot of other space to put it, as", "zh": "还有很多其他空间可以放置它，例如"}, {"start": 195.239, "duration": 4.481, "text": "well as my robot cleaner which gets the", "zh": "以及我的扫地机器人"}, {"start": 197.68, "duration": 4.559, "text": "job done. It's not perfect, but it", "zh": "工作完成了。它并不完美，但它"}, {"start": 199.72, "duration": 4.2, "text": "definitely helps out uh in terms of", "zh": "绝对有帮助呃"}, {"start": 202.239, "duration": 4.0, "text": "having to clean.", "zh": "必须清洁。"}, {"start": 203.92, "duration": 3.8, "text": "Over here, we've got just the bedroom.", "zh": "在这里，我们只有卧室。"}, {"start": 206.239, "duration": 3.28, "text": "Haha.", "zh": "哈哈。"}, {"start": 207.72, "duration": 3.72, "text": "I mean, there's really not much to my", "zh": "我的意思是，我的东西真的不多"}, {"start": 209.519, "duration": 4.641, "text": "bedroom. It gets the job done for me. I", "zh": "卧室。它帮我完成了工作。我"}, {"start": 211.44, "duration": 3.68, "text": "have my blanket, my pillow,", "zh": "有我的毯子，我的枕头，"}, {"start": 214.16, "duration": 2.48, "text": "um", "zh": "嗯"}, {"start": 215.12, "duration": 4.2, "text": "a filing cabinet doubling as a", "zh": "一个文件柜兼作一个"}, {"start": 216.64, "duration": 3.879, "text": "nightstand as well as my charger there.", "zh": "床头柜还有我的充电器。"}, {"start": 219.32, "duration": 3.32, "text": "It's all that I really need at this", "zh": "这就是我真正需要的一切"}, {"start": 220.519, "duration": 3.961, "text": "point.", "zh": "观点。"}, {"start": 222.64, "duration": 3.52, "text": "And this is my bathroom. The highlight", "zh": "这是我的浴室。亮点"}, {"start": 224.48, "duration": 4.8, "text": "of this is really the bidet that I", "zh": "这真的是我的坐浴盆"}, {"start": 226.16, "duration": 4.92, "text": "installed. It was about $400 or so, but", "zh": "安装。大约是 400 美元左右，但是"}, {"start": 229.28, "duration": 4.84, "text": "it was a really, really nice quality of", "zh": "这是一种非常非常好的品质"}, {"start": 231.08, "duration": 4.64, "text": "life improvement for myself.", "zh": "为自己改善生活。"}, {"start": 234.12, "duration": 3.4, "text": "And outside over here, we've got a", "zh": "在外面，我们有一个"}, {"start": 235.72, "duration": 3.72, "text": "little bit of a balcony.", "zh": "一个小阳台。"}, {"start": 237.52, "duration": 3.8, "text": "I don't spend a lot of time out here as", "zh": "我不会在这里花很多时间"}, {"start": 239.44, "duration": 4.44, "text": "you may be able to tell, but it is a", "zh": "你也许能看出来，但这是一个"}, {"start": 241.32, "duration": 4.04, "text": "nice way to get some fresh air in.", "zh": "呼吸新鲜空气的好方法。"}, {"start": 243.88, "duration": 3.72, "text": "I've been told by many of my friends", "zh": "很多朋友都告诉我"}, {"start": 245.36, "duration": 4.44, "text": "that my living situation is very", "zh": "我的生活状况很"}, {"start": 247.6, "duration": 4.04, "text": "spartan, but really it's an intentional", "zh": "斯巴达，但实际上这是故意的"}, {"start": 249.8, "duration": 3.64, "text": "choice to pick and choose parts of my", "zh": "选择挑选我的部分"}, {"start": 251.64, "duration": 4.12, "text": "life that I decide to spend more or less", "zh": "我决定或多或少度过的生活"}, {"start": 253.44, "duration": 4.4, "text": "money on. So, even though my living", "zh": "钱上。所以，尽管我的生活"}, {"start": 255.76, "duration": 3.199, "text": "situation right now is fairly sparse,", "zh": "现在的情况相当稀疏，"}, {"start": 257.84, "duration": 3.16, "text": "that doesn't mean that it's going to", "zh": "这并不意味着它会"}, {"start": 258.959, "duration": 5.401, "text": "stay that way say if I decide to have a", "zh": "保持这种方式说如果我决定有一个"}, {"start": 261.0, "duration": 3.36, "text": "partner or have kids.", "zh": "伴侣或有孩子。"}, {"start": 266.48, "duration": 4.16, "text": "Between ride sharing and public transit,", "zh": "在拼车和公共交通之间，"}, {"start": 268.44, "duration": 4.698, "text": "I will sometimes spend around $30 per", "zh": "我有时会花费大约 30 美元/次"}, {"start": 270.64, "duration": 2.68, "text": "month, but most of the time it's zero.", "zh": "月，但大多数时候为零。"}, {"start": 273.138, "duration": 2.702, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 273.32, "duration": 4.599, "text": ">> I live in the Bay Area without a car,", "zh": ">> 我住在湾区没有车，"}, {"start": 275.84, "duration": 3.64, "text": "and so I think one of the big things to", "zh": "所以我认为最重要的事情之一"}, {"start": 277.919, "duration": 3.761, "text": "me is [music] the accessibility to", "zh": "我是[音乐]的可访问性"}, {"start": 279.48, "duration": 4.32, "text": "public transit. I live about 5 minutes", "zh": "公共交通。我住5分钟左右"}, {"start": 281.68, "duration": 3.64, "text": "away from the nearest Bay Area rapid", "zh": "距离最近的湾区快速"}, {"start": 283.8, "duration": 3.04, "text": "transit station. [music]", "zh": "中转站。 [音乐]"}, {"start": 285.32, "duration": 3.28, "text": "I'm actually quite used to living", "zh": "我其实已经习惯了生活"}, {"start": 286.84, "duration": 3.96, "text": "car-free. I had lived previously in", "zh": "无车。我以前住过"}, {"start": 288.6, "duration": 2.878, "text": "Dallas for 2 years without a car and got", "zh": "达拉斯 2 年没有车，得到了"}, {"start": 290.8, "duration": 0.72, "text": "around", "zh": "大约"}, {"start": 291.478, "duration": 2.242, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 291.52, "duration": 4.16, "text": ">> in very similar ways. I picked out this", "zh": ">> 以非常相似的方式。我选了这个"}, {"start": 293.72, "duration": 4.12, "text": "apartment also specifically for its", "zh": "公寓还专门为其"}, {"start": 295.68, "duration": 3.52, "text": "proximity to all of the things that I", "zh": "靠近我所接触到的所有事物"}, {"start": 297.84, "duration": 3.6, "text": "would really want to go to [music] on a", "zh": "真的很想去听[音乐]"}, {"start": 299.2, "duration": 3.96, "text": "regular basis. So, that would be cafe,", "zh": "定期。那么，那就是咖啡馆，"}, {"start": 301.44, "duration": 2.56, "text": "boba shops, as well as the grocery", "zh": "波巴店以及杂货店"}, {"start": 303.16, "duration": 3.24, "text": "store. [music]", "zh": "店铺。 [音乐]"}, {"start": 304.0, "duration": 4.24, "text": "For those, I just walk and for anything", "zh": "对于那些，我只是步行，为任何事情"}, {"start": 306.4, "duration": 4.36, "text": "else, I would either take the public", "zh": "否则，我要么采取公众"}, {"start": 308.24, "duration": 3.72, "text": "transit or in certain cases [music] take", "zh": "过境或在某些情况下[音乐]采取"}, {"start": 310.76, "duration": 2.92, "text": "ride sharing.", "zh": "乘车共享。"}, {"start": 311.96, "duration": 3.68, "text": "Our company, like many other companies", "zh": "我们公司和许多其他公司一样"}, {"start": 313.68, "duration": 4.76, "text": "around the Bay Area, have shuttles that", "zh": "湾区周边有班车"}, {"start": 315.64, "duration": 5.84, "text": "go around the area and I utilize those", "zh": "绕过该地区，我利用这些"}, {"start": 318.44, "duration": 3.04, "text": "to get to and from work.", "zh": "上下班。"}, {"start": 323.56, "duration": 3.0, "text": "I spend about $300 per month on", "zh": "我每月花费大约 300 美元"}, {"start": 325.36, "duration": 3.16, "text": "groceries.", "zh": "杂货。"}, {"start": 326.56, "duration": 4.08, "text": "I usually budget $75 per month for", "zh": "我通常每月预算 75 美元"}, {"start": 328.52, "duration": 3.6, "text": "eating out, but I usually don't hit that", "zh": "出去吃饭，但我通常不这么做"}, {"start": 330.64, "duration": 3.52, "text": "maximum.", "zh": "最大限度。"}, {"start": 332.12, "duration": 4.16, "text": "I used to get online delivery for my", "zh": "我以前都是通过网上送货的"}, {"start": 334.16, "duration": 4.6, "text": "groceries, but not anymore given that", "zh": "杂货，但鉴于此不再"}, {"start": 336.28, "duration": 3.92, "text": "it's so close to my apartment. I should", "zh": "它离我的公寓很近。我应该"}, {"start": 338.76, "duration": 2.48, "text": "I should stock up on some more instant", "zh": "我应该多储备一些即食的"}, {"start": 340.2, "duration": 2.36, "text": "noodles.", "zh": "面条。"}, {"start": 341.24, "duration": 3.52, "text": "In terms of what I cook on a daily", "zh": "就我每天做的菜而言"}, {"start": 342.56, "duration": 3.72, "text": "basis, I don't really have a set plan", "zh": "基本上，我并没有一个固定的计划"}, {"start": 344.76, "duration": 3.32, "text": "because of the fact that my company", "zh": "因为我的公司"}, {"start": 346.28, "duration": 3.0, "text": "subsidizes both my breakfast and my", "zh": "补贴我的早餐和我的"}, {"start": 348.08, "duration": 4.0, "text": "lunch.", "zh": "午餐。"}, {"start": 349.28, "duration": 5.84, "text": "But yes, beef short rib, 1434", "zh": "但是，是的，牛小排，1434"}, {"start": 352.08, "duration": 6.32, "text": "or $10.99 per pound. This is a cut that", "zh": "或每磅 10.99 美元。这是一个剪裁"}, {"start": 355.12, "duration": 5.08, "text": "usually isn't super widely available in", "zh": "通常在以下领域并不广泛使用"}, {"start": 358.4, "duration": 3.2, "text": "western grocery stores. So, always nice", "zh": "西方杂货店。所以，永远美好"}, {"start": 360.2, "duration": 2.84, "text": "to pick some up from the Asian grocery", "zh": "从亚洲杂货店买一些"}, {"start": 361.6, "duration": 3.12, "text": "store.", "zh": "店铺。"}, {"start": 363.04, "duration": 3.92, "text": "In terms of dinner, I'll usually meal", "zh": "晚餐方面，我通常会吃"}, {"start": 364.72, "duration": 3.68, "text": "prep some sort of protein as well as", "zh": "准备某种蛋白质以及"}, {"start": 366.96, "duration": 3.84, "text": "vegetables. So, it that could be", "zh": "蔬菜。所以，这可能是"}, {"start": 368.4, "duration": 4.88, "text": "chicken, it could be some fish. Um it", "zh": "鸡肉，也可能是一些鱼。嗯它"}, {"start": 370.8, "duration": 4.4, "text": "really just depends on my mood.", "zh": "真的只取决于我的心情。"}, {"start": 373.28, "duration": 5.0, "text": "This herbal tea.", "zh": "这花草茶。"}, {"start": 375.2, "duration": 5.32, "text": "This stuff This stuff is gas. Uh", "zh": "这个东西这个东西是气体。呃"}, {"start": 378.28, "duration": 3.92, "text": "Also also a ton of sugar in there, but", "zh": "里面还有一吨糖，但是"}, {"start": 380.52, "duration": 5.08, "text": "really really good.", "zh": "真的真的很好。"}, {"start": 382.2, "duration": 5.2, "text": "Uh so, a pack of six for $3.99.", "zh": "嗯，一包 6 个，售价 3.99 美元。"}, {"start": 385.6, "duration": 3.08, "text": "I'm lucky enough to be in a situation", "zh": "我很幸运能够处于这样的境地"}, {"start": 387.4, "duration": 3.92, "text": "where food prices have not really", "zh": "那里的食品价格还没有真正上涨"}, {"start": 388.68, "duration": 6.32, "text": "affected how I socialize or make these", "zh": "影响了我的社交或制作这些的方式"}, {"start": 391.32, "duration": 5.52, "text": "decisions around food choices.", "zh": "围绕食物选择的决定。"}, {"start": 395.0, "duration": 4.48, "text": "All righty. Let's go ahead and make our", "zh": "好吧。让我们继续做我们的"}, {"start": 396.84, "duration": 4.6, "text": "way to the other grocery store.", "zh": "去另一家杂货店的路。"}, {"start": 399.48, "duration": 3.439, "text": "Round two. Let's go.", "zh": "第二轮。我们走吧。"}, {"start": 401.44, "duration": 4.0, "text": "In terms of cooking versus eating out, I", "zh": "就做饭和外出就餐而言，我"}, {"start": 402.919, "duration": 4.561, "text": "am almost always cooking at home. I very", "zh": "我几乎总是在家做饭。我很"}, {"start": 405.44, "duration": 4.16, "text": "rarely dine out.", "zh": "很少出去吃饭。"}, {"start": 407.48, "duration": 4.84, "text": "Man, people are feening for the Coke", "zh": "伙计，人们都在为可口可乐而烦恼"}, {"start": 409.6, "duration": 4.6, "text": "Zeros. They ran out of the of the large", "zh": "零。他们跑出了大"}, {"start": 412.32, "duration": 3.599, "text": "ones.", "zh": "那些。"}, {"start": 414.2, "duration": 5.84, "text": "Here's what I got at [music] the western", "zh": "这是我在西部片[音乐]中得到的"}, {"start": 415.919, "duration": 4.121, "text": "supermarket. A loaf of white bread,", "zh": "超级市场。一条白面包，"}, {"start": 420.48, "duration": 3.08, "text": "a bag of white rice,", "zh": "一袋白米，"}, {"start": 424.44, "duration": 2.84, "text": "a dozen eggs,", "zh": "鸡蛋一打，"}, {"start": 427.36, "duration": 4.04, "text": "a bottle of Coke,", "zh": "一瓶可乐，"}, {"start": 430.2, "duration": 3.719, "text": "and", "zh": "和"}, {"start": 431.4, "duration": 4.96, "text": "a gallon of whole milk. In total, this", "zh": "一加仑全脂牛奶。总共，这"}, {"start": 433.919, "duration": 4.401, "text": "came out to [snorts] be $22.34.", "zh": "结果[哼哼]是22.34美元。"}, {"start": 436.36, "duration": 4.32, "text": "Now, this isn't necessarily what I would", "zh": "现在，这不一定是我想要的"}, {"start": 438.32, "duration": 4.08, "text": "get on a regular basis, but it's just to", "zh": "定期进行，但这只是为了"}, {"start": 440.68, "duration": 3.76, "text": "give an idea of how things how much", "zh": "大致了解一下事情有多少"}, {"start": 442.4, "duration": 3.08, "text": "things cost in my area.", "zh": "我所在地区的东西很贵。"}, {"start": 444.44, "duration": 3.12, "text": "What do you do for fun in your free", "zh": "闲暇时你会做哪些有趣的事情"}, {"start": 445.48, "duration": 3.92, "text": "time?", "zh": "时间？"}, {"start": 447.56, "duration": 2.43, "text": "Uh that's an that's an excellent", "zh": "呃，那是一个，那是一个极好的"}, {"start": 449.4, "duration": 1.64, "text": "question.", "zh": "问题。"}, {"start": 449.99, "duration": 3.13, "text": ">> [laughter]", "zh": ">> [笑声]"}, {"start": 451.04, "duration": 3.84, "text": ">> In terms of what I do in my free time,", "zh": ">> 就我空闲时间所做的事情而言，"}, {"start": 453.12, "duration": 3.88, "text": "there are really three major areas that", "zh": "实际上有三个主要领域"}, {"start": 454.88, "duration": 4.08, "text": "I spend my money on. The first is", "zh": "我花我的钱。第一个是"}, {"start": 457.0, "duration": 3.919, "text": "finances, so really a lot about the", "zh": "财务，所以真的有很多关于"}, {"start": 458.96, "duration": 3.16, "text": "credit cards and churning and that sort", "zh": "信用卡和搅动之类的"}, {"start": 460.919, "duration": 3.361, "text": "of thing as well as my personal", "zh": "事物以及我个人的"}, {"start": 462.12, "duration": 3.6, "text": "finances. There's also a big aspect of", "zh": "财政。还有一个很大的方面"}, {"start": 464.28, "duration": 3.68, "text": "travel, whether that's domestic or", "zh": "旅行，无论是国内旅行还是"}, {"start": 465.72, "duration": 4.28, "text": "international. And I am also an active", "zh": "国际的。而且我也是一个活跃的人"}, {"start": 467.96, "duration": 4.92, "text": "participant in the furry community. I", "zh": "毛茸茸社区的参与者。我"}, {"start": 470.0, "duration": 4.36, "text": "currently spend about $1,000 a year just", "zh": "目前每年花费约1,000美元"}, {"start": 472.88, "duration": 3.24, "text": "for the privilege of owning the credit", "zh": "为了拥有信用的特权"}, {"start": 474.36, "duration": 3.6, "text": "cards that I currently hold on to. In", "zh": "我目前持有的卡片。在"}, {"start": 476.12, "duration": 4.68, "text": "terms of my hobbies, I generally spend", "zh": "就我的爱好而言，我一般会花"}, {"start": 477.96, "duration": 4.96, "text": "between 4 and $500 a month across all of", "zh": "每月 4 至 500 美元"}, {"start": 480.8, "duration": 3.72, "text": "them. Though in certain cases, I will", "zh": "他们。尽管在某些情况下我会"}, {"start": 482.92, "duration": 3.64, "text": "spend a little bit more money and I'm", "zh": "多花一点钱，我"}, {"start": 484.52, "duration": 3.72, "text": "currently saving up for a fursuit. On", "zh": "目前正在攒钱买一件兽装。在"}, {"start": 486.56, "duration": 4.0, "text": "average, depending on where your maker", "zh": "平均，取决于你的制造商在哪里"}, {"start": 488.24, "duration": 4.04, "text": "is as well as how reputable they are, a", "zh": "以及他们的信誉如何，"}, {"start": 490.56, "duration": 3.76, "text": "fursuit will generally cost between 4 to", "zh": "兽装通常花费 4 至"}, {"start": 492.28, "duration": 3.52, "text": "$7,000.", "zh": "7,000 美元。"}, {"start": 494.32, "duration": 3.04, "text": "The furry community means a lot of", "zh": "毛茸茸的社区意味着很多"}, {"start": 495.8, "duration": 3.44, "text": "different things to various [music]", "zh": "不同的事物有不同的[音乐]"}, {"start": 497.36, "duration": 3.559, "text": "people. To some people, it's a way of", "zh": "人们。对某些人来说，这是一种方式"}, {"start": 499.24, "duration": 3.88, "text": "expressing themselves, sometimes in", "zh": "表达自己，有时"}, {"start": 500.919, "duration": 4.321, "text": "adult ways, and other times it's just a", "zh": "成人的方式，而其他时候这只是"}, {"start": 503.12, "duration": 3.2, "text": "way of designing a fictional character", "zh": "设计虚构人物的方法"}, {"start": 505.24, "duration": 1.52, "text": "and sort of", "zh": "和有点"}, {"start": 506.32, "duration": 2.72, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 506.76, "duration": 3.44, "text": ">> living in a bit of a mascot costume for", "zh": ">> 穿着有点吉祥物服装的生活"}, {"start": 509.04, "duration": 2.84, "text": "a while.", "zh": "一会儿。"}, {"start": 510.2, "duration": 3.08, "text": "To me, being part of this community", "zh": "对我来说，成为这个社区的一部分"}, {"start": 511.88, "duration": 3.96, "text": "really means designing my own", "zh": "真正意味着设计我自己的"}, {"start": 513.28, "duration": 4.759, "text": "characters, as well as embodying them in", "zh": "人物，以及将他们体现在"}, {"start": 515.84, "duration": 4.079, "text": "the form of either commissioning art or", "zh": "委托艺术的形式或"}, {"start": 518.039, "duration": 3.041, "text": "in some extreme cases, commissioning", "zh": "在某些极端情况下，调试"}, {"start": 519.919, "duration": 3.24, "text": "fursuits.", "zh": "兽装。"}, {"start": 521.08, "duration": 3.52, "text": "And all of this faux fur, or at least", "zh": "所有这些人造毛皮，或者至少"}, {"start": 523.159, "duration": 2.601, "text": "part of it, will eventually end up on", "zh": "它的一部分，最终将结束于"}, {"start": 524.6, "duration": 3.68, "text": "the head.", "zh": "头。"}, {"start": 525.76, "duration": 4.4, "text": "Um [music] this is a bigger part of the", "zh": "嗯[音乐]这是更大的一部分"}, {"start": 528.28, "duration": 3.72, "text": "project, especially since I'm not super", "zh": "项目，特别是因为我不是超级"}, {"start": 530.16, "duration": 3.44, "text": "familiar with sewing, but it'll", "zh": "熟悉缝纫，但它会"}, {"start": 532.0, "duration": 3.64, "text": "eventually end up on there. So, my", "zh": "最终到达那里。所以，我的"}, {"start": 533.6, "duration": 3.96, "text": "character currently is a bit of a cyborg", "zh": "目前的角色有点像机器人"}, {"start": 535.64, "duration": 3.64, "text": "hybrid between a canine as well as a", "zh": "犬科动物和"}, {"start": 537.56, "duration": 4.12, "text": "robot, known in the community", "zh": "机器人，在社区中众所周知"}, {"start": 539.28, "duration": 3.84, "text": "colloquially as a protogen.", "zh": "通俗地称为质原。"}, {"start": 541.68, "duration": 3.286, "text": "I think", "zh": "我认为"}, {"start": 543.12, "duration": 4.16, "text": "for for really anything mentioning", "zh": "对于任何提及的事情"}, {"start": 544.966, "duration": 4.754, "text": "[music] furry in in the furry community", "zh": "[音乐] 毛茸茸的社区里的毛茸茸"}, {"start": 547.28, "duration": 4.72, "text": "as well, because of it being a sort of", "zh": "同样，因为它是一种"}, {"start": 549.72, "duration": 4.2, "text": "historically marginalized community in", "zh": "历史上被边缘化的社区"}, {"start": 552.0, "duration": 4.96, "text": "the social space, there are a lot of", "zh": "社交空间，有很多"}, {"start": 553.92, "duration": 4.72, "text": "concerns around um doxxing as well as in", "zh": "围绕嗯人肉搜索以及"}, {"start": 556.96, "duration": 3.84, "text": "general people not necessarily being", "zh": "一般人不一定是"}, {"start": 558.64, "duration": 4.44, "text": "super comfortable with being public with", "zh": "与公众相处超级舒服"}, {"start": 560.8, "duration": 3.88, "text": "this. I just happen to be one of the", "zh": "这。我只是碰巧是其中之一"}, {"start": 563.08, "duration": 2.8, "text": "stupid people that decided to go public", "zh": "愚蠢的人决定公开"}, {"start": 564.68, "duration": 2.72, "text": "with this.", "zh": "有了这个。"}, {"start": 565.88, "duration": 4.04, "text": "I don't really spend a lot of money on", "zh": "我真的没有花很多钱"}, {"start": 567.4, "duration": 5.08, "text": "improving my finances. It's more so of a", "zh": "改善我的财务状况。这更像是一个"}, {"start": 569.92, "duration": 4.44, "text": "lifestyle choice to take a look at", "zh": "生活方式选择看看"}, {"start": 572.48, "duration": 3.359, "text": "credit cards and the perks that they", "zh": "信用卡及其福利"}, {"start": 574.36, "duration": 3.44, "text": "offer and whether or not it's really", "zh": "报价以及是否真的"}, {"start": 575.839, "duration": 3.441, "text": "worth it to me. In terms of maximizing", "zh": "对我来说值得。在最大化方面"}, {"start": 577.8, "duration": 3.68, "text": "your value for the points, this is", "zh": "您的积分价值是"}, {"start": 579.28, "duration": 4.08, "text": "really a process of trying to earn those", "zh": "这确实是一个努力赢得这些的过程"}, {"start": 581.48, "duration": 2.88, "text": "points in the most efficient way and", "zh": "以最有效的方式进行积分"}, {"start": 583.36, "duration": 3.08, "text": "spending [music] those points in the", "zh": "花费[音乐]这些点"}, {"start": 584.36, "duration": 3.44, "text": "most efficient way. Generally, in terms", "zh": "最有效的方式。一般来说，就"}, {"start": 586.44, "duration": 3.16, "text": "of earning, you're going to be getting", "zh": "的收入，你将会得到"}, {"start": 587.8, "duration": 4.04, "text": "those from sign-up bonuses rather than", "zh": "那些来自注册奖金而不是"}, {"start": 589.6, "duration": 3.96, "text": "everyday spend. And in terms of actually", "zh": "日常花费。而就实际而言"}, {"start": 591.84, "duration": 4.0, "text": "cashing in those points, you're going to", "zh": "兑现这些积分，您将"}, {"start": 593.56, "duration": 3.8, "text": "be trying to look for value where, say,", "zh": "试图寻找价值，比如说，"}, {"start": 595.84, "duration": 4.801, "text": "maybe a business class ticket might be", "zh": "也许商务舱机票可能是"}, {"start": 597.36, "duration": 4.24, "text": "$5,000 but only $2,500 worth of points.", "zh": "5,000 美元，但积分仅价值 2,500 美元。"}, {"start": 600.641, "duration": 2.399, "text": "[music]", "zh": "[音乐]"}, {"start": 601.6, "duration": 2.88, "text": "I was fortunate enough to grow up in a", "zh": "我很幸运能够成长在一个"}, {"start": 603.04, "duration": 3.04, "text": "household where my mother was very", "zh": "我母亲非常喜欢的家庭"}, {"start": 604.48, "duration": 2.92, "text": "financially illiterate. And she was", "zh": "财务文盲。而她是"}, {"start": 606.08, "duration": 2.88, "text": "actually the one that got me interested", "zh": "实际上是让我感兴趣的"}, {"start": 607.4, "duration": 3.52, "text": "in credit cards and churning in the", "zh": "在信用卡和搅动"}, {"start": 608.96, "duration": 4.16, "text": "first place. The most recent trip that I", "zh": "首位。我最近的一次旅行"}, {"start": 610.92, "duration": 4.24, "text": "did was to Southeast Asia, so Singapore", "zh": "去了东南亚，所以新加坡"}, {"start": 613.12, "duration": 3.96, "text": "as well as Malaysia. I was fortunate", "zh": "还有马来西亚。我很幸运"}, {"start": 615.16, "duration": 4.4, "text": "enough to bring my dad along as well as", "zh": "足够带我爸爸一起去"}, {"start": 617.08, "duration": 3.8, "text": "my sister.", "zh": "我的姐妹。"}, {"start": 619.56, "duration": 3.16, "text": "I have health insurance provided by my", "zh": "我有我的健康保险"}, {"start": 620.88, "duration": 3.72, "text": "employer. I am currently paying for a", "zh": "雇主。我目前正在支付"}, {"start": 622.72, "duration": 4.72, "text": "high deductible plan and I spend about", "zh": "高免赔额计划，我花费大约"}, {"start": 624.6, "duration": 4.8, "text": "$17 per month. I currently do not have", "zh": "每月 17 美元。我目前没有"}, {"start": 627.44, "duration": 4.08, "text": "any recurring health care costs. In", "zh": "任何经常性的医疗保健费用。在"}, {"start": 629.4, "duration": 4.6, "text": "terms of staying fit, my apartment has a", "zh": "就保持健康而言，我的公寓有一个"}, {"start": 631.52, "duration": 4.64, "text": "gym, but in case I'm lazy to do that, I", "zh": "健身房，但以防万一我懒得这么做，我"}, {"start": 634.0, "duration": 6.44, "text": "also do body weight fitness. And for", "zh": "也做体重健身。而对于"}, {"start": 636.16, "duration": 4.28, "text": "cardio and aerobics, I do dancing.", "zh": "有氧运动和有氧运动，我跳舞。"}, {"start": 642.12, "duration": 4.12, "text": "One of the big parts about the furry", "zh": "关于毛茸茸的重要部分之一"}, {"start": 644.0, "duration": 4.839, "text": "conventions are as well are the the", "zh": "惯例也是"}, {"start": 646.24, "duration": 4.56, "text": "raves that happen in person. And there", "zh": "亲自发生的狂欢。还有那里"}, {"start": 648.839, "duration": 4.641, "text": "are some people there are that know how", "zh": "有人知道如何做吗"}, {"start": 650.8, "duration": 2.68, "text": "to dance.", "zh": "跳舞。"}, {"start": 657.627, "duration": 2.613, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 658.6, "duration": 4.72, "text": ">> In any given month, I will save anywhere", "zh": ">> 在任何特定的月份，我都会​​在任何地方存钱"}, {"start": 660.24, "duration": 5.599, "text": "between $5,000 to $20,000. In terms of", "zh": "5,000 美元至 20,000 美元之间。按照"}, {"start": 663.32, "duration": 4.64, "text": "that large range, it really depends on", "zh": "这么大的范围，这实际上取决于"}, {"start": 665.839, "duration": 4.233, "text": "whether or not my 401k is maxed out,", "zh": "无论我的 401k 是否已满，"}, {"start": 667.96, "duration": 2.2, "text": "whether or not I have any stock vesting,", "zh": "无论我是否有任何股票归属，"}, {"start": 670.072, "duration": 2.248, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 670.16, "duration": 3.88, "text": ">> and whether or not I have any bonuses.", "zh": ">> 以及我是否有任何奖金。"}, {"start": 672.32, "duration": 4.96, "text": "In terms of maxing out my 401k with my", "zh": "就用我的 401k 最大化而言"}, {"start": 674.04, "duration": 4.92, "text": "employer, I contribute $24,500", "zh": "雇主，我贡献 $24,500"}, {"start": 677.28, "duration": 3.76, "text": "up to the maximum limit that I can", "zh": "达到我能做到的最大限制"}, {"start": 678.96, "duration": 2.902, "text": "contribute alongside my employer", "zh": "与我的雇主一起做出贡献"}, {"start": 681.04, "duration": 1.08, "text": "contributions.", "zh": "贡献。"}, {"start": 681.862, "duration": 1.977, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 682.12, "duration": 3.92, "text": ">> In addition to that, I make after-tax", "zh": ">> 除此之外，我还做税后"}, {"start": 683.839, "duration": 4.881, "text": "contributions all the way up to the IRS", "zh": "一直到美国国税局 (IRS) 的捐款"}, {"start": 686.04, "duration": 5.4, "text": "limit of $72,000. [music] So, in total,", "zh": "限额为 72,000 美元。 [音乐] 所以，总的来说，"}, {"start": 688.72, "duration": 4.76, "text": "about 1/6 of my compensation is going", "zh": "我的报酬的大约 1/6 用于"}, {"start": 691.44, "duration": 4.4, "text": "towards my 401k. In terms of my other", "zh": "迈向我的401k。就我的其他方面而言"}, {"start": 693.48, "duration": 4.68, "text": "investments, I also max out my Roth IRA", "zh": "投资，我也最大化了我的 Roth IRA"}, {"start": 695.84, "duration": 4.04, "text": "and HSA every single year, and then any", "zh": "和 HSA 每年，然后任何"}, {"start": 698.16, "duration": 4.24, "text": "additional money goes into my brokerage", "zh": "额外的钱进入我的经纪业务"}, {"start": 699.88, "duration": 5.52, "text": "account. I'm currently about 80%", "zh": "帐户。我目前大约80%"}, {"start": 702.4, "duration": 4.72, "text": "invested in the US stock market and 20%", "zh": "投资美国股市20%"}, {"start": 705.4, "duration": 3.76, "text": "internationally.", "zh": "国际上。"}, {"start": 707.12, "duration": 4.04, "text": "I think like with many other parts of my", "zh": "我认为就像我的许多其他部分一样"}, {"start": 709.16, "duration": 4.32, "text": "generation, there is very much a big", "zh": "一代人，有很大"}, {"start": 711.16, "duration": 5.0, "text": "split in terms of financial literacy", "zh": "金融知识方面的分歧"}, {"start": 713.48, "duration": 5.08, "text": "among other things. There's a swath of", "zh": "除其他事项外。有一大片"}, {"start": 716.16, "duration": 4.48, "text": "people who are fairly well educated in", "zh": "受过良好教育的人"}, {"start": 718.56, "duration": 4.08, "text": "terms of personal finances, and there", "zh": "个人财务方面，还有"}, {"start": 720.64, "duration": 4.32, "text": "are a lot of those who are just getting", "zh": "很多人刚刚获得"}, {"start": 722.64, "duration": 4.68, "text": "by. I view personal finance in a very", "zh": "经过。我非常看重个人理财"}, {"start": 724.96, "duration": 4.16, "text": "similar way as I do personal fitness. A", "zh": "与我个人健身的方式类似。一个"}, {"start": 727.32, "duration": 3.44, "text": "lot of the core concepts are fairly", "zh": "很多核心概念都相当"}, {"start": 729.12, "duration": 3.36, "text": "simple, but it doesn't mean that it's", "zh": "很简单，但这并不意味着它是"}, {"start": 730.76, "duration": 3.76, "text": "easy to follow and there are a lot of", "zh": "很容易遵循并且有很多"}, {"start": 732.48, "duration": 4.24, "text": "traps along the way. I'm aiming to", "zh": "一路上的陷阱。我的目标是"}, {"start": 734.52, "duration": 4.08, "text": "retire by the age of 30, in which case", "zh": "30岁之前退休，在这种情况下"}, {"start": 736.72, "duration": 4.36, "text": "I'll need about 1.6 million dollars to", "zh": "我需要大约 160 万美元"}, {"start": 738.6, "duration": 4.04, "text": "do so. In terms of why I decided to", "zh": "这样做。至于我决定的原因"}, {"start": 741.08, "duration": 3.16, "text": "start pursuing the path of financial", "zh": "开始走金融之路"}, {"start": 742.64, "duration": 3.08, "text": "independence and retiring early, I", "zh": "独立并提前退休，我"}, {"start": 744.24, "duration": 3.96, "text": "wanted to build a life for myself where", "zh": "想为自己创造一种生活"}, {"start": 745.72, "duration": 4.263, "text": "I wouldn't have to work for money all", "zh": "我不必为了钱而工作"}, {"start": 748.2, "duration": 1.96, "text": "the way up until 65.", "zh": "一直到65。"}, {"start": 749.983, "duration": 1.457, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 750.16, "duration": 3.64, "text": ">> There's a lot of moving parts when it", "zh": ">> 有很多活动部件"}, {"start": 751.44, "duration": 4.44, "text": "comes to retirement planning and even", "zh": "涉及退休计划，甚至"}, {"start": 753.8, "duration": 4.4, "text": "establishing a goal number is a bit of a", "zh": "设定一个目标数字有点困难"}, {"start": 755.88, "duration": 4.2, "text": "moving goal post in general. The rule of", "zh": "一般情况下移动球门柱。的规则"}, {"start": 758.2, "duration": 4.639, "text": "thumb in the community is to multiply", "zh": "社区中的大拇指就是倍增"}, {"start": 760.08, "duration": 5.48, "text": "your expenses by 25, or otherwise known", "zh": "您的开支 25 岁或以其他方式已知"}, {"start": 762.839, "duration": 5.321, "text": "as the 4% rule, and if you're retiring", "zh": "按照 4% 规则，如果你要退休"}, {"start": 765.56, "duration": 4.72, "text": "earlier than say around 40 or so, you", "zh": "早于说大约 40 左右，你"}, {"start": 768.16, "duration": 4.16, "text": "might want to add some leeway to that.", "zh": "可能想为此添加一些余地。"}, {"start": 770.28, "duration": 4.48, "text": "And so my budget is a little bit greater", "zh": "所以我的预算有点多"}, {"start": 772.32, "duration": 3.96, "text": "than the actual 4% rule.", "zh": "比实际的 4% 规则。"}, {"start": 774.76, "duration": 3.12, "text": "There's a lot of different projections", "zh": "有很多不同的预测"}, {"start": 776.28, "duration": 3.52, "text": "in terms of how much I'm going to be", "zh": "就我将要达到的程度而言"}, {"start": 777.88, "duration": 3.36, "text": "contributing in the future, as well as", "zh": "以及对未来的贡献"}, {"start": 779.8, "duration": 3.36, "text": "how well the stock market is going to do", "zh": "股市表现如何"}, {"start": 781.24, "duration": 5.4, "text": "over that course of time.", "zh": "在那段时间里。"}, {"start": 783.16, "duration": 5.8, "text": "I have way too many sheets in this uh in", "zh": "我这里面有太多的床单了"}, {"start": 786.64, "duration": 5.12, "text": "this. So, every month I'll create a copy", "zh": "这。所以，每个月我都会创建一个副本"}, {"start": 788.96, "duration": 5.0, "text": "of this sort of base spreadsheet. I", "zh": "此类基本电子表格。我"}, {"start": 791.76, "duration": 4.48, "text": "designed it myself. I don't really have", "zh": "我自己设计的。我真的没有"}, {"start": 793.96, "duration": 4.12, "text": "a template that I follow, and I prefer", "zh": "我遵循并且更喜欢的模板"}, {"start": 796.24, "duration": 3.44, "text": "it this way. It's more of a DIY approach", "zh": "就这样。这更像是一种 DIY 方法"}, {"start": 798.08, "duration": 3.759, "text": "of if I decide that there are certain", "zh": "如果我决定有某些"}, {"start": 799.68, "duration": 4.014, "text": "categories that I don't want, or", "zh": "我不想要的类别，或者"}, {"start": 801.839, "duration": 3.361, "text": "categories that I do need, then I'll", "zh": "我确实需要的类别，然后我会"}, {"start": 803.694, "duration": 3.026, "text": "[music] just add it onto the spreadsheet", "zh": "[音乐]只需将其添加到电子表格中即可"}, {"start": 805.2, "duration": 4.0, "text": "and it'll be copied over for the", "zh": "它将被复制到"}, {"start": 806.72, "duration": 3.4, "text": "remainder of however long I decide to do", "zh": "无论我决定做什么，剩下的时间"}, {"start": 809.2, "duration": 3.32, "text": "this budgeting. [music]", "zh": "这个预算。 [音乐]"}, {"start": 810.12, "duration": 4.709, "text": "I actually do have a larger tax sheet", "zh": "我实际上有一张更大的税表"}, {"start": 812.52, "duration": 2.52, "text": "that does track down in terms of like", "zh": "这确实可以追踪类似的情况"}, {"start": 814.829, "duration": 2.491, "text": ">> [music]", "zh": ">> [音乐]"}, {"start": 815.04, "duration": 4.92, "text": ">> taxes that I'm paying", "zh": ">> 我缴纳的税款"}, {"start": 817.32, "duration": 4.76, "text": "in terms of the income that I'm getting,", "zh": "就我获得的收入而言"}, {"start": 819.96, "duration": 4.0, "text": "the expected amount of paychecks, and", "zh": "预期的薪水金额，以及"}, {"start": 822.08, "duration": 4.6, "text": "then over here I just have some pretty", "zh": "然后我这里有一些漂亮的"}, {"start": 823.96, "duration": 4.0, "text": "straightforward projections in terms of", "zh": "直接预测"}, {"start": 826.68, "duration": 3.88, "text": "actually where I'm going to be at", "zh": "实际上我要去的地方"}, {"start": 827.96, "duration": 4.68, "text": "financially for a given year and age", "zh": "特定年份和年龄的经济状况"}, {"start": 830.56, "duration": 4.44, "text": "assuming certain figures [music] for", "zh": "假设某些数字[音乐]为"}, {"start": 832.64, "duration": 4.8, "text": "growth as well as investment outcome.", "zh": "增长以及投资成果。"}, {"start": 835.0, "duration": 4.96, "text": "And yeah, so by age 30 assuming that all", "zh": "是的，所以到 30 岁时，假设所有"}, {"start": 837.44, "duration": 4.48, "text": "goes well, I'm expecting that I might", "zh": "进展顺利，我期待着我可能"}, {"start": 839.96, "duration": 4.04, "text": "have somewhere north of around $2", "zh": "有大约 2 美元以北的地方"}, {"start": 841.92, "duration": 4.36, "text": "million invested.", "zh": "投资万元。"}, {"start": 844.0, "duration": 4.4, "text": "And this is also tracking the active", "zh": "这也在跟踪活跃的"}, {"start": 846.28, "duration": 4.12, "text": "price of some of my investments, and so", "zh": "我的一些投资的价格等等"}, {"start": 848.4, "duration": 4.04, "text": "this will fluctuate over time. And by", "zh": "这会随着时间的推移而波动。并由"}, {"start": 850.4, "duration": 4.64, "text": "age 40, I'm expected to be retired at", "zh": "40岁，我预计退休年龄"}, {"start": 852.44, "duration": 4.0, "text": "that point, so I do have empty columns", "zh": "那一点，所以我确实有空列"}, {"start": 855.04, "duration": 2.76, "text": "in terms [music] of my actual", "zh": "就我实际的[音乐]而言"}, {"start": 856.44, "duration": 2.96, "text": "investments.", "zh": "投资。"}, {"start": 857.8, "duration": 4.16, "text": "But at that point, I might have", "zh": "但到那时，我可能会"}, {"start": 859.4, "duration": 3.84, "text": "somewhere in the north of $7 million", "zh": "700万美元以上"}, {"start": 861.96, "duration": 2.52, "text": "invested.", "zh": "投资。"}, {"start": 863.24, "duration": 3.56, "text": "I think a very interesting part of the", "zh": "我认为其中一个非常有趣的部分"}, {"start": 864.48, "duration": 5.4, "text": "FIRE community is that it has splintered", "zh": "FIRE 社区已经分裂"}, {"start": 866.8, "duration": 5.92, "text": "off into various groups and evolved from", "zh": "分成不同的群体并演化而来"}, {"start": 869.88, "duration": 5.32, "text": "its original form around the 2010s that", "zh": "它的最初形式是在2010年代左右"}, {"start": 872.72, "duration": 4.2, "text": "was largely focused on frugality at all", "zh": "主要关注节俭"}, {"start": 875.2, "duration": 4.04, "text": "costs. [music] Now there are folks such", "zh": "成本。 [音乐] 现在有这样的人"}, {"start": 876.92, "duration": 4.48, "text": "as myself that sort of can have their", "zh": "像我这样的人可以有他们的"}, {"start": 879.24, "duration": 4.88, "text": "cake and eat it, too, where we are able", "zh": "蛋糕也可以吃，只要我们有能力"}, {"start": 881.4, "duration": 4.92, "text": "to live a very fulfilling lifestyle and", "zh": "过上非常充实的生活方式并且"}, {"start": 884.12, "duration": 3.719, "text": "save a lot for retirement. In terms of", "zh": "为退休储蓄很多。按照"}, {"start": 886.32, "duration": 3.12, "text": "my lifestyle after retirement, I don't", "zh": "我退休后的生活方式，我不"}, {"start": 887.839, "duration": 3.681, "text": "expect that I'm going to stop working", "zh": "预计我会停止工作"}, {"start": 889.44, "duration": 4.16, "text": "entirely. I might pick up some odd jobs", "zh": "完全。我可能会做一些零工"}, {"start": 891.52, "duration": 4.76, "text": "or contracting work every now and then", "zh": "或时不时地承包工作"}, {"start": 893.6, "duration": 5.12, "text": "just if I decide that it's interesting", "zh": "只要我认为这很有趣"}, {"start": 896.28, "duration": 4.2, "text": "to me. Other than that, it's really", "zh": "大部头书。除此之外，真的是"}, {"start": 898.72, "duration": 3.36, "text": "going to be populated with travel as", "zh": "将会充满旅行"}, {"start": 900.48, "duration": 3.52, "text": "well as attending conventions and just", "zh": "以及参加会议和只是"}, {"start": 902.08, "duration": 3.14, "text": "being myself.", "zh": "做我自己。"}, {"start": 904.0, "duration": 3.2, "text": "I think one of the biggest privileges", "zh": "我认为最大的特权之一"}, {"start": 905.22, "duration": 3.86, "text": "[music] for myself is that I am able to", "zh": "[音乐]对于我自己来说，我能够"}, {"start": 907.2, "duration": 3.72, "text": "earn enough of an income where I could", "zh": "尽我所能赚取足够的收入"}, {"start": 909.08, "duration": 4.48, "text": "reasonably support my family if they", "zh": "合理地支持我的家人，如果他们"}, {"start": 910.92, "duration": 4.56, "text": "were ever in trouble, and in the case of", "zh": "曾经遇到过麻烦，并且在这种情况下"}, {"start": 913.56, "duration": 5.279, "text": "a future family, that would be something", "zh": "未来的家庭，那将是"}, {"start": 915.48, "duration": 4.8, "text": "that I would have to readjust over time.", "zh": "随着时间的推移我必须重新调整。"}, {"start": 918.839, "duration": 3.161, "text": "Moving here has definitely been worth", "zh": "搬到这里绝对是值得的"}, {"start": 920.28, "duration": 4.2, "text": "it. Even though the cost of living is", "zh": "它。尽管生活成本"}, {"start": 922.0, "duration": 4.48, "text": "higher, the job compensation and the", "zh": "更高的工作报酬和"}, {"start": 924.48, "duration": 3.88, "text": "opportunities available here are really", "zh": "这里提供的机会确实很多"}, {"start": 926.48, "duration": 4.96, "text": "unmatched. In terms of staying here", "zh": "无与伦比的。就住在这里而言"}, {"start": 928.36, "duration": 3.08, "text": "long-term, I'm", "zh": "从长远来看，我"}, {"start": 931.92, "duration": 2.775, "text": "That's that that that's a that's an", "zh": "那是那个 那是一个 那是一个"}, {"start": 933.2, "duration": 1.92, "text": "existential question.", "zh": "存在主义问题。"}, {"start": 934.695, "duration": 1.505, "text": ">> [laughter]", "zh": ">> [笑声]"}, {"start": 935.12, "duration": 2.96, "text": ">> Uh", "zh": ">> 呃"}, {"start": 936.2, "duration": 3.68, "text": "I think in terms of long-term living, I", "zh": "我认为从长期生活的角度来看，"}, {"start": 938.08, "duration": 3.36, "text": "plan to move back to the Los Angeles", "zh": "计划搬回洛杉矶"}, {"start": 939.88, "duration": 2.92, "text": "area.", "zh": "区域。"}, {"start": 941.44, "duration": 2.96, "text": "I could definitely see myself in the", "zh": "我绝对可以在其中看到自己"}, {"start": 942.8, "duration": 4.72, "text": "position of starting a company in the", "zh": "创办公司的职位"}, {"start": 944.4, "duration": 4.96, "text": "next couple of years or decades, but no", "zh": "未来几年或几十年，但不会"}, {"start": 947.52, "duration": 3.24, "text": "plans for that currently.", "zh": "目前的计划。"}, {"start": 949.36, "duration": 3.28, "text": "My biggest piece of advice is something", "zh": "我最大的建议是"}, {"start": 950.76, "duration": 3.8, "text": "that's fairly widely shared among the", "zh": "这是相当广泛的共享"}, {"start": 952.64, "duration": 3.64, "text": "folks in the FIRE community, and it's", "zh": "FIRE 社区的人们，"}, {"start": 954.56, "duration": 2.64, "text": "build a life you want and then save for", "zh": "建立你想要的生活，然后为之存钱"}, {"start": 956.28, "duration": 3.28, "text": "it.", "zh": "它。"}, {"start": 957.2, "duration": 4.76, "text": "There may be a situation where you can't", "zh": "可能有一种情况你不能"}, {"start": 959.56, "duration": 3.8, "text": "have everything all at once [music] now,", "zh": "现在一切都齐备了[音乐]，"}, {"start": 961.96, "duration": 3.12, "text": "and you just kind of have to pick and", "zh": "你只需要选择"}, {"start": 963.36, "duration": 4.086, "text": "choose whether or not you want to live", "zh": "选择你是否想活下去"}, {"start": 965.08, "duration": 4.6, "text": "in a favorable location, or you decide", "zh": "在一个有利的位置，或者你决定"}, {"start": 967.446, "duration": 4.594, "text": "[music] to spend more on say travel and", "zh": "[音乐] 在旅行上花费更多"}, {"start": 969.68, "duration": 4.04, "text": "other experiences, or maybe on some of", "zh": "其他经历，或者也许是某些"}, {"start": 972.04, "duration": 4.08, "text": "the other material goods that you're", "zh": "你所拥有的其他物质商品"}, {"start": 973.72, "duration": 4.28, "text": "looking at.", "zh": "看着。"}, {"start": 976.12, "duration": 3.56, "text": "Oh man.", "zh": "噢，伙计。"}, {"start": 978.0, "duration": 3.44, "text": "I'm going to I'm going to get roasted by", "zh": "我要被烤了"}, {"start": 979.68, "duration": 3.36, "text": "so many people. It's going to be the the", "zh": "这么多人。这将是"}, {"start": 981.44, "duration": 2.88, "text": "people who who are going to comment on", "zh": "即将发表评论的人"}, {"start": 983.04, "duration": 2.68, "text": "my forum, the people who are going to", "zh": "我的论坛，那些要去的人"}, {"start": 984.32, "duration": 2.24, "text": "comment on the furry thing, the people", "zh": "评论毛茸茸的东西，人们"}, {"start": 985.72, "duration": 3.68, "text": "that are going to comment on my", "zh": "将对我的评论"}, {"start": 986.56, "duration": 2.84, "text": "apartment.", "zh": "公寓。"}];
+const audio = document.getElementById('audio');
+const offsetSlider = document.getElementById('offsetSlider');
+const offsetVal = document.getElementById('offsetVal');
+
+// Sync offset with player via localStorage
+const savedOffset = localStorage.getItem('syncOffset');
+if (savedOffset !== null) offsetSlider.value = savedOffset;
+else offsetSlider.value = 0.5;
+updateOffsetDisplay();
+
+offsetSlider.addEventListener('input', () => {
+  localStorage.setItem('syncOffset', offsetSlider.value);
+  updateOffsetDisplay();
+});
+function updateOffsetDisplay() {
+  const v = parseFloat(offsetSlider.value);
+  offsetVal.textContent = (v >= 0 ? '+' : '') + v.toFixed(1) + 's';
+}
+function getOffset() { return parseFloat(offsetSlider.value); }
+
+function jumpTo(idx) {
+  audio.currentTime = Math.max(0, SUBS[idx].start + getOffset());
+  audio.play();
+}
+
+function setSpeed(s) {
+  audio.playbackRate = s;
+  document.querySelectorAll('.speed-btn').forEach(b => {
+    b.classList.toggle('active', parseFloat(b.textContent) === s);
+  });
+}
+
+let lastActive = -1;
+audio.addEventListener('timeupdate', () => {
+  const t = audio.currentTime - getOffset();
+  let idx = -1;
+  for (let i = 0; i < SUBS.length; i++) {
+    if (t >= SUBS[i].start && t < SUBS[i].start + SUBS[i].duration) {
+      idx = i; break;
+    }
+  }
+  if (idx !== lastActive) {
+    if (lastActive >= 0) {
+      const el = document.getElementById('seg' + lastActive);
+      if (el) el.classList.remove('active');
+    }
+    lastActive = idx;
+    if (idx >= 0) {
+      const el = document.getElementById('seg' + idx);
+      if (el) {
+        el.classList.add('active');
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }
+});
+
+function doSearch(q) {
+  document.querySelectorAll('.seg').forEach(el => {
+    el.classList.remove('highlight');
+    el.querySelectorAll('mark').forEach(m => {
+      m.replaceWith(m.textContent);
+    });
+  });
+  if (!q.trim()) return;
+  const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+  let first = null;
+  document.querySelectorAll('.seg .en, .seg .zh').forEach(span => {
+    if (re.test(span.textContent)) {
+      span.closest('.seg').classList.add('highlight');
+      span.innerHTML = span.textContent.replace(re, m => '<mark>' + m + '</mark>');
+      if (!first) first = span.closest('.seg');
+    }
+  });
+  if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+</body>
+</html>
