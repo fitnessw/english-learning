@@ -1,0 +1,48 @@
+#!/bin/sh
+set -eu
+
+if [ "$#" -lt 1 ]; then
+  echo "Usage: AGENT_TOOL=Codex AGENT_MODEL='GPT-5' scripts/agent-commit 'message'" >&2
+  exit 2
+fi
+
+message=$1
+agent_tool=${AGENT_TOOL:-unknown}
+agent_model=${AGENT_MODEL:-unknown}
+agent_run_id=${AGENT_RUN_ID:-}
+human_owner=${HUMAN_OWNER:-}
+human_reviewed=${HUMAN_REVIEWED:-unknown}
+
+if [ -z "$human_owner" ]; then
+  git_user_name=$(git config --get user.name || true)
+  git_user_email=$(git config --get user.email || true)
+  if [ -n "$git_user_name" ] && [ -n "$git_user_email" ]; then
+    human_owner="$git_user_name <$git_user_email>"
+  elif [ -n "$git_user_name" ]; then
+    human_owner="$git_user_name"
+  elif [ -n "$git_user_email" ]; then
+    human_owner="$git_user_email"
+  else
+    human_owner="unknown"
+  fi
+fi
+
+if [ "$agent_tool" = "unknown" ]; then
+  echo "warning: AGENT_TOOL is not set; using Agent-Tool: unknown" >&2
+fi
+
+if [ "$agent_model" = "unknown" ]; then
+  echo "warning: AGENT_MODEL is not set; using Agent-Model: unknown" >&2
+fi
+
+set -- git commit -m "$message" \
+  --trailer "Agent-Tool:$agent_tool" \
+  --trailer "Agent-Model:$agent_model" \
+  --trailer "Human-Owner:$human_owner" \
+  --trailer "Human-Reviewed:$human_reviewed"
+
+if [ -n "$agent_run_id" ]; then
+  set -- "$@" --trailer "Agent-Run-Id:$agent_run_id"
+fi
+
+exec "$@"

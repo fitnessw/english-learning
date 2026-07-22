@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+if [ "${ALLOW_MISSING_AGENT_ATTRIBUTION:-}" = "1" ]; then
+  exit 0
+fi
+
+message_file=$1
+trailers=$(git interpret-trailers --parse < "$message_file")
+
+if ! printf '%s\n' "$trailers" | grep -q '^Agent-Tool:'; then
+  echo "Missing required commit trailer: Agent-Tool:" >&2
+  echo "Use: AGENT_TOOL=<tool> AGENT_MODEL=<model> scripts/agent-commit \"message\"" >&2
+  exit 1
+fi
+
+if ! printf '%s\n' "$trailers" | grep -q '^Agent-Model:'; then
+  echo "Missing required commit trailer: Agent-Model:" >&2
+  echo "Use Agent-Model: unknown if the exact model is not available." >&2
+  exit 1
+fi
+
+if ! printf '%s\n' "$trailers" | grep -q '^Human-Owner:'; then
+  echo "Missing required commit trailer: Human-Owner:" >&2
+  echo "scripts/agent-commit fills this from git user.name/user.email by default." >&2
+  exit 1
+fi
