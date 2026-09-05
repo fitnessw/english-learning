@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transcript: Breaking Down My $306,500 Salary In San Francisco</title>
+<style>
+  body { margin:0; background:#0f172a; color:#e2e8f0; font-family:'Segoe UI',sans-serif; }
+  .header { position:sticky; top:0; background:#1e293b; padding:10px 16px; border-bottom:1px solid #334155; z-index:10; }
+  .header h2 { margin:0 0 8px; font-size:1em; color:#a78bfa; }
+  audio { width:100%; margin-bottom:8px; }
+  .controls { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:6px; }
+  button { background:#334155; color:#e2e8f0; border:none; border-radius:5px; padding:5px 10px; cursor:pointer; font-size:12px; }
+  button:hover { background:#475569; }
+  button.active { background:#7c3aed; }
+  .speed-row { display:flex; align-items:center; flex-wrap:wrap; gap:5px; font-size:12px; margin-bottom:6px; }
+  .toggle-row { display:flex; gap:14px; font-size:12px; }
+  .toggle-row label { display:flex; align-items:center; gap:5px; cursor:pointer; }
+  table { width:100%; border-collapse:collapse; }
+  .chapter-header { background:#1e293b; color:#a78bfa; font-size:12px; font-weight:600;
+    padding:8px 16px; border-top:1px solid #334155; }
+  tr { cursor:pointer; border-bottom:1px solid #1e293b; transition:background .1s; }
+  tr:hover { background:#1e293b; }
+  tr.playing { background:#1e1e4f; border-left:3px solid #a78bfa; }
+  td.time { color:#64748b; font-size:11px; padding:8px 10px 8px 16px; white-space:nowrap; vertical-align:top; width:44px; }
+  td.text { padding:8px 16px 8px 4px; }
+  .en { display:block; font-size:14px; color:#e2e8f0; line-height:1.5; }
+  .zh { display:none; font-size:12px; color:#93c5fd; margin-top:3px; }
+  table.show-zh .zh { display:block; }
+  footer { padding:20px; font-size:11px; color:#475569; text-align:center; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h2>📄 Breaking Down My $306,500 Salary In San Francisco — Interactive Transcript</h2>
+  <audio id="audio" controls>
+    <source src="audio.mp3" type="audio/mpeg">
+  </audio>
+  <div class="controls">
+    <button onclick="skip(-10)">⏪ -10s</button>
+    <button onclick="skip(-5)">← -5s</button>
+    <button onclick="skip(5)">+5s →</button>
+    <button onclick="skip(10)">+10s ⏩</button>
+  </div>
+  <div class="speed-row">
+    Speed:
+    <button onclick="setSpeed(0.7)" data-speed="0.7">0.7×</button>
+    <button onclick="setSpeed(0.85)" data-speed="0.85">0.85×</button>
+    <button onclick="setSpeed(1.0)" data-speed="1.0" class="active">1.0×</button>
+    <button onclick="setSpeed(1.15)" data-speed="1.15">1.15×</button>
+    <button onclick="setSpeed(1.3)" data-speed="1.3">1.3×</button>
+    &nbsp;|&nbsp; Sync offset:
+    <button onclick="adjustOffset(-0.5)">-0.5s</button>
+    <span id="offsetDisplay" style="color:#93c5fd;min-width:40px;display:inline-block;text-align:center">+0.5s</span>
+    <button onclick="adjustOffset(0.5)">+0.5s</button>
+  </div>
+  <div class="toggle-row">
+    <label><input type="checkbox" id="toggle-zh" checked onchange="toggleZh()"> 🇨🇳 中文显示</label>
+  </div>
+</div>
+<table id="main-table">
+<div class="chapter-header">Chapter 1 — 00:00+</div>
+<tr id="r0" onclick="toggleRow(0.0,4.88,this)"><td class="time">0:00</td><td class="text"><span class="en">I&#39;m Raymond Zeng. I work as a software</span><span class="zh">我是曾雷蒙德。我的工作是软件</span></td></tr>
+<tr id="r1" onclick="toggleRow(2.0,6.24,this)"><td class="time">0:02</td><td class="text"><span class="en">engineer making $306,500</span><span class="zh">工程师年薪 306,500 美元</span></td></tr>
+<tr id="r2" onclick="toggleRow(4.88,8.2,this)"><td class="time">0:04</td><td class="text"><span class="en">and I live in the San Francisco Bay</span><span class="zh">我住在旧金山湾</span></td></tr>
+<tr id="r3" onclick="toggleRow(6.24,10.24,this)"><td class="time">0:06</td><td class="text"><span class="en">Area. I&#39;m going to be sharing all of my</span><span class="zh">区域。我将分享我所有的</span></td></tr>
+<tr id="r4" onclick="toggleRow(8.2,14.48,this)"><td class="time">0:08</td><td class="text"><span class="en">finances between my bills and my</span><span class="zh">我的账单和我的</span></td></tr>
+<tr id="r5" onclick="toggleRow(10.24,17.04,this)"><td class="time">0:10</td><td class="text"><span class="en">investments. This is Cost of Living.</span><span class="zh">之间的财务状况投资。这是生活成本。</span></td></tr>
+<tr id="r6" onclick="toggleRow(14.48,20.48,this)"><td class="time">0:14</td><td class="text"><span class="en">I&#39;m a software engineer working at Meta.</span><span class="zh">我是一名在 Meta 工作的软件工程师。</span></td></tr>
+<tr id="r7" onclick="toggleRow(17.04,22.0,this)"><td class="time">0:17</td><td class="text"><span class="en">In terms of my role, I earn $306,500</span><span class="zh">就我的角色而言，我的收入为 306,500 美元</span></td></tr>
+<tr id="r8" onclick="toggleRow(20.48,23.4,this)"><td class="time">0:20</td><td class="text"><span class="en">on average.</span><span class="zh">平均而言。</span></td></tr>
+<tr id="r9" onclick="toggleRow(22.0,25.0,this)"><td class="time">0:22</td><td class="text"><span class="en">After taxes and retirement</span><span class="zh">税后和退休后</span></td></tr>
+<tr id="r10" onclick="toggleRow(23.4,27.6,this)"><td class="time">0:23</td><td class="text"><span class="en">contributions, I am currently taking</span><span class="zh">贡献，我目前正在接受</span></td></tr>
+<tr id="r11" onclick="toggleRow(25.0,28.92,this)"><td class="time">0:25</td><td class="text"><span class="en">home about $4,000 a month.</span><span class="zh">家里每月大约4000美元。</span></td></tr>
+<tr id="r12" onclick="toggleRow(27.6,30.79,this)"><td class="time">0:27</td><td class="text"><span class="en">I currently do not have any other</span><span class="zh">我目前没有任何其他</span></td></tr>
+<tr id="r13" onclick="toggleRow(28.92,32.8,this)"><td class="time">0:28</td><td class="text"><span class="en">sources of income.</span><span class="zh">收入来源。</span></td></tr>
+<tr id="r14" onclick="toggleRow(30.79,32.8,this)"><td class="time">0:30</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r15" onclick="toggleRow(33.28,37.04,this)"><td class="time">0:33</td><td class="text"><span class="en">&gt;&gt; I work anywhere between 40 to 50 hours a</span><span class="zh">>> 我在任何地方工作 40 到 50 小时</span></td></tr>
+<tr id="r16" onclick="toggleRow(35.36,39.4,this)"><td class="time">0:35</td><td class="text"><span class="en">week on average. In terms of my</span><span class="zh">平均一周。就我而言</span></td></tr>
+<tr id="r17" onclick="toggleRow(37.04,41.56,this)"><td class="time">0:37</td><td class="text"><span class="en">day-to-day, it can be really anything.</span><span class="zh">日常生活中，它可以是任何事情。</span></td></tr>
+<tr id="r18" onclick="toggleRow(39.4,43.32,this)"><td class="time">0:39</td><td class="text"><span class="en">My role is fairly dynamic, so I could be</span><span class="zh">我的角色相当动态，所以我可以</span></td></tr>
+<tr id="r19" onclick="toggleRow(41.56,45.96,this)"><td class="time">0:41</td><td class="text"><span class="en">doing anything from software engineering</span><span class="zh">做任何软件工程</span></td></tr>
+<tr id="r20" onclick="toggleRow(43.32,47.76,this)"><td class="time">0:43</td><td class="text"><span class="en">and actual coding to some of the more</span><span class="zh">以及实际编码中的一些更多</span></td></tr>
+<tr id="r21" onclick="toggleRow(45.96,50.6,this)"><td class="time">0:45</td><td class="text"><span class="en">sort of project management or product</span><span class="zh">项目管理或产品类型</span></td></tr>
+<tr id="r22" onclick="toggleRow(47.76,53.8,this)"><td class="time">0:47</td><td class="text"><span class="en">management stuff, as well as some data</span><span class="zh">管理的东西，以及一些数据</span></td></tr>
+<tr id="r23" onclick="toggleRow(50.6,55.56,this)"><td class="time">0:50</td><td class="text"><span class="en">science [music] sort of analysis.</span><span class="zh">科学[音乐]类型的分析。</span></td></tr>
+<tr id="r24" onclick="toggleRow(53.8,57.36,this)"><td class="time">0:53</td><td class="text"><span class="en">Prior to joining my current company, I&#39;d</span><span class="zh">在加入我现在的公司之前，我会</span></td></tr>
+<tr id="r25" onclick="toggleRow(55.56,59.92,this)"><td class="time">0:55</td><td class="text"><span class="en">spent 2 years living in Dallas and I</span><span class="zh">我在达拉斯生活了两年</span></td></tr>
+<tr id="r26" onclick="toggleRow(57.36,62.44,this)"><td class="time">0:57</td><td class="text"><span class="en">moved here about 7 or 8 months ago back</span><span class="zh">大约七八个月前搬到这里</span></td></tr>
+<tr id="r27" onclick="toggleRow(59.92,65.84,this)"><td class="time">0:59</td><td class="text"><span class="en">in July of 2025. In terms of base rent,</span><span class="zh">2025 年 7 月。就基本租金而言，</span></td></tr>
+<tr id="r28" onclick="toggleRow(62.44,68.32,this)"><td class="time">1:02</td><td class="text"><span class="en">I am paying $2,600 a month. Amenity fees</span><span class="zh">我每月支付 2,600 美元。便利设施费</span></td></tr>
+<tr id="r29" onclick="toggleRow(65.84,71.72,this)"><td class="time">1:05</td><td class="text"><span class="en">are included in the base rent. Utilities</span><span class="zh">均包含在基本租金中。实用程序</span></td></tr>
+<tr id="r30" onclick="toggleRow(68.32,73.8,this)"><td class="time">1:08</td><td class="text"><span class="en">will cost anywhere between $150 to $170</span><span class="zh">价格在 150 美元到 170 美元之间</span></td></tr>
+<tr id="r31" onclick="toggleRow(71.72,76.6,this)"><td class="time">1:11</td><td class="text"><span class="en">a month. My electricity bill here is</span><span class="zh">一个月。我这里的电费是</span></td></tr>
+<tr id="r32" onclick="toggleRow(73.8,79.24,this)"><td class="time">1:13</td><td class="text"><span class="en">about 50% higher than it was in Dallas</span><span class="zh">比达拉斯高出约 50%</span></td></tr>
+<tr id="r33" onclick="toggleRow(76.6,80.76,this)"><td class="time">1:16</td><td class="text"><span class="en">from about $20 to $30 per month to about</span><span class="zh">从每月约 20 美元到 30 美元到约</span></td></tr>
+<tr id="r34" onclick="toggleRow(79.24,82.6,this)"><td class="time">1:19</td><td class="text"><span class="en">$50 a month.</span><span class="zh">每月 50 美元。</span></td></tr>
+<tr id="r35" onclick="toggleRow(80.76,84.64,this)"><td class="time">1:20</td><td class="text"><span class="en">I feel like I am getting good value. A</span><span class="zh">我觉得我得到了很好的价值。一个</span></td></tr>
+<tr id="r36" onclick="toggleRow(82.6,86.4,this)"><td class="time">1:22</td><td class="text"><span class="en">lot of the comparable areas that are</span><span class="zh">许多类似的领域是</span></td></tr>
+<tr id="r37" onclick="toggleRow(84.64,90.4,this)"><td class="time">1:24</td><td class="text"><span class="en">closer to my work could run anywhere</span><span class="zh">离我工作更近的地方可以在任何地方运行</span></td></tr>
+<tr id="r38" onclick="toggleRow(86.4,92.4,this)"><td class="time">1:26</td><td class="text"><span class="en">between $3,500 to $3,700 per month and</span><span class="zh">每月 3,500 美元至 3,700 美元之间，并且</span></td></tr>
+<tr id="r39" onclick="toggleRow(90.4,94.2,this)"><td class="time">1:30</td><td class="text"><span class="en">I&#39;m getting everything that I wanted out</span><span class="zh">我得到了我想要的一切</span></td></tr>
+<tr id="r40" onclick="toggleRow(92.4,96.12,this)"><td class="time">1:32</td><td class="text"><span class="en">of this apartment. I live a little bit</span><span class="zh">这间公寓的。我活得有点</span></td></tr>
+<tr id="r41" onclick="toggleRow(94.2,98.04,this)"><td class="time">1:34</td><td class="text"><span class="en">further away from either the major</span><span class="zh">远离主要</span></td></tr>
+<tr id="r42" onclick="toggleRow(96.12,99.92,this)"><td class="time">1:36</td><td class="text"><span class="en">cities of San Francisco or San Jose or</span><span class="zh">旧金山或圣何塞城市或</span></td></tr>
+<tr id="r43" onclick="toggleRow(98.04,101.56,this)"><td class="time">1:38</td><td class="text"><span class="en">Oakland, but still within commutable</span><span class="zh">奥克兰，但仍在通勤范围内</span></td></tr>
+<tr id="r44" onclick="toggleRow(99.92,104.28,this)"><td class="time">1:39</td><td class="text"><span class="en">distance of all three.</span><span class="zh">三者的距离。</span></td></tr>
+<tr id="r45" onclick="toggleRow(101.56,106.68,this)"><td class="time">1:41</td><td class="text"><span class="en">Even though I had access to a relocation</span><span class="zh">即使我可以搬迁</span></td></tr>
+<tr id="r46" onclick="toggleRow(104.28,109.92,this)"><td class="time">1:44</td><td class="text"><span class="en">expert, I decided to do a lot of the</span><span class="zh">专家，我决定做很多</span></td></tr>
+<tr id="r47" onclick="toggleRow(106.68,111.72,this)"><td class="time">1:46</td><td class="text"><span class="en">research on my own taking a look at all</span><span class="zh">我自己研究了一下所有</span></td></tr>
+<tr id="r48" onclick="toggleRow(109.92,114.8,this)"><td class="time">1:49</td><td class="text"><span class="en">the things that I wanted to focus on</span><span class="zh">我想关注的事情</span></td></tr>
+<tr id="r49" onclick="toggleRow(111.72,116.6,this)"><td class="time">1:51</td><td class="text"><span class="en">from a living perspective and after</span><span class="zh">从生活的角度来看</span></td></tr>
+<tr id="r50" onclick="toggleRow(114.8,118.6,this)"><td class="time">1:54</td><td class="text"><span class="en">making the decisions, I decided to sign</span><span class="zh">做出决定后，我决定签署</span></td></tr>
+<tr id="r51" onclick="toggleRow(116.6,120.84,this)"><td class="time">1:56</td><td class="text"><span class="en">the lease sight unseen without actually</span><span class="zh">实际上看不见的租赁景象</span></td></tr>
+<tr id="r52" onclick="toggleRow(118.6,122.92,this)"><td class="time">1:58</td><td class="text"><span class="en">having seen the place in person. Hey,</span><span class="zh">亲眼见过这个地方。嘿，</span></td></tr>
+<tr id="r53" onclick="toggleRow(120.84,124.45,this)"><td class="time">2:00</td><td class="text"><span class="en">welcome to my apartment.</span><span class="zh">欢迎来到我的公寓。</span></td></tr>
+<tr id="r54" onclick="toggleRow(122.92,125.52,this)"><td class="time">2:02</td><td class="text"><span class="en">So, this is the main kitchen area.</span><span class="zh">所以，这是主要的厨房区域。</span></td></tr>
+<tr id="r55" onclick="toggleRow(125.52,128.08,this)"><td class="time">2:05</td><td class="text"><span class="en">It&#39;s</span><span class="zh">是</span></td></tr>
+<tr id="r56" onclick="toggleRow(126.48,129.8,this)"><td class="time">2:06</td><td class="text"><span class="en">quite spacious compared to my last</span><span class="zh">与我上次相比相当宽敞</span></td></tr>
+<tr id="r57" onclick="toggleRow(128.08,132.32,this)"><td class="time">2:08</td><td class="text"><span class="en">apartment. The only complaint that I</span><span class="zh">公寓。我唯一的抱怨</span></td></tr>
+<tr id="r58" onclick="toggleRow(129.8,134.64,this)"><td class="time">2:09</td><td class="text"><span class="en">really have are these uh the countertops</span><span class="zh">真的有这些呃台面</span></td></tr>
+<tr id="r59" onclick="toggleRow(132.32,135.59,this)"><td class="time">2:12</td><td class="text"><span class="en">aren&#39;t exactly ideal for the amount that</span><span class="zh">对于</span></td></tr>
+<tr id="r60" onclick="toggleRow(134.64,135.8,this)"><td class="time">2:14</td><td class="text"><span class="en">I&#39;m paying, but</span><span class="zh">的数量来说并不完全理想我正在付款，但是</span></td></tr>
+<tr id="r61" onclick="toggleRow(135.59,137.56,this)"><td class="time">2:15</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r62" onclick="toggleRow(135.8,140.32,this)"><td class="time">2:15</td><td class="text"><span class="en">&gt;&gt; it&#39;s all right.</span><span class="zh">>> 没关系。</span></td></tr>
+<tr id="r63" onclick="toggleRow(137.56,141.52,this)"><td class="time">2:17</td><td class="text"><span class="en">In terms of fridge and freezer,</span><span class="zh">就冰箱和冰柜而言，</span></td></tr>
+<tr id="r64" onclick="toggleRow(140.32,144.28,this)"><td class="time">2:20</td><td class="text"><span class="en">I got some meal prep stuff from the</span><span class="zh">我从</span></td></tr>
+<tr id="r65" onclick="toggleRow(141.52,145.48,this)"><td class="time">2:21</td><td class="text"><span class="en">night before as well as a whole host of</span><span class="zh">那里得到了一些准备饭菜的东西前一天晚上以及一大堆</span></td></tr>
+<tr id="r66" onclick="toggleRow(144.28,146.72,this)"><td class="time">2:24</td><td class="text"><span class="en">uh drinks</span><span class="zh">呃饮料</span></td></tr>
+<tr id="r67" onclick="toggleRow(145.48,146.76,this)"><td class="time">2:25</td><td class="text"><span class="en">and mixers.</span><span class="zh">和搅拌机。</span></td></tr>
+<tr id="r68" onclick="toggleRow(146.72,147.88,this)"><td class="time">2:26</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r69" onclick="toggleRow(146.76,149.28,this)"><td class="time">2:26</td><td class="text"><span class="en">&gt;&gt; Um</span><span class="zh">>> 嗯</span></td></tr>
+<tr id="r70" onclick="toggleRow(147.88,151.0,this)"><td class="time">2:27</td><td class="text"><span class="en">in the freezer,</span><span class="zh">在冰箱里，</span></td></tr>
+<tr id="r71" onclick="toggleRow(149.28,153.2,this)"><td class="time">2:29</td><td class="text"><span class="en">very similar thing where I&#39;ve got a</span><span class="zh">非常相似的事情，我有一个</span></td></tr>
+<tr id="r72" onclick="toggleRow(151.0,154.76,this)"><td class="time">2:31</td><td class="text"><span class="en">couple of frozen things as well as some</span><span class="zh">一些冷冻的东西以及一些</span></td></tr>
+<tr id="r73" onclick="toggleRow(153.2,157.4,this)"><td class="time">2:33</td><td class="text"><span class="en">dumplings that I actually wrapped myself</span><span class="zh">自己包的饺子</span></td></tr>
+<tr id="r74" onclick="toggleRow(154.76,159.4,this)"><td class="time">2:34</td><td class="text"><span class="en">when I was really bored one day.</span><span class="zh">当有一天我真的很无聊的时候。</span></td></tr>
+<div class="chapter-header">Chapter 2 — 02:00+</div>
+<tr id="r75" onclick="toggleRow(157.4,161.28,this)"><td class="time">2:37</td><td class="text"><span class="en">Over here, we have my main sort of</span><span class="zh">在这里，我们有我的主要类型</span></td></tr>
+<tr id="r76" onclick="toggleRow(159.4,163.16,this)"><td class="time">2:39</td><td class="text"><span class="en">living {slash} workshop area. This is</span><span class="zh">生活{slash}车间区域。这是</span></td></tr>
+<tr id="r77" onclick="toggleRow(161.28,166.28,this)"><td class="time">2:41</td><td class="text"><span class="en">where I get all my work done as well as</span><span class="zh">我在那里完成所有工作以及</span></td></tr>
+<tr id="r78" onclick="toggleRow(163.16,168.48,this)"><td class="time">2:43</td><td class="text"><span class="en">my personal projects. The decision to do</span><span class="zh">我的个人项目。决定做什么</span></td></tr>
+<tr id="r79" onclick="toggleRow(166.28,171.04,this)"><td class="time">2:46</td><td class="text"><span class="en">without a couch and a TV is really just</span><span class="zh">没有沙发和电视真的只是</span></td></tr>
+<tr id="r80" onclick="toggleRow(168.48,173.08,this)"><td class="time">2:48</td><td class="text"><span class="en">based on my own needs. I don&#39;t really</span><span class="zh">根据我自己的需要。我真的不</span></td></tr>
+<tr id="r81" onclick="toggleRow(171.04,174.88,this)"><td class="time">2:51</td><td class="text"><span class="en">watch a whole lot of TV. I just use my</span><span class="zh">看很多电视。我只是用我的</span></td></tr>
+<tr id="r82" onclick="toggleRow(173.08,177.28,this)"><td class="time">2:53</td><td class="text"><span class="en">computer. I don&#39;t host people in my</span><span class="zh">电脑。我不接待别人在我的</span></td></tr>
+<tr id="r83" onclick="toggleRow(174.88,178.56,this)"><td class="time">2:54</td><td class="text"><span class="en">apartment, obviously. If I do decide to</span><span class="zh">公寓，显然。如果我决定</span></td></tr>
+<tr id="r84" onclick="toggleRow(177.28,181.2,this)"><td class="time">2:57</td><td class="text"><span class="en">hang out with friends, I&#39;ll usually go</span><span class="zh">和朋友出去玩，我通常会去</span></td></tr>
+<tr id="r85" onclick="toggleRow(178.56,182.68,this)"><td class="time">2:58</td><td class="text"><span class="en">to their place or maybe a third place.</span><span class="zh">到他们的地方或者第三个地方。</span></td></tr>
+<tr id="r86" onclick="toggleRow(181.2,184.48,this)"><td class="time">3:01</td><td class="text"><span class="en">And in the case of hanging out with my</span><span class="zh">如果和我一起出去玩</span></td></tr>
+<tr id="r87" onclick="toggleRow(182.68,186.44,this)"><td class="time">3:02</td><td class="text"><span class="en">friends in virtual reality, well,</span><span class="zh">虚拟现实中的朋友，好吧，</span></td></tr>
+<tr id="r88" onclick="toggleRow(184.48,188.64,this)"><td class="time">3:04</td><td class="text"><span class="en">everyone sort of split off in their own</span><span class="zh">每个人都各自分裂</span></td></tr>
+<tr id="r89" onclick="toggleRow(186.44,191.2,this)"><td class="time">3:06</td><td class="text"><span class="en">physical space. We&#39;ve also got a couple</span><span class="zh">物理空间。我们还有一对</span></td></tr>
+<tr id="r90" onclick="toggleRow(188.64,193.04,this)"><td class="time">3:08</td><td class="text"><span class="en">of other things over here, just uh</span><span class="zh">这里还有其他的事情，只是呃</span></td></tr>
+<tr id="r91" onclick="toggleRow(191.2,195.24,this)"><td class="time">3:11</td><td class="text"><span class="en">the DJ controller because I really don&#39;t</span><span class="zh">DJ 控制器，因为我真的不会</span></td></tr>
+<tr id="r92" onclick="toggleRow(193.04,197.68,this)"><td class="time">3:13</td><td class="text"><span class="en">have a lot of other space to put it, as</span><span class="zh">还有很多其他空间可以放置它，如</span></td></tr>
+<tr id="r93" onclick="toggleRow(195.24,199.72,this)"><td class="time">3:15</td><td class="text"><span class="en">well as my robot cleaner which gets the</span><span class="zh">以及我的扫地机器人，它得到了</span></td></tr>
+<tr id="r94" onclick="toggleRow(197.68,202.24,this)"><td class="time">3:17</td><td class="text"><span class="en">job done. It&#39;s not perfect, but it</span><span class="zh">工作完成了。它并不完美，但它</span></td></tr>
+<tr id="r95" onclick="toggleRow(199.72,203.92,this)"><td class="time">3:19</td><td class="text"><span class="en">definitely helps out uh in terms of</span><span class="zh">在</span></td></tr>
+<tr id="r96" onclick="toggleRow(202.24,206.24,this)"><td class="time">3:22</td><td class="text"><span class="en">having to clean.</span><span class="zh">方面绝对有帮助呃必须清洁。</span></td></tr>
+<tr id="r97" onclick="toggleRow(203.92,207.72,this)"><td class="time">3:23</td><td class="text"><span class="en">Over here, we&#39;ve got just the bedroom.</span><span class="zh">在这里，我们只有卧室。</span></td></tr>
+<tr id="r98" onclick="toggleRow(206.24,209.52,this)"><td class="time">3:26</td><td class="text"><span class="en">Haha.</span><span class="zh">哈哈。</span></td></tr>
+<tr id="r99" onclick="toggleRow(207.72,211.44,this)"><td class="time">3:27</td><td class="text"><span class="en">I mean, there&#39;s really not much to my</span><span class="zh">我的意思是，我的</span></td></tr>
+<tr id="r100" onclick="toggleRow(209.52,214.16,this)"><td class="time">3:29</td><td class="text"><span class="en">bedroom. It gets the job done for me. I</span><span class="zh">真的没什么卧室。它帮我完成了工作。我</span></td></tr>
+<tr id="r101" onclick="toggleRow(211.44,215.12,this)"><td class="time">3:31</td><td class="text"><span class="en">have my blanket, my pillow,</span><span class="zh">有我的毯子，我的枕头，</span></td></tr>
+<tr id="r102" onclick="toggleRow(214.16,216.64,this)"><td class="time">3:34</td><td class="text"><span class="en">um</span><span class="zh">嗯</span></td></tr>
+<tr id="r103" onclick="toggleRow(215.12,219.32,this)"><td class="time">3:35</td><td class="text"><span class="en">a filing cabinet doubling as a</span><span class="zh">一个文件柜兼作</span></td></tr>
+<tr id="r104" onclick="toggleRow(216.64,220.52,this)"><td class="time">3:36</td><td class="text"><span class="en">nightstand as well as my charger there.</span><span class="zh">床头柜还有我的充电器。</span></td></tr>
+<tr id="r105" onclick="toggleRow(219.32,222.64,this)"><td class="time">3:39</td><td class="text"><span class="en">It&#39;s all that I really need at this</span><span class="zh">这就是我真正需要的</span></td></tr>
+<tr id="r106" onclick="toggleRow(220.52,224.48,this)"><td class="time">3:40</td><td class="text"><span class="en">point.</span><span class="zh">观点。</span></td></tr>
+<tr id="r107" onclick="toggleRow(222.64,226.16,this)"><td class="time">3:42</td><td class="text"><span class="en">And this is my bathroom. The highlight</span><span class="zh">这是我的浴室。亮点</span></td></tr>
+<tr id="r108" onclick="toggleRow(224.48,229.28,this)"><td class="time">3:44</td><td class="text"><span class="en">of this is really the bidet that I</span><span class="zh">这真的是我的坐浴盆</span></td></tr>
+<tr id="r109" onclick="toggleRow(226.16,231.08,this)"><td class="time">3:46</td><td class="text"><span class="en">installed. It was about $400 or so, but</span><span class="zh">安装。大约是 400 美元左右，但是</span></td></tr>
+<tr id="r110" onclick="toggleRow(229.28,234.12,this)"><td class="time">3:49</td><td class="text"><span class="en">it was a really, really nice quality of</span><span class="zh">这是一个非常非常好的品质</span></td></tr>
+<tr id="r111" onclick="toggleRow(231.08,235.72,this)"><td class="time">3:51</td><td class="text"><span class="en">life improvement for myself.</span><span class="zh">为自己改善生活。</span></td></tr>
+<tr id="r112" onclick="toggleRow(234.12,237.52,this)"><td class="time">3:54</td><td class="text"><span class="en">And outside over here, we&#39;ve got a</span><span class="zh">在外面，我们有一个</span></td></tr>
+<tr id="r113" onclick="toggleRow(235.72,239.44,this)"><td class="time">3:55</td><td class="text"><span class="en">little bit of a balcony.</span><span class="zh">一个小阳台。</span></td></tr>
+<tr id="r114" onclick="toggleRow(237.52,241.32,this)"><td class="time">3:57</td><td class="text"><span class="en">I don&#39;t spend a lot of time out here as</span><span class="zh">我不会在这里花很多时间</span></td></tr>
+<tr id="r115" onclick="toggleRow(239.44,243.88,this)"><td class="time">3:59</td><td class="text"><span class="en">you may be able to tell, but it is a</span><span class="zh">你也许能看出来，但它是一个</span></td></tr>
+<tr id="r116" onclick="toggleRow(241.32,245.36,this)"><td class="time">4:01</td><td class="text"><span class="en">nice way to get some fresh air in.</span><span class="zh">呼吸新鲜空气的好方法。</span></td></tr>
+<tr id="r117" onclick="toggleRow(243.88,247.6,this)"><td class="time">4:03</td><td class="text"><span class="en">I&#39;ve been told by many of my friends</span><span class="zh">很多朋友都告诉我</span></td></tr>
+<tr id="r118" onclick="toggleRow(245.36,249.8,this)"><td class="time">4:05</td><td class="text"><span class="en">that my living situation is very</span><span class="zh">那我的生活状况很</span></td></tr>
+<tr id="r119" onclick="toggleRow(247.6,251.64,this)"><td class="time">4:07</td><td class="text"><span class="en">spartan, but really it&#39;s an intentional</span><span class="zh">斯巴达，但实际上这是故意的</span></td></tr>
+<tr id="r120" onclick="toggleRow(249.8,253.44,this)"><td class="time">4:09</td><td class="text"><span class="en">choice to pick and choose parts of my</span><span class="zh">选择挑选我的部分</span></td></tr>
+<tr id="r121" onclick="toggleRow(251.64,255.76,this)"><td class="time">4:11</td><td class="text"><span class="en">life that I decide to spend more or less</span><span class="zh">我决定或多或少度过的人生</span></td></tr>
+<tr id="r122" onclick="toggleRow(253.44,257.84,this)"><td class="time">4:13</td><td class="text"><span class="en">money on. So, even though my living</span><span class="zh">钱上。所以，尽管我的生活</span></td></tr>
+<tr id="r123" onclick="toggleRow(255.76,258.96,this)"><td class="time">4:15</td><td class="text"><span class="en">situation right now is fairly sparse,</span><span class="zh">现在的情况相当稀疏，</span></td></tr>
+<tr id="r124" onclick="toggleRow(257.84,261.0,this)"><td class="time">4:17</td><td class="text"><span class="en">that doesn&#39;t mean that it&#39;s going to</span><span class="zh">这并不意味着它会</span></td></tr>
+<tr id="r125" onclick="toggleRow(258.96,264.36,this)"><td class="time">4:18</td><td class="text"><span class="en">stay that way say if I decide to have a</span><span class="zh">保持这种方式，如果我决定有一个</span></td></tr>
+<tr id="r126" onclick="toggleRow(261.0,264.36,this)"><td class="time">4:21</td><td class="text"><span class="en">partner or have kids.</span><span class="zh">伴侣或有孩子。</span></td></tr>
+<tr id="r127" onclick="toggleRow(266.48,270.64,this)"><td class="time">4:26</td><td class="text"><span class="en">Between ride sharing and public transit,</span><span class="zh">在拼车和公共交通之间，</span></td></tr>
+<tr id="r128" onclick="toggleRow(268.44,273.14,this)"><td class="time">4:28</td><td class="text"><span class="en">I will sometimes spend around $30 per</span><span class="zh">我有时会花费大约 30 美元/</span></td></tr>
+<tr id="r129" onclick="toggleRow(270.64,273.32,this)"><td class="time">4:30</td><td class="text"><span class="en">month, but most of the time it&#39;s zero.</span><span class="zh">月，但大多数时候为零。</span></td></tr>
+<tr id="r130" onclick="toggleRow(273.14,275.84,this)"><td class="time">4:33</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r131" onclick="toggleRow(273.32,277.92,this)"><td class="time">4:33</td><td class="text"><span class="en">&gt;&gt; I live in the Bay Area without a car,</span><span class="zh">>> 我住在湾区没有车，</span></td></tr>
+<tr id="r132" onclick="toggleRow(275.84,279.48,this)"><td class="time">4:35</td><td class="text"><span class="en">and so I think one of the big things to</span><span class="zh">所以我认为最重要的事情之一是</span></td></tr>
+<tr id="r133" onclick="toggleRow(277.92,281.68,this)"><td class="time">4:37</td><td class="text"><span class="en">me is [music] the accessibility to</span><span class="zh">我是[音乐]</span></td></tr>
+<tr id="r134" onclick="toggleRow(279.48,283.8,this)"><td class="time">4:39</td><td class="text"><span class="en">public transit. I live about 5 minutes</span><span class="zh">的可访问性公共交通。我活了大约5分钟</span></td></tr>
+<tr id="r135" onclick="toggleRow(281.68,285.32,this)"><td class="time">4:41</td><td class="text"><span class="en">away from the nearest Bay Area rapid</span><span class="zh">离湾区最近的快速</span></td></tr>
+<tr id="r136" onclick="toggleRow(283.8,286.84,this)"><td class="time">4:43</td><td class="text"><span class="en">transit station. [music]</span><span class="zh">中转站。 [音乐]</span></td></tr>
+<tr id="r137" onclick="toggleRow(285.32,288.6,this)"><td class="time">4:45</td><td class="text"><span class="en">I&#39;m actually quite used to living</span><span class="zh">我其实已经习惯了生活</span></td></tr>
+<tr id="r138" onclick="toggleRow(286.84,290.8,this)"><td class="time">4:46</td><td class="text"><span class="en">car-free. I had lived previously in</span><span class="zh">无车。我以前住在</span></td></tr>
+<tr id="r139" onclick="toggleRow(288.6,291.48,this)"><td class="time">4:48</td><td class="text"><span class="en">Dallas for 2 years without a car and got</span><span class="zh">达拉斯 2 年没有车，却得到了</span></td></tr>
+<tr id="r140" onclick="toggleRow(290.8,291.52,this)"><td class="time">4:50</td><td class="text"><span class="en">around</span><span class="zh">周围</span></td></tr>
+<tr id="r141" onclick="toggleRow(291.48,293.72,this)"><td class="time">4:51</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r142" onclick="toggleRow(291.52,295.68,this)"><td class="time">4:51</td><td class="text"><span class="en">&gt;&gt; in very similar ways. I picked out this</span><span class="zh">>> 以非常相似的方式。我选了这个</span></td></tr>
+<tr id="r143" onclick="toggleRow(293.72,297.84,this)"><td class="time">4:53</td><td class="text"><span class="en">apartment also specifically for its</span><span class="zh">公寓还专门为其</span></td></tr>
+<tr id="r144" onclick="toggleRow(295.68,299.2,this)"><td class="time">4:55</td><td class="text"><span class="en">proximity to all of the things that I</span><span class="zh">接近我</span></td></tr>
+<tr id="r145" onclick="toggleRow(297.84,301.44,this)"><td class="time">4:57</td><td class="text"><span class="en">would really want to go to [music] on a</span><span class="zh">的所有事物真的很想去</span></td></tr>
+<tr id="r146" onclick="toggleRow(299.2,303.16,this)"><td class="time">4:59</td><td class="text"><span class="en">regular basis. So, that would be cafe,</span><span class="zh">听[音乐]定期。所以，那就是咖啡馆，</span></td></tr>
+<tr id="r147" onclick="toggleRow(301.44,304.0,this)"><td class="time">5:01</td><td class="text"><span class="en">boba shops, as well as the grocery</span><span class="zh">波巴店，以及杂货店</span></td></tr>
+<tr id="r148" onclick="toggleRow(303.16,306.4,this)"><td class="time">5:03</td><td class="text"><span class="en">store. [music]</span><span class="zh">店铺。 [音乐]</span></td></tr>
+<tr id="r149" onclick="toggleRow(304.0,308.24,this)"><td class="time">5:04</td><td class="text"><span class="en">For those, I just walk and for anything</span><span class="zh">对于那些，我只是步行和任何事情</span></td></tr>
+<div class="chapter-header">Chapter 3 — 05:00+</div>
+<tr id="r150" onclick="toggleRow(306.4,310.76,this)"><td class="time">5:06</td><td class="text"><span class="en">else, I would either take the public</span><span class="zh">否则，我要么接受公众</span></td></tr>
+<tr id="r151" onclick="toggleRow(308.24,311.96,this)"><td class="time">5:08</td><td class="text"><span class="en">transit or in certain cases [music] take</span><span class="zh">过境或在某些情况下[音乐]采取</span></td></tr>
+<tr id="r152" onclick="toggleRow(310.76,313.68,this)"><td class="time">5:10</td><td class="text"><span class="en">ride sharing.</span><span class="zh">乘车共享。</span></td></tr>
+<tr id="r153" onclick="toggleRow(311.96,315.64,this)"><td class="time">5:11</td><td class="text"><span class="en">Our company, like many other companies</span><span class="zh">我们公司，像许多其他公司一样</span></td></tr>
+<tr id="r154" onclick="toggleRow(313.68,318.44,this)"><td class="time">5:13</td><td class="text"><span class="en">around the Bay Area, have shuttles that</span><span class="zh">湾区周围有班车</span></td></tr>
+<tr id="r155" onclick="toggleRow(315.64,321.48,this)"><td class="time">5:15</td><td class="text"><span class="en">go around the area and I utilize those</span><span class="zh">绕过该地区，我利用那些</span></td></tr>
+<tr id="r156" onclick="toggleRow(318.44,321.48,this)"><td class="time">5:18</td><td class="text"><span class="en">to get to and from work.</span><span class="zh">上下班。</span></td></tr>
+<tr id="r157" onclick="toggleRow(323.56,326.56,this)"><td class="time">5:23</td><td class="text"><span class="en">I spend about $300 per month on</span><span class="zh">我每月花费大约 300 美元在</span></td></tr>
+<tr id="r158" onclick="toggleRow(325.36,328.52,this)"><td class="time">5:25</td><td class="text"><span class="en">groceries.</span><span class="zh">上杂货。</span></td></tr>
+<tr id="r159" onclick="toggleRow(326.56,330.64,this)"><td class="time">5:26</td><td class="text"><span class="en">I usually budget $75 per month for</span><span class="zh">我通常每月预算 75 美元</span></td></tr>
+<tr id="r160" onclick="toggleRow(328.52,332.12,this)"><td class="time">5:28</td><td class="text"><span class="en">eating out, but I usually don&#39;t hit that</span><span class="zh">出去吃饭，但我通常不会那样</span></td></tr>
+<tr id="r161" onclick="toggleRow(330.64,334.16,this)"><td class="time">5:30</td><td class="text"><span class="en">maximum.</span><span class="zh">最大限度。</span></td></tr>
+<tr id="r162" onclick="toggleRow(332.12,336.28,this)"><td class="time">5:32</td><td class="text"><span class="en">I used to get online delivery for my</span><span class="zh">我曾经为我的</span></td></tr>
+<tr id="r163" onclick="toggleRow(334.16,338.76,this)"><td class="time">5:34</td><td class="text"><span class="en">groceries, but not anymore given that</span><span class="zh">获得在线交付杂货，但不再考虑</span></td></tr>
+<tr id="r164" onclick="toggleRow(336.28,340.2,this)"><td class="time">5:36</td><td class="text"><span class="en">it&#39;s so close to my apartment. I should</span><span class="zh">它离我的公寓很近。我应该</span></td></tr>
+<tr id="r165" onclick="toggleRow(338.76,341.24,this)"><td class="time">5:38</td><td class="text"><span class="en">I should stock up on some more instant</span><span class="zh">我应该多储备一些速食</span></td></tr>
+<tr id="r166" onclick="toggleRow(340.2,342.56,this)"><td class="time">5:40</td><td class="text"><span class="en">noodles.</span><span class="zh">面条。</span></td></tr>
+<tr id="r167" onclick="toggleRow(341.24,344.76,this)"><td class="time">5:41</td><td class="text"><span class="en">In terms of what I cook on a daily</span><span class="zh">就我每天做饭而言</span></td></tr>
+<tr id="r168" onclick="toggleRow(342.56,346.28,this)"><td class="time">5:42</td><td class="text"><span class="en">basis, I don&#39;t really have a set plan</span><span class="zh">基本上，我真的没有一个既定计划</span></td></tr>
+<tr id="r169" onclick="toggleRow(344.76,348.08,this)"><td class="time">5:44</td><td class="text"><span class="en">because of the fact that my company</span><span class="zh">因为我的公司</span></td></tr>
+<tr id="r170" onclick="toggleRow(346.28,349.28,this)"><td class="time">5:46</td><td class="text"><span class="en">subsidizes both my breakfast and my</span><span class="zh">补贴我的早餐和我的</span></td></tr>
+<tr id="r171" onclick="toggleRow(348.08,352.08,this)"><td class="time">5:48</td><td class="text"><span class="en">lunch.</span><span class="zh">午餐。</span></td></tr>
+<tr id="r172" onclick="toggleRow(349.28,355.12,this)"><td class="time">5:49</td><td class="text"><span class="en">But yes, beef short rib, 1434</span><span class="zh">但是，是的，牛小排，1434</span></td></tr>
+<tr id="r173" onclick="toggleRow(352.08,358.4,this)"><td class="time">5:52</td><td class="text"><span class="en">or $10.99 per pound. This is a cut that</span><span class="zh">或每磅 10.99 美元。这是一个</span></td></tr>
+<tr id="r174" onclick="toggleRow(355.12,360.2,this)"><td class="time">5:55</td><td class="text"><span class="en">usually isn&#39;t super widely available in</span><span class="zh">的剪辑通常在</span></td></tr>
+<tr id="r175" onclick="toggleRow(358.4,361.6,this)"><td class="time">5:58</td><td class="text"><span class="en">western grocery stores. So, always nice</span><span class="zh">中并不广泛使用西方杂货店。所以，永远都很好</span></td></tr>
+<tr id="r176" onclick="toggleRow(360.2,363.04,this)"><td class="time">6:00</td><td class="text"><span class="en">to pick some up from the Asian grocery</span><span class="zh">从亚洲杂货店买一些</span></td></tr>
+<tr id="r177" onclick="toggleRow(361.6,364.72,this)"><td class="time">6:01</td><td class="text"><span class="en">store.</span><span class="zh">店铺。</span></td></tr>
+<tr id="r178" onclick="toggleRow(363.04,366.96,this)"><td class="time">6:03</td><td class="text"><span class="en">In terms of dinner, I&#39;ll usually meal</span><span class="zh">晚餐方面，我一般都会吃饭</span></td></tr>
+<tr id="r179" onclick="toggleRow(364.72,368.4,this)"><td class="time">6:04</td><td class="text"><span class="en">prep some sort of protein as well as</span><span class="zh">准备某种蛋白质以及</span></td></tr>
+<tr id="r180" onclick="toggleRow(366.96,370.8,this)"><td class="time">6:06</td><td class="text"><span class="en">vegetables. So, it that could be</span><span class="zh">蔬菜。所以，这可能是</span></td></tr>
+<tr id="r181" onclick="toggleRow(368.4,373.28,this)"><td class="time">6:08</td><td class="text"><span class="en">chicken, it could be some fish. Um it</span><span class="zh">鸡肉，也可能是一些鱼。嗯</span></td></tr>
+<tr id="r182" onclick="toggleRow(370.8,375.2,this)"><td class="time">6:10</td><td class="text"><span class="en">really just depends on my mood.</span><span class="zh">真的只取决于我的心情。</span></td></tr>
+<tr id="r183" onclick="toggleRow(373.28,378.28,this)"><td class="time">6:13</td><td class="text"><span class="en">This herbal tea.</span><span class="zh">这花草茶。</span></td></tr>
+<tr id="r184" onclick="toggleRow(375.2,380.52,this)"><td class="time">6:15</td><td class="text"><span class="en">This stuff This stuff is gas. Uh</span><span class="zh">这个东西这个东西是气体。呃</span></td></tr>
+<tr id="r185" onclick="toggleRow(378.28,382.2,this)"><td class="time">6:18</td><td class="text"><span class="en">Also also a ton of sugar in there, but</span><span class="zh">里面还有一吨糖，但是</span></td></tr>
+<tr id="r186" onclick="toggleRow(380.52,385.6,this)"><td class="time">6:20</td><td class="text"><span class="en">really really good.</span><span class="zh">真的真的很好。</span></td></tr>
+<tr id="r187" onclick="toggleRow(382.2,387.4,this)"><td class="time">6:22</td><td class="text"><span class="en">Uh so, a pack of six for $3.99.</span><span class="zh">嗯，一包 6 个，售价 3.99 美元。</span></td></tr>
+<tr id="r188" onclick="toggleRow(385.6,388.68,this)"><td class="time">6:25</td><td class="text"><span class="en">I&#39;m lucky enough to be in a situation</span><span class="zh">我很幸运能遇到这种情况</span></td></tr>
+<tr id="r189" onclick="toggleRow(387.4,391.32,this)"><td class="time">6:27</td><td class="text"><span class="en">where food prices have not really</span><span class="zh">那里的粮食还真没涨价</span></td></tr>
+<tr id="r190" onclick="toggleRow(388.68,395.0,this)"><td class="time">6:28</td><td class="text"><span class="en">affected how I socialize or make these</span><span class="zh">影响了我的社交或制作这些</span></td></tr>
+<tr id="r191" onclick="toggleRow(391.32,396.84,this)"><td class="time">6:31</td><td class="text"><span class="en">decisions around food choices.</span><span class="zh">围绕食物选择的决定。</span></td></tr>
+<tr id="r192" onclick="toggleRow(395.0,399.48,this)"><td class="time">6:35</td><td class="text"><span class="en">All righty. Let&#39;s go ahead and make our</span><span class="zh">好吧。让我们继续制作我们的</span></td></tr>
+<tr id="r193" onclick="toggleRow(396.84,401.44,this)"><td class="time">6:36</td><td class="text"><span class="en">way to the other grocery store.</span><span class="zh">去另一家杂货店的路。</span></td></tr>
+<tr id="r194" onclick="toggleRow(399.48,402.92,this)"><td class="time">6:39</td><td class="text"><span class="en">Round two. Let&#39;s go.</span><span class="zh">第二轮。我们走吧。</span></td></tr>
+<tr id="r195" onclick="toggleRow(401.44,405.44,this)"><td class="time">6:41</td><td class="text"><span class="en">In terms of cooking versus eating out, I</span><span class="zh">就做饭与外出就餐而言，我</span></td></tr>
+<tr id="r196" onclick="toggleRow(402.92,407.48,this)"><td class="time">6:42</td><td class="text"><span class="en">am almost always cooking at home. I very</span><span class="zh">我几乎总是在家做饭。我很</span></td></tr>
+<tr id="r197" onclick="toggleRow(405.44,409.6,this)"><td class="time">6:45</td><td class="text"><span class="en">rarely dine out.</span><span class="zh">很少出去吃饭。</span></td></tr>
+<tr id="r198" onclick="toggleRow(407.48,412.32,this)"><td class="time">6:47</td><td class="text"><span class="en">Man, people are feening for the Coke</span><span class="zh">伙计，人们都在为可口可乐而烦恼</span></td></tr>
+<tr id="r199" onclick="toggleRow(409.6,414.2,this)"><td class="time">6:49</td><td class="text"><span class="en">Zeros. They ran out of the of the large</span><span class="zh">零。他们跑出了大</span></td></tr>
+<tr id="r200" onclick="toggleRow(412.32,415.92,this)"><td class="time">6:52</td><td class="text"><span class="en">ones.</span><span class="zh">那些。</span></td></tr>
+<tr id="r201" onclick="toggleRow(414.2,420.04,this)"><td class="time">6:54</td><td class="text"><span class="en">Here&#39;s what I got at [music] the western</span><span class="zh">这是我在[音乐]西部片中得到的</span></td></tr>
+<tr id="r202" onclick="toggleRow(415.92,420.04,this)"><td class="time">6:55</td><td class="text"><span class="en">supermarket. A loaf of white bread,</span><span class="zh">超级市场。一条白面包，</span></td></tr>
+<tr id="r203" onclick="toggleRow(420.48,423.56,this)"><td class="time">7:00</td><td class="text"><span class="en">a bag of white rice,</span><span class="zh">一袋白米，</span></td></tr>
+<tr id="r204" onclick="toggleRow(424.44,427.28,this)"><td class="time">7:04</td><td class="text"><span class="en">a dozen eggs,</span><span class="zh">一打鸡蛋，</span></td></tr>
+<tr id="r205" onclick="toggleRow(427.36,431.4,this)"><td class="time">7:07</td><td class="text"><span class="en">a bottle of Coke,</span><span class="zh">一瓶可乐，</span></td></tr>
+<tr id="r206" onclick="toggleRow(430.2,433.92,this)"><td class="time">7:10</td><td class="text"><span class="en">and</span><span class="zh">和</span></td></tr>
+<tr id="r207" onclick="toggleRow(431.4,436.36,this)"><td class="time">7:11</td><td class="text"><span class="en">a gallon of whole milk. In total, this</span><span class="zh">一加仑全脂牛奶。总共，这个</span></td></tr>
+<tr id="r208" onclick="toggleRow(433.92,438.32,this)"><td class="time">7:13</td><td class="text"><span class="en">came out to [snorts] be $22.34.</span><span class="zh">结果[哼哼]是22.34美元。</span></td></tr>
+<tr id="r209" onclick="toggleRow(436.36,440.68,this)"><td class="time">7:16</td><td class="text"><span class="en">Now, this isn&#39;t necessarily what I would</span><span class="zh">现在，这不一定是我想要的</span></td></tr>
+<tr id="r210" onclick="toggleRow(438.32,442.4,this)"><td class="time">7:18</td><td class="text"><span class="en">get on a regular basis, but it&#39;s just to</span><span class="zh">定期获得，但这只是为了</span></td></tr>
+<tr id="r211" onclick="toggleRow(440.68,444.44,this)"><td class="time">7:20</td><td class="text"><span class="en">give an idea of how things how much</span><span class="zh">给出一个想法，事情有多少</span></td></tr>
+<tr id="r212" onclick="toggleRow(442.4,445.48,this)"><td class="time">7:22</td><td class="text"><span class="en">things cost in my area.</span><span class="zh">我所在地区的东西很贵。</span></td></tr>
+<tr id="r213" onclick="toggleRow(444.44,447.56,this)"><td class="time">7:24</td><td class="text"><span class="en">What do you do for fun in your free</span><span class="zh">你在闲暇时做什么好玩的</span></td></tr>
+<tr id="r214" onclick="toggleRow(445.48,449.4,this)"><td class="time">7:25</td><td class="text"><span class="en">time?</span><span class="zh">时间？</span></td></tr>
+<tr id="r215" onclick="toggleRow(447.56,449.99,this)"><td class="time">7:27</td><td class="text"><span class="en">Uh that&#39;s an that&#39;s an excellent</span><span class="zh">呃，那真是太棒了</span></td></tr>
+<tr id="r216" onclick="toggleRow(449.4,451.04,this)"><td class="time">7:29</td><td class="text"><span class="en">question.</span><span class="zh">问题。</span></td></tr>
+<tr id="r217" onclick="toggleRow(449.99,453.12,this)"><td class="time">7:29</td><td class="text"><span class="en">&gt;&gt; [laughter]</span><span class="zh">>> [笑声]</span></td></tr>
+<tr id="r218" onclick="toggleRow(451.04,454.88,this)"><td class="time">7:31</td><td class="text"><span class="en">&gt;&gt; In terms of what I do in my free time,</span><span class="zh">>> 就我空闲时间所做的事情而言，</span></td></tr>
+<tr id="r219" onclick="toggleRow(453.12,457.0,this)"><td class="time">7:33</td><td class="text"><span class="en">there are really three major areas that</span><span class="zh">实际上有三个主要领域</span></td></tr>
+<tr id="r220" onclick="toggleRow(454.88,458.96,this)"><td class="time">7:34</td><td class="text"><span class="en">I spend my money on. The first is</span><span class="zh">我花我的钱。第一个是</span></td></tr>
+<tr id="r221" onclick="toggleRow(457.0,460.92,this)"><td class="time">7:37</td><td class="text"><span class="en">finances, so really a lot about the</span><span class="zh">财务，所以真的有很多关于</span></td></tr>
+<tr id="r222" onclick="toggleRow(458.96,462.12,this)"><td class="time">7:38</td><td class="text"><span class="en">credit cards and churning and that sort</span><span class="zh">的事情信用卡和搅动之类的</span></td></tr>
+<tr id="r223" onclick="toggleRow(460.92,464.28,this)"><td class="time">7:40</td><td class="text"><span class="en">of thing as well as my personal</span><span class="zh">事物以及我个人的</span></td></tr>
+<tr id="r224" onclick="toggleRow(462.12,465.72,this)"><td class="time">7:42</td><td class="text"><span class="en">finances. There&#39;s also a big aspect of</span><span class="zh">财政。还有一个很大的方面</span></td></tr>
+<div class="chapter-header">Chapter 4 — 07:00+</div>
+<tr id="r225" onclick="toggleRow(464.28,467.96,this)"><td class="time">7:44</td><td class="text"><span class="en">travel, whether that&#39;s domestic or</span><span class="zh">旅行，无论是国内旅行还是</span></td></tr>
+<tr id="r226" onclick="toggleRow(465.72,470.0,this)"><td class="time">7:45</td><td class="text"><span class="en">international. And I am also an active</span><span class="zh">国际的。而且我也是一个活跃的</span></td></tr>
+<tr id="r227" onclick="toggleRow(467.96,472.88,this)"><td class="time">7:47</td><td class="text"><span class="en">participant in the furry community. I</span><span class="zh">毛茸茸社区的参与者。我</span></td></tr>
+<tr id="r228" onclick="toggleRow(470.0,474.36,this)"><td class="time">7:50</td><td class="text"><span class="en">currently spend about $1,000 a year just</span><span class="zh">目前每年仅花费约 1,000 美元</span></td></tr>
+<tr id="r229" onclick="toggleRow(472.88,476.12,this)"><td class="time">7:52</td><td class="text"><span class="en">for the privilege of owning the credit</span><span class="zh">为了拥有信用的特权</span></td></tr>
+<tr id="r230" onclick="toggleRow(474.36,477.96,this)"><td class="time">7:54</td><td class="text"><span class="en">cards that I currently hold on to. In</span><span class="zh">我目前持有的卡片。在</span></td></tr>
+<tr id="r231" onclick="toggleRow(476.12,480.8,this)"><td class="time">7:56</td><td class="text"><span class="en">terms of my hobbies, I generally spend</span><span class="zh">就我的爱好而言，我一般都会花</span></td></tr>
+<tr id="r232" onclick="toggleRow(477.96,482.92,this)"><td class="time">7:57</td><td class="text"><span class="en">between 4 and $500 a month across all of</span><span class="zh"></span></td></tr>
+<tr id="r233" onclick="toggleRow(480.8,484.52,this)"><td class="time">8:00</td><td class="text"><span class="en">them. Though in certain cases, I will</span><span class="zh">每月 4 到 500 美元他们。尽管在某些情况下，我会</span></td></tr>
+<tr id="r234" onclick="toggleRow(482.92,486.56,this)"><td class="time">8:02</td><td class="text"><span class="en">spend a little bit more money and I&#39;m</span><span class="zh">多花一点钱我就</span></td></tr>
+<tr id="r235" onclick="toggleRow(484.52,488.24,this)"><td class="time">8:04</td><td class="text"><span class="en">currently saving up for a fursuit. On</span><span class="zh">目前正在攒钱买一件兽装。上</span></td></tr>
+<tr id="r236" onclick="toggleRow(486.56,490.56,this)"><td class="time">8:06</td><td class="text"><span class="en">average, depending on where your maker</span><span class="zh">平均，取决于你的制造商在哪里</span></td></tr>
+<tr id="r237" onclick="toggleRow(488.24,492.28,this)"><td class="time">8:08</td><td class="text"><span class="en">is as well as how reputable they are, a</span><span class="zh">以及他们的信誉如何，</span></td></tr>
+<tr id="r238" onclick="toggleRow(490.56,494.32,this)"><td class="time">8:10</td><td class="text"><span class="en">fursuit will generally cost between 4 to</span><span class="zh">兽装的价格通常在 4 到</span></td></tr>
+<tr id="r239" onclick="toggleRow(492.28,495.8,this)"><td class="time">8:12</td><td class="text"><span class="en">$7,000.</span><span class="zh">之间7,000 美元。</span></td></tr>
+<tr id="r240" onclick="toggleRow(494.32,497.36,this)"><td class="time">8:14</td><td class="text"><span class="en">The furry community means a lot of</span><span class="zh">毛茸茸的社区意味着很多</span></td></tr>
+<tr id="r241" onclick="toggleRow(495.8,499.24,this)"><td class="time">8:15</td><td class="text"><span class="en">different things to various [music]</span><span class="zh">不同的事物有不同的[音乐]</span></td></tr>
+<tr id="r242" onclick="toggleRow(497.36,500.92,this)"><td class="time">8:17</td><td class="text"><span class="en">people. To some people, it&#39;s a way of</span><span class="zh">人们。对于某些人来说，这是一种</span></td></tr>
+<tr id="r243" onclick="toggleRow(499.24,503.12,this)"><td class="time">8:19</td><td class="text"><span class="en">expressing themselves, sometimes in</span><span class="zh">的方式表达自己，有时用</span></td></tr>
+<tr id="r244" onclick="toggleRow(500.92,505.24,this)"><td class="time">8:20</td><td class="text"><span class="en">adult ways, and other times it&#39;s just a</span><span class="zh">成人的方式，有时它只是一个</span></td></tr>
+<tr id="r245" onclick="toggleRow(503.12,506.32,this)"><td class="time">8:23</td><td class="text"><span class="en">way of designing a fictional character</span><span class="zh">设计虚构人物的方式</span></td></tr>
+<tr id="r246" onclick="toggleRow(505.24,506.76,this)"><td class="time">8:25</td><td class="text"><span class="en">and sort of</span><span class="zh">有点</span></td></tr>
+<tr id="r247" onclick="toggleRow(506.32,509.04,this)"><td class="time">8:26</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r248" onclick="toggleRow(506.76,510.2,this)"><td class="time">8:26</td><td class="text"><span class="en">&gt;&gt; living in a bit of a mascot costume for</span><span class="zh">>> 穿着有点吉祥物服装的</span></td></tr>
+<tr id="r249" onclick="toggleRow(509.04,511.88,this)"><td class="time">8:29</td><td class="text"><span class="en">a while.</span><span class="zh">一会儿。</span></td></tr>
+<tr id="r250" onclick="toggleRow(510.2,513.28,this)"><td class="time">8:30</td><td class="text"><span class="en">To me, being part of this community</span><span class="zh">对我来说，成为这个社区的一部分</span></td></tr>
+<tr id="r251" onclick="toggleRow(511.88,515.84,this)"><td class="time">8:31</td><td class="text"><span class="en">really means designing my own</span><span class="zh">真正意味着设计我自己的</span></td></tr>
+<tr id="r252" onclick="toggleRow(513.28,518.04,this)"><td class="time">8:33</td><td class="text"><span class="en">characters, as well as embodying them in</span><span class="zh">字符，以及将它们体现在</span></td></tr>
+<tr id="r253" onclick="toggleRow(515.84,519.92,this)"><td class="time">8:35</td><td class="text"><span class="en">the form of either commissioning art or</span><span class="zh">中委托艺术或</span></td></tr>
+<tr id="r254" onclick="toggleRow(518.04,521.08,this)"><td class="time">8:38</td><td class="text"><span class="en">in some extreme cases, commissioning</span><span class="zh">的形式在某些极端情况下，调试</span></td></tr>
+<tr id="r255" onclick="toggleRow(519.92,523.16,this)"><td class="time">8:39</td><td class="text"><span class="en">fursuits.</span><span class="zh">兽装。</span></td></tr>
+<tr id="r256" onclick="toggleRow(521.08,524.6,this)"><td class="time">8:41</td><td class="text"><span class="en">And all of this faux fur, or at least</span><span class="zh">还有所有这些人造毛皮，或者至少</span></td></tr>
+<tr id="r257" onclick="toggleRow(523.16,525.76,this)"><td class="time">8:43</td><td class="text"><span class="en">part of it, will eventually end up on</span><span class="zh">它的一部分，最终将在</span></td></tr>
+<tr id="r258" onclick="toggleRow(524.6,528.28,this)"><td class="time">8:44</td><td class="text"><span class="en">the head.</span><span class="zh">上结束头。</span></td></tr>
+<tr id="r259" onclick="toggleRow(525.76,530.16,this)"><td class="time">8:45</td><td class="text"><span class="en">Um [music] this is a bigger part of the</span><span class="zh">嗯[音乐]这是</span></td></tr>
+<tr id="r260" onclick="toggleRow(528.28,532.0,this)"><td class="time">8:48</td><td class="text"><span class="en">project, especially since I&#39;m not super</span><span class="zh">的很大一部分项目，特别是因为我不是超级</span></td></tr>
+<tr id="r261" onclick="toggleRow(530.16,533.6,this)"><td class="time">8:50</td><td class="text"><span class="en">familiar with sewing, but it&#39;ll</span><span class="zh">熟悉缝纫，但会</span></td></tr>
+<tr id="r262" onclick="toggleRow(532.0,535.64,this)"><td class="time">8:52</td><td class="text"><span class="en">eventually end up on there. So, my</span><span class="zh">最终到达那里。所以，我的</span></td></tr>
+<tr id="r263" onclick="toggleRow(533.6,537.56,this)"><td class="time">8:53</td><td class="text"><span class="en">character currently is a bit of a cyborg</span><span class="zh">目前的角色有点像机器人</span></td></tr>
+<tr id="r264" onclick="toggleRow(535.64,539.28,this)"><td class="time">8:55</td><td class="text"><span class="en">hybrid between a canine as well as a</span><span class="zh">犬科动物和</span></td></tr>
+<tr id="r265" onclick="toggleRow(537.56,541.68,this)"><td class="time">8:57</td><td class="text"><span class="en">robot, known in the community</span><span class="zh">之间的混合体机器人，在社区中广为人知</span></td></tr>
+<tr id="r266" onclick="toggleRow(539.28,543.12,this)"><td class="time">8:59</td><td class="text"><span class="en">colloquially as a protogen.</span><span class="zh">通俗地称为质原。</span></td></tr>
+<tr id="r267" onclick="toggleRow(541.68,544.97,this)"><td class="time">9:01</td><td class="text"><span class="en">I think</span><span class="zh">我认为</span></td></tr>
+<tr id="r268" onclick="toggleRow(543.12,547.28,this)"><td class="time">9:03</td><td class="text"><span class="en">for for really anything mentioning</span><span class="zh">对于任何提及</span></td></tr>
+<tr id="r269" onclick="toggleRow(547.28,552.0,this)"><td class="time">9:07</td><td class="text"><span class="en">as well, because of it being a sort of</span><span class="zh">的事情同样，因为它是一种</span></td></tr>
+<tr id="r270" onclick="toggleRow(549.72,553.92,this)"><td class="time">9:09</td><td class="text"><span class="en">historically marginalized community in</span><span class="zh"></span></td></tr>
+<tr id="r271" onclick="toggleRow(552.0,556.96,this)"><td class="time">9:12</td><td class="text"><span class="en">the social space, there are a lot of</span><span class="zh">历史上被边缘化的社区社交空间，有很多</span></td></tr>
+<tr id="r272" onclick="toggleRow(553.92,558.64,this)"><td class="time">9:13</td><td class="text"><span class="en">concerns around um doxxing as well as in</span><span class="zh">对嗯人肉搜索以及</span></td></tr>
+<tr id="r273" onclick="toggleRow(556.96,560.8,this)"><td class="time">9:16</td><td class="text"><span class="en">general people not necessarily being</span><span class="zh">的担忧一般人不一定是</span></td></tr>
+<tr id="r274" onclick="toggleRow(558.64,563.08,this)"><td class="time">9:18</td><td class="text"><span class="en">super comfortable with being public with</span><span class="zh">与</span></td></tr>
+<tr id="r275" onclick="toggleRow(560.8,564.68,this)"><td class="time">9:20</td><td class="text"><span class="en">this. I just happen to be one of the</span><span class="zh">一起公开超级舒服这。我只是碰巧是</span></td></tr>
+<tr id="r276" onclick="toggleRow(563.08,565.88,this)"><td class="time">9:23</td><td class="text"><span class="en">stupid people that decided to go public</span><span class="zh">之一决定上市的愚蠢的人</span></td></tr>
+<tr id="r277" onclick="toggleRow(564.68,567.4,this)"><td class="time">9:24</td><td class="text"><span class="en">with this.</span><span class="zh">有了这个。</span></td></tr>
+<tr id="r278" onclick="toggleRow(565.88,569.92,this)"><td class="time">9:25</td><td class="text"><span class="en">I don&#39;t really spend a lot of money on</span><span class="zh">我真的没有花很多钱</span></td></tr>
+<tr id="r279" onclick="toggleRow(567.4,572.48,this)"><td class="time">9:27</td><td class="text"><span class="en">improving my finances. It&#39;s more so of a</span><span class="zh">改善我的财务状况。这更像是一个</span></td></tr>
+<tr id="r280" onclick="toggleRow(569.92,574.36,this)"><td class="time">9:29</td><td class="text"><span class="en">lifestyle choice to take a look at</span><span class="zh">生活方式选择看看</span></td></tr>
+<tr id="r281" onclick="toggleRow(572.48,575.84,this)"><td class="time">9:32</td><td class="text"><span class="en">credit cards and the perks that they</span><span class="zh">信用卡及其福利</span></td></tr>
+<tr id="r282" onclick="toggleRow(574.36,577.8,this)"><td class="time">9:34</td><td class="text"><span class="en">offer and whether or not it&#39;s really</span><span class="zh">报价以及是否真的</span></td></tr>
+<tr id="r283" onclick="toggleRow(575.84,579.28,this)"><td class="time">9:35</td><td class="text"><span class="en">worth it to me. In terms of maximizing</span><span class="zh">对我来说值得。就最大化</span></td></tr>
+<tr id="r284" onclick="toggleRow(577.8,581.48,this)"><td class="time">9:37</td><td class="text"><span class="en">your value for the points, this is</span><span class="zh">而言您的积分价值，这是</span></td></tr>
+<tr id="r285" onclick="toggleRow(579.28,583.36,this)"><td class="time">9:39</td><td class="text"><span class="en">really a process of trying to earn those</span><span class="zh">这确实是一个努力赚取这些</span></td></tr>
+<tr id="r286" onclick="toggleRow(581.48,584.36,this)"><td class="time">9:41</td><td class="text"><span class="en">points in the most efficient way and</span><span class="zh">的过程以最有效的方式点和</span></td></tr>
+<tr id="r287" onclick="toggleRow(583.36,586.44,this)"><td class="time">9:43</td><td class="text"><span class="en">spending [music] those points in the</span><span class="zh">花费[音乐]那些点在</span></td></tr>
+<tr id="r288" onclick="toggleRow(584.36,587.8,this)"><td class="time">9:44</td><td class="text"><span class="en">most efficient way. Generally, in terms</span><span class="zh">最有效的方式。一般来说，用</span></td></tr>
+<tr id="r289" onclick="toggleRow(586.44,589.6,this)"><td class="time">9:46</td><td class="text"><span class="en">of earning, you&#39;re going to be getting</span><span class="zh">来说的收入，您将获得</span></td></tr>
+<tr id="r290" onclick="toggleRow(587.8,591.84,this)"><td class="time">9:47</td><td class="text"><span class="en">those from sign-up bonuses rather than</span><span class="zh">那些来自注册奖金而不是</span></td></tr>
+<tr id="r291" onclick="toggleRow(589.6,593.56,this)"><td class="time">9:49</td><td class="text"><span class="en">everyday spend. And in terms of actually</span><span class="zh">日常花费。实际上</span></td></tr>
+<tr id="r292" onclick="toggleRow(591.84,595.84,this)"><td class="time">9:51</td><td class="text"><span class="en">cashing in those points, you&#39;re going to</span><span class="zh">兑现这些积分，您将</span></td></tr>
+<tr id="r293" onclick="toggleRow(593.56,597.36,this)"><td class="time">9:53</td><td class="text"><span class="en">be trying to look for value where, say,</span><span class="zh">试图寻找价值，比如说，</span></td></tr>
+<tr id="r294" onclick="toggleRow(595.84,600.64,this)"><td class="time">9:55</td><td class="text"><span class="en">maybe a business class ticket might be</span><span class="zh">也许商务舱机票可能是</span></td></tr>
+<tr id="r295" onclick="toggleRow(597.36,601.6,this)"><td class="time">9:57</td><td class="text"><span class="en">$5,000 but only $2,500 worth of points.</span><span class="zh">5,000 美元，但积分仅价值 2,500 美元。</span></td></tr>
+<tr id="r296" onclick="toggleRow(601.6,604.48,this)"><td class="time">10:01</td><td class="text"><span class="en">I was fortunate enough to grow up in a</span><span class="zh">我很幸运能够在一个</span></td></tr>
+<tr id="r297" onclick="toggleRow(603.04,606.08,this)"><td class="time">10:03</td><td class="text"><span class="en">household where my mother was very</span><span class="zh">的环境中长大。我母亲非常喜欢的家庭</span></td></tr>
+<tr id="r298" onclick="toggleRow(604.48,607.4,this)"><td class="time">10:04</td><td class="text"><span class="en">financially illiterate. And she was</span><span class="zh">财务文盲。而她是</span></td></tr>
+<tr id="r299" onclick="toggleRow(606.08,608.96,this)"><td class="time">10:06</td><td class="text"><span class="en">actually the one that got me interested</span><span class="zh">实际上是让我感兴趣的</span></td></tr>
+<div class="chapter-header">Chapter 5 — 10:00+</div>
+<tr id="r300" onclick="toggleRow(607.4,610.92,this)"><td class="time">10:07</td><td class="text"><span class="en">in credit cards and churning in the</span><span class="zh">在信用卡和搅动</span></td></tr>
+<tr id="r301" onclick="toggleRow(608.96,613.12,this)"><td class="time">10:08</td><td class="text"><span class="en">first place. The most recent trip that I</span><span class="zh">首位。我最近的一次旅行</span></td></tr>
+<tr id="r302" onclick="toggleRow(610.92,615.16,this)"><td class="time">10:10</td><td class="text"><span class="en">did was to Southeast Asia, so Singapore</span><span class="zh">确实是去东南亚，所以新加坡</span></td></tr>
+<tr id="r303" onclick="toggleRow(613.12,617.08,this)"><td class="time">10:13</td><td class="text"><span class="en">as well as Malaysia. I was fortunate</span><span class="zh">还有马来西亚。我很幸运</span></td></tr>
+<tr id="r304" onclick="toggleRow(615.16,619.56,this)"><td class="time">10:15</td><td class="text"><span class="en">enough to bring my dad along as well as</span><span class="zh">足以带上我爸爸以及</span></td></tr>
+<tr id="r305" onclick="toggleRow(617.08,620.88,this)"><td class="time">10:17</td><td class="text"><span class="en">my sister.</span><span class="zh">我的姐妹。</span></td></tr>
+<tr id="r306" onclick="toggleRow(619.56,622.72,this)"><td class="time">10:19</td><td class="text"><span class="en">I have health insurance provided by my</span><span class="zh">我有由我的</span></td></tr>
+<tr id="r307" onclick="toggleRow(620.88,624.6,this)"><td class="time">10:20</td><td class="text"><span class="en">employer. I am currently paying for a</span><span class="zh">提供的健康保险雇主。我目前正在支付</span></td></tr>
+<tr id="r308" onclick="toggleRow(622.72,627.44,this)"><td class="time">10:22</td><td class="text"><span class="en">high deductible plan and I spend about</span><span class="zh">高免赔额计划和我花费大约</span></td></tr>
+<tr id="r309" onclick="toggleRow(624.6,629.4,this)"><td class="time">10:24</td><td class="text"><span class="en">$17 per month. I currently do not have</span><span class="zh">每月 17 美元。我目前没有</span></td></tr>
+<tr id="r310" onclick="toggleRow(627.44,631.52,this)"><td class="time">10:27</td><td class="text"><span class="en">any recurring health care costs. In</span><span class="zh">任何经常性的医疗保健费用。在</span></td></tr>
+<tr id="r311" onclick="toggleRow(629.4,634.0,this)"><td class="time">10:29</td><td class="text"><span class="en">terms of staying fit, my apartment has a</span><span class="zh">就保持健康而言，我的公寓有一个</span></td></tr>
+<tr id="r312" onclick="toggleRow(631.52,636.16,this)"><td class="time">10:31</td><td class="text"><span class="en">gym, but in case I&#39;m lazy to do that, I</span><span class="zh">健身房，但以防万一我懒得这么做，我</span></td></tr>
+<tr id="r313" onclick="toggleRow(634.0,640.44,this)"><td class="time">10:34</td><td class="text"><span class="en">also do body weight fitness. And for</span><span class="zh">也做体重健身。而对于</span></td></tr>
+<tr id="r314" onclick="toggleRow(636.16,640.44,this)"><td class="time">10:36</td><td class="text"><span class="en">cardio and aerobics, I do dancing.</span><span class="zh">有氧运动和有氧运动，我跳舞。</span></td></tr>
+<tr id="r315" onclick="toggleRow(642.12,646.24,this)"><td class="time">10:42</td><td class="text"><span class="en">One of the big parts about the furry</span><span class="zh">关于毛茸茸的重要部分之一</span></td></tr>
+<tr id="r316" onclick="toggleRow(644.0,648.84,this)"><td class="time">10:44</td><td class="text"><span class="en">conventions are as well are the the</span><span class="zh">约定还有</span></td></tr>
+<tr id="r317" onclick="toggleRow(646.24,650.8,this)"><td class="time">10:46</td><td class="text"><span class="en">raves that happen in person. And there</span><span class="zh">亲自发生的狂欢。还有</span></td></tr>
+<tr id="r318" onclick="toggleRow(648.84,653.48,this)"><td class="time">10:48</td><td class="text"><span class="en">are some people there are that know how</span><span class="zh">有人知道怎么做</span></td></tr>
+<tr id="r319" onclick="toggleRow(650.8,653.48,this)"><td class="time">10:50</td><td class="text"><span class="en">to dance.</span><span class="zh">跳舞。</span></td></tr>
+<tr id="r320" onclick="toggleRow(657.63,660.24,this)"><td class="time">10:57</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r321" onclick="toggleRow(658.6,663.32,this)"><td class="time">10:58</td><td class="text"><span class="en">&gt;&gt; In any given month, I will save anywhere</span><span class="zh">>> 在任何给定的月份，我都会​​在任何地方存钱</span></td></tr>
+<tr id="r322" onclick="toggleRow(660.24,665.84,this)"><td class="time">11:00</td><td class="text"><span class="en">between $5,000 to $20,000. In terms of</span><span class="zh">5,000 美元至 20,000 美元之间。就</span></td></tr>
+<tr id="r323" onclick="toggleRow(663.32,667.96,this)"><td class="time">11:03</td><td class="text"><span class="en">that large range, it really depends on</span><span class="zh">而言这么大的范围，这确实取决于</span></td></tr>
+<tr id="r324" onclick="toggleRow(665.84,670.07,this)"><td class="time">11:05</td><td class="text"><span class="en">whether or not my 401k is maxed out,</span><span class="zh">无论我的 401k 是否已满，</span></td></tr>
+<tr id="r325" onclick="toggleRow(667.96,670.16,this)"><td class="time">11:07</td><td class="text"><span class="en">whether or not I have any stock vesting,</span><span class="zh">无论我是否有任何股票归属，</span></td></tr>
+<tr id="r326" onclick="toggleRow(670.07,672.32,this)"><td class="time">11:10</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r327" onclick="toggleRow(670.16,674.04,this)"><td class="time">11:10</td><td class="text"><span class="en">&gt;&gt; and whether or not I have any bonuses.</span><span class="zh">>> 以及我是否有任何奖金。</span></td></tr>
+<tr id="r328" onclick="toggleRow(672.32,677.28,this)"><td class="time">11:12</td><td class="text"><span class="en">In terms of maxing out my 401k with my</span><span class="zh">就用我的</span></td></tr>
+<tr id="r329" onclick="toggleRow(674.04,678.96,this)"><td class="time">11:14</td><td class="text"><span class="en">employer, I contribute $24,500</span><span class="zh">最大化我的 401k 而言雇主，我贡献 $24,500</span></td></tr>
+<tr id="r330" onclick="toggleRow(677.28,681.04,this)"><td class="time">11:17</td><td class="text"><span class="en">up to the maximum limit that I can</span><span class="zh">达到我可以的最大限制</span></td></tr>
+<tr id="r331" onclick="toggleRow(678.96,681.86,this)"><td class="time">11:18</td><td class="text"><span class="en">contribute alongside my employer</span><span class="zh">与我的雇主一起贡献</span></td></tr>
+<tr id="r332" onclick="toggleRow(681.04,682.12,this)"><td class="time">11:21</td><td class="text"><span class="en">contributions.</span><span class="zh">贡献。</span></td></tr>
+<tr id="r333" onclick="toggleRow(681.86,683.84,this)"><td class="time">11:21</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r334" onclick="toggleRow(682.12,686.04,this)"><td class="time">11:22</td><td class="text"><span class="en">&gt;&gt; In addition to that, I make after-tax</span><span class="zh">>> 除此之外，我还赚税后</span></td></tr>
+<tr id="r335" onclick="toggleRow(683.84,688.72,this)"><td class="time">11:23</td><td class="text"><span class="en">contributions all the way up to the IRS</span><span class="zh">一直向国税局捐款</span></td></tr>
+<tr id="r336" onclick="toggleRow(686.04,691.44,this)"><td class="time">11:26</td><td class="text"><span class="en">limit of $72,000. [music] So, in total,</span><span class="zh">限额为 72,000 美元。 [音乐] 所以，总共，</span></td></tr>
+<tr id="r337" onclick="toggleRow(688.72,693.48,this)"><td class="time">11:28</td><td class="text"><span class="en">about 1/6 of my compensation is going</span><span class="zh">我的报酬的大约 1/6 用于</span></td></tr>
+<tr id="r338" onclick="toggleRow(691.44,695.84,this)"><td class="time">11:31</td><td class="text"><span class="en">towards my 401k. In terms of my other</span><span class="zh">迈向我的401k。就我的其他</span></td></tr>
+<tr id="r339" onclick="toggleRow(693.48,698.16,this)"><td class="time">11:33</td><td class="text"><span class="en">investments, I also max out my Roth IRA</span><span class="zh">而言投资，我也最大化了我的 Roth IRA</span></td></tr>
+<tr id="r340" onclick="toggleRow(695.84,699.88,this)"><td class="time">11:35</td><td class="text"><span class="en">and HSA every single year, and then any</span><span class="zh">每年都有 HSA，然后是任何</span></td></tr>
+<tr id="r341" onclick="toggleRow(698.16,702.4,this)"><td class="time">11:38</td><td class="text"><span class="en">additional money goes into my brokerage</span><span class="zh">额外的钱进入我的经纪业务</span></td></tr>
+<tr id="r342" onclick="toggleRow(699.88,705.4,this)"><td class="time">11:39</td><td class="text"><span class="en">account. I&#39;m currently about 80%</span><span class="zh">帐户。我目前大约80%</span></td></tr>
+<tr id="r343" onclick="toggleRow(702.4,707.12,this)"><td class="time">11:42</td><td class="text"><span class="en">invested in the US stock market and 20%</span><span class="zh">投资美国股市20%</span></td></tr>
+<tr id="r344" onclick="toggleRow(705.4,709.16,this)"><td class="time">11:45</td><td class="text"><span class="en">internationally.</span><span class="zh">国际上。</span></td></tr>
+<tr id="r345" onclick="toggleRow(707.12,711.16,this)"><td class="time">11:47</td><td class="text"><span class="en">I think like with many other parts of my</span><span class="zh">我认为就像我的</span></td></tr>
+<tr id="r346" onclick="toggleRow(709.16,713.48,this)"><td class="time">11:49</td><td class="text"><span class="en">generation, there is very much a big</span><span class="zh">的许多其他部分一样一代人，有很大</span></td></tr>
+<tr id="r347" onclick="toggleRow(711.16,716.16,this)"><td class="time">11:51</td><td class="text"><span class="en">split in terms of financial literacy</span><span class="zh">金融知识方面的分歧</span></td></tr>
+<tr id="r348" onclick="toggleRow(713.48,718.56,this)"><td class="time">11:53</td><td class="text"><span class="en">among other things. There&#39;s a swath of</span><span class="zh">除其他事项外。有一大片</span></td></tr>
+<tr id="r349" onclick="toggleRow(716.16,720.64,this)"><td class="time">11:56</td><td class="text"><span class="en">people who are fairly well educated in</span><span class="zh"></span></td></tr>
+<tr id="r350" onclick="toggleRow(718.56,722.64,this)"><td class="time">11:58</td><td class="text"><span class="en">terms of personal finances, and there</span><span class="zh">受过良好教育的人就个人财务而言，还有</span></td></tr>
+<tr id="r351" onclick="toggleRow(720.64,724.96,this)"><td class="time">12:00</td><td class="text"><span class="en">are a lot of those who are just getting</span><span class="zh">很多人刚刚获得</span></td></tr>
+<tr id="r352" onclick="toggleRow(722.64,727.32,this)"><td class="time">12:02</td><td class="text"><span class="en">by. I view personal finance in a very</span><span class="zh">经过。我对个人理财的看法非常</span></td></tr>
+<tr id="r353" onclick="toggleRow(724.96,729.12,this)"><td class="time">12:04</td><td class="text"><span class="en">similar way as I do personal fitness. A</span><span class="zh">与我个人健身的方式类似。一个</span></td></tr>
+<tr id="r354" onclick="toggleRow(727.32,730.76,this)"><td class="time">12:07</td><td class="text"><span class="en">lot of the core concepts are fairly</span><span class="zh">很多核心概念相当</span></td></tr>
+<tr id="r355" onclick="toggleRow(729.12,732.48,this)"><td class="time">12:09</td><td class="text"><span class="en">simple, but it doesn&#39;t mean that it&#39;s</span><span class="zh">简单，但这并不意味着它就是</span></td></tr>
+<tr id="r356" onclick="toggleRow(730.76,734.52,this)"><td class="time">12:10</td><td class="text"><span class="en">easy to follow and there are a lot of</span><span class="zh">很容易遵循，并且有很多</span></td></tr>
+<tr id="r357" onclick="toggleRow(732.48,736.72,this)"><td class="time">12:12</td><td class="text"><span class="en">traps along the way. I&#39;m aiming to</span><span class="zh">一路上的陷阱。我的目标是</span></td></tr>
+<tr id="r358" onclick="toggleRow(734.52,738.6,this)"><td class="time">12:14</td><td class="text"><span class="en">retire by the age of 30, in which case</span><span class="zh">30岁退休，在这种情况下</span></td></tr>
+<tr id="r359" onclick="toggleRow(736.72,741.08,this)"><td class="time">12:16</td><td class="text"><span class="en">I&#39;ll need about 1.6 million dollars to</span><span class="zh">我需要大约 160 万美元</span></td></tr>
+<tr id="r360" onclick="toggleRow(738.6,742.64,this)"><td class="time">12:18</td><td class="text"><span class="en">do so. In terms of why I decided to</span><span class="zh">这样做。就为什么我决定</span></td></tr>
+<tr id="r361" onclick="toggleRow(741.08,744.24,this)"><td class="time">12:21</td><td class="text"><span class="en">start pursuing the path of financial</span><span class="zh">开始踏上金融之路</span></td></tr>
+<tr id="r362" onclick="toggleRow(742.64,745.72,this)"><td class="time">12:22</td><td class="text"><span class="en">independence and retiring early, I</span><span class="zh">独立并提前退休，我</span></td></tr>
+<tr id="r363" onclick="toggleRow(744.24,748.2,this)"><td class="time">12:24</td><td class="text"><span class="en">wanted to build a life for myself where</span><span class="zh">想为自己建立一种生活</span></td></tr>
+<tr id="r364" onclick="toggleRow(745.72,749.98,this)"><td class="time">12:25</td><td class="text"><span class="en">I wouldn&#39;t have to work for money all</span><span class="zh">我不必为了钱而工作</span></td></tr>
+<tr id="r365" onclick="toggleRow(748.2,750.16,this)"><td class="time">12:28</td><td class="text"><span class="en">the way up until 65.</span><span class="zh">一直到65。</span></td></tr>
+<tr id="r366" onclick="toggleRow(749.98,751.44,this)"><td class="time">12:29</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">>> [音乐]</span></td></tr>
+<tr id="r367" onclick="toggleRow(750.16,753.8,this)"><td class="time">12:30</td><td class="text"><span class="en">&gt;&gt; There&#39;s a lot of moving parts when it</span><span class="zh">>></span></td></tr>
+<tr id="r368" onclick="toggleRow(751.44,755.88,this)"><td class="time">12:31</td><td class="text"><span class="en">comes to retirement planning and even</span><span class="zh">时有很多活动部件涉及退休计划，甚至</span></td></tr>
+<tr id="r369" onclick="toggleRow(753.8,758.2,this)"><td class="time">12:33</td><td class="text"><span class="en">establishing a goal number is a bit of a</span><span class="zh">设定目标数字有点</span></td></tr>
+<tr id="r370" onclick="toggleRow(755.88,760.08,this)"><td class="time">12:35</td><td class="text"><span class="en">moving goal post in general. The rule of</span><span class="zh">一般情况下移动球门柱。</span></td></tr>
+<tr id="r371" onclick="toggleRow(758.2,762.84,this)"><td class="time">12:38</td><td class="text"><span class="en">thumb in the community is to multiply</span><span class="zh">的规则社区中的大拇指就是乘以</span></td></tr>
+<tr id="r372" onclick="toggleRow(760.08,765.56,this)"><td class="time">12:40</td><td class="text"><span class="en">your expenses by 25, or otherwise known</span><span class="zh">您的开支 25 岁或以其他方式已知</span></td></tr>
+<tr id="r373" onclick="toggleRow(762.84,768.16,this)"><td class="time">12:42</td><td class="text"><span class="en">as the 4% rule, and if you&#39;re retiring</span><span class="zh">作为 4% 规则，如果你要退休</span></td></tr>
+<tr id="r374" onclick="toggleRow(765.56,770.28,this)"><td class="time">12:45</td><td class="text"><span class="en">earlier than say around 40 or so, you</span><span class="zh">早于大约40岁左右，你</span></td></tr>
+<div class="chapter-header">Chapter 6 — 12:00+</div>
+<tr id="r375" onclick="toggleRow(768.16,772.32,this)"><td class="time">12:48</td><td class="text"><span class="en">might want to add some leeway to that.</span><span class="zh">可能想为此添加一些余地。</span></td></tr>
+<tr id="r376" onclick="toggleRow(770.28,774.76,this)"><td class="time">12:50</td><td class="text"><span class="en">And so my budget is a little bit greater</span><span class="zh">所以我的预算有点多</span></td></tr>
+<tr id="r377" onclick="toggleRow(772.32,776.28,this)"><td class="time">12:52</td><td class="text"><span class="en">than the actual 4% rule.</span><span class="zh">比实际的 4% 规则。</span></td></tr>
+<tr id="r378" onclick="toggleRow(774.76,777.88,this)"><td class="time">12:54</td><td class="text"><span class="en">There&#39;s a lot of different projections</span><span class="zh">有很多不同的预测</span></td></tr>
+<tr id="r379" onclick="toggleRow(776.28,779.8,this)"><td class="time">12:56</td><td class="text"><span class="en">in terms of how much I&#39;m going to be</span><span class="zh">就我要成为的人而言</span></td></tr>
+<tr id="r380" onclick="toggleRow(777.88,781.24,this)"><td class="time">12:57</td><td class="text"><span class="en">contributing in the future, as well as</span><span class="zh">为未来做出贡献，以及</span></td></tr>
+<tr id="r381" onclick="toggleRow(779.8,783.16,this)"><td class="time">12:59</td><td class="text"><span class="en">how well the stock market is going to do</span><span class="zh">股市将会表现如何</span></td></tr>
+<tr id="r382" onclick="toggleRow(781.24,786.64,this)"><td class="time">13:01</td><td class="text"><span class="en">over that course of time.</span><span class="zh">在那段时间里。</span></td></tr>
+<tr id="r383" onclick="toggleRow(783.16,788.96,this)"><td class="time">13:03</td><td class="text"><span class="en">I have way too many sheets in this uh in</span><span class="zh">我在这个呃</span></td></tr>
+<tr id="r384" onclick="toggleRow(786.64,791.76,this)"><td class="time">13:06</td><td class="text"><span class="en">this. So, every month I&#39;ll create a copy</span><span class="zh">里有太多的表了这。所以，每个月我都会创建一个副本</span></td></tr>
+<tr id="r385" onclick="toggleRow(788.96,793.96,this)"><td class="time">13:08</td><td class="text"><span class="en">of this sort of base spreadsheet. I</span><span class="zh">此类基本电子表格。我</span></td></tr>
+<tr id="r386" onclick="toggleRow(791.76,796.24,this)"><td class="time">13:11</td><td class="text"><span class="en">designed it myself. I don&#39;t really have</span><span class="zh">我自己设计的。我真的没有</span></td></tr>
+<tr id="r387" onclick="toggleRow(793.96,798.08,this)"><td class="time">13:13</td><td class="text"><span class="en">a template that I follow, and I prefer</span><span class="zh">我遵循的模板，并且我更喜欢</span></td></tr>
+<tr id="r388" onclick="toggleRow(796.24,799.68,this)"><td class="time">13:16</td><td class="text"><span class="en">it this way. It&#39;s more of a DIY approach</span><span class="zh">就这样。这更像是一种 DIY 方法</span></td></tr>
+<tr id="r389" onclick="toggleRow(798.08,801.84,this)"><td class="time">13:18</td><td class="text"><span class="en">of if I decide that there are certain</span><span class="zh">如果我决定有某些</span></td></tr>
+<tr id="r390" onclick="toggleRow(799.68,803.69,this)"><td class="time">13:19</td><td class="text"><span class="en">categories that I don&#39;t want, or</span><span class="zh">我不想要的类别，或者</span></td></tr>
+<tr id="r391" onclick="toggleRow(801.84,805.2,this)"><td class="time">13:21</td><td class="text"><span class="en">categories that I do need, then I&#39;ll</span><span class="zh">我确实需要的类别，然后我会</span></td></tr>
+<tr id="r392" onclick="toggleRow(805.2,809.2,this)"><td class="time">13:25</td><td class="text"><span class="en">and it&#39;ll be copied over for the</span><span class="zh">它将被复制到</span></td></tr>
+<tr id="r393" onclick="toggleRow(806.72,810.12,this)"><td class="time">13:26</td><td class="text"><span class="en">remainder of however long I decide to do</span><span class="zh">无论我决定做什么，剩下的时间</span></td></tr>
+<tr id="r394" onclick="toggleRow(809.2,812.52,this)"><td class="time">13:29</td><td class="text"><span class="en">this budgeting. [music]</span><span class="zh">这个预算。 [音乐]</span></td></tr>
+<tr id="r395" onclick="toggleRow(810.12,814.83,this)"><td class="time">13:30</td><td class="text"><span class="en">I actually do have a larger tax sheet</span><span class="zh">我实际上有一张更大的税单</span></td></tr>
+<tr id="r396" onclick="toggleRow(812.52,815.04,this)"><td class="time">13:32</td><td class="text"><span class="en">that does track down in terms of like</span><span class="zh">这确实可以追踪</span></td></tr>
+<tr id="r397" onclick="toggleRow(814.83,817.32,this)"><td class="time">13:34</td><td class="text"><span class="en">&gt;&gt; [music]</span><span class="zh">等方面>> [音乐]</span></td></tr>
+<tr id="r398" onclick="toggleRow(815.04,819.96,this)"><td class="time">13:35</td><td class="text"><span class="en">&gt;&gt; taxes that I&#39;m paying</span><span class="zh">>> 我正在缴纳的税款</span></td></tr>
+<tr id="r399" onclick="toggleRow(817.32,822.08,this)"><td class="time">13:37</td><td class="text"><span class="en">in terms of the income that I&#39;m getting,</span><span class="zh">就我获得的收入而言</span></td></tr>
+<tr id="r400" onclick="toggleRow(819.96,823.96,this)"><td class="time">13:39</td><td class="text"><span class="en">the expected amount of paychecks, and</span><span class="zh">预期的薪水金额，以及</span></td></tr>
+<tr id="r401" onclick="toggleRow(822.08,826.68,this)"><td class="time">13:42</td><td class="text"><span class="en">then over here I just have some pretty</span><span class="zh">然后我这里有一些漂亮的</span></td></tr>
+<tr id="r402" onclick="toggleRow(823.96,827.96,this)"><td class="time">13:43</td><td class="text"><span class="en">straightforward projections in terms of</span><span class="zh"></span></td></tr>
+<tr id="r403" onclick="toggleRow(826.68,830.56,this)"><td class="time">13:46</td><td class="text"><span class="en">actually where I&#39;m going to be at</span><span class="zh">方面的直接预测实际上我要去的地方</span></td></tr>
+<tr id="r404" onclick="toggleRow(827.96,832.64,this)"><td class="time">13:47</td><td class="text"><span class="en">financially for a given year and age</span><span class="zh">给定年份和年龄的经济状况</span></td></tr>
+<tr id="r405" onclick="toggleRow(830.56,835.0,this)"><td class="time">13:50</td><td class="text"><span class="en">assuming certain figures [music] for</span><span class="zh">假设某些数字[音乐]为</span></td></tr>
+<tr id="r406" onclick="toggleRow(832.64,837.44,this)"><td class="time">13:52</td><td class="text"><span class="en">growth as well as investment outcome.</span><span class="zh">增长以及投资成果。</span></td></tr>
+<tr id="r407" onclick="toggleRow(835.0,839.96,this)"><td class="time">13:55</td><td class="text"><span class="en">And yeah, so by age 30 assuming that all</span><span class="zh">是的，所以到 30 岁时，假设所有</span></td></tr>
+<tr id="r408" onclick="toggleRow(837.44,841.92,this)"><td class="time">13:57</td><td class="text"><span class="en">goes well, I&#39;m expecting that I might</span><span class="zh">进展顺利，我期待着我可能</span></td></tr>
+<tr id="r409" onclick="toggleRow(839.96,844.0,this)"><td class="time">13:59</td><td class="text"><span class="en">have somewhere north of around $2</span><span class="zh">有大约 2 美元以北的地方</span></td></tr>
+<tr id="r410" onclick="toggleRow(841.92,846.28,this)"><td class="time">14:01</td><td class="text"><span class="en">million invested.</span><span class="zh">投资万元。</span></td></tr>
+<tr id="r411" onclick="toggleRow(844.0,848.4,this)"><td class="time">14:04</td><td class="text"><span class="en">And this is also tracking the active</span><span class="zh">这也正在跟踪活跃的</span></td></tr>
+<tr id="r412" onclick="toggleRow(846.28,850.4,this)"><td class="time">14:06</td><td class="text"><span class="en">price of some of my investments, and so</span><span class="zh">我的一些投资的价格，等等</span></td></tr>
+<tr id="r413" onclick="toggleRow(848.4,852.44,this)"><td class="time">14:08</td><td class="text"><span class="en">this will fluctuate over time. And by</span><span class="zh">这会随着时间的推移而波动。并通过</span></td></tr>
+<tr id="r414" onclick="toggleRow(850.4,855.04,this)"><td class="time">14:10</td><td class="text"><span class="en">age 40, I&#39;m expected to be retired at</span><span class="zh">40 岁，预计退休时间</span></td></tr>
+<tr id="r415" onclick="toggleRow(852.44,856.44,this)"><td class="time">14:12</td><td class="text"><span class="en">that point, so I do have empty columns</span><span class="zh">那一点，所以我确实有空列</span></td></tr>
+<tr id="r416" onclick="toggleRow(855.04,857.8,this)"><td class="time">14:15</td><td class="text"><span class="en">in terms [music] of my actual</span><span class="zh">就我实际的[音乐]而言</span></td></tr>
+<tr id="r417" onclick="toggleRow(856.44,859.4,this)"><td class="time">14:16</td><td class="text"><span class="en">investments.</span><span class="zh">投资。</span></td></tr>
+<tr id="r418" onclick="toggleRow(857.8,861.96,this)"><td class="time">14:17</td><td class="text"><span class="en">But at that point, I might have</span><span class="zh">但到那时，我可能会</span></td></tr>
+<tr id="r419" onclick="toggleRow(859.4,863.24,this)"><td class="time">14:19</td><td class="text"><span class="en">somewhere in the north of $7 million</span><span class="zh">700 万美元以上</span></td></tr>
+<tr id="r420" onclick="toggleRow(861.96,864.48,this)"><td class="time">14:21</td><td class="text"><span class="en">invested.</span><span class="zh">投资。</span></td></tr>
+<tr id="r421" onclick="toggleRow(863.24,866.8,this)"><td class="time">14:23</td><td class="text"><span class="en">I think a very interesting part of the</span><span class="zh">我认为</span></td></tr>
+<tr id="r422" onclick="toggleRow(864.48,869.88,this)"><td class="time">14:24</td><td class="text"><span class="en">FIRE community is that it has splintered</span><span class="zh">的一个非常有趣的部分FIRE社区是它已经分裂</span></td></tr>
+<tr id="r423" onclick="toggleRow(866.8,872.72,this)"><td class="time">14:26</td><td class="text"><span class="en">off into various groups and evolved from</span><span class="zh">分成不同的群体并从</span></td></tr>
+<tr id="r424" onclick="toggleRow(869.88,875.2,this)"><td class="time">14:29</td><td class="text"><span class="en">its original form around the 2010s that</span><span class="zh">演变而来它的原始形式是在 2010 年代左右</span></td></tr>
+<tr id="r425" onclick="toggleRow(872.72,876.92,this)"><td class="time">14:32</td><td class="text"><span class="en">was largely focused on frugality at all</span><span class="zh">主要关注节俭</span></td></tr>
+<tr id="r426" onclick="toggleRow(875.2,879.24,this)"><td class="time">14:35</td><td class="text"><span class="en">costs. [music] Now there are folks such</span><span class="zh">成本。 [音乐]现在有这样的人</span></td></tr>
+<tr id="r427" onclick="toggleRow(876.92,881.4,this)"><td class="time">14:36</td><td class="text"><span class="en">as myself that sort of can have their</span><span class="zh">作为我自己，那种可以有他们的</span></td></tr>
+<tr id="r428" onclick="toggleRow(879.24,884.12,this)"><td class="time">14:39</td><td class="text"><span class="en">cake and eat it, too, where we are able</span><span class="zh">鱼与熊掌兼得，尽我们所能</span></td></tr>
+<tr id="r429" onclick="toggleRow(881.4,886.32,this)"><td class="time">14:41</td><td class="text"><span class="en">to live a very fulfilling lifestyle and</span><span class="zh">过上非常充实的生活方式并且</span></td></tr>
+<tr id="r430" onclick="toggleRow(884.12,887.84,this)"><td class="time">14:44</td><td class="text"><span class="en">save a lot for retirement. In terms of</span><span class="zh">为退休储蓄很多。就</span></td></tr>
+<tr id="r431" onclick="toggleRow(886.32,889.44,this)"><td class="time">14:46</td><td class="text"><span class="en">my lifestyle after retirement, I don&#39;t</span><span class="zh">而言我退休后的生活方式，我不</span></td></tr>
+<tr id="r432" onclick="toggleRow(887.84,891.52,this)"><td class="time">14:47</td><td class="text"><span class="en">expect that I&#39;m going to stop working</span><span class="zh">预计我会停止工作</span></td></tr>
+<tr id="r433" onclick="toggleRow(889.44,893.6,this)"><td class="time">14:49</td><td class="text"><span class="en">entirely. I might pick up some odd jobs</span><span class="zh">完全。我可能会做一些零工</span></td></tr>
+<tr id="r434" onclick="toggleRow(891.52,896.28,this)"><td class="time">14:51</td><td class="text"><span class="en">or contracting work every now and then</span><span class="zh">或时不时地承包工作</span></td></tr>
+<tr id="r435" onclick="toggleRow(893.6,898.72,this)"><td class="time">14:53</td><td class="text"><span class="en">just if I decide that it&#39;s interesting</span><span class="zh">只是如果我认为这很有趣</span></td></tr>
+<tr id="r436" onclick="toggleRow(896.28,900.48,this)"><td class="time">14:56</td><td class="text"><span class="en">to me. Other than that, it&#39;s really</span><span class="zh">大部头书。除此之外，真的是</span></td></tr>
+<tr id="r437" onclick="toggleRow(898.72,902.08,this)"><td class="time">14:58</td><td class="text"><span class="en">going to be populated with travel as</span><span class="zh">将充满旅行作为</span></td></tr>
+<tr id="r438" onclick="toggleRow(900.48,904.0,this)"><td class="time">15:00</td><td class="text"><span class="en">well as attending conventions and just</span><span class="zh">以及参加会议和只是</span></td></tr>
+<tr id="r439" onclick="toggleRow(902.08,905.22,this)"><td class="time">15:02</td><td class="text"><span class="en">being myself.</span><span class="zh">做我自己。</span></td></tr>
+<tr id="r440" onclick="toggleRow(904.0,907.2,this)"><td class="time">15:04</td><td class="text"><span class="en">I think one of the biggest privileges</span><span class="zh">我认为最大的特权之一</span></td></tr>
+<tr id="r441" onclick="toggleRow(907.2,910.92,this)"><td class="time">15:07</td><td class="text"><span class="en">earn enough of an income where I could</span><span class="zh">我可以赚到足够的收入</span></td></tr>
+<tr id="r442" onclick="toggleRow(909.08,913.56,this)"><td class="time">15:09</td><td class="text"><span class="en">reasonably support my family if they</span><span class="zh">合理地支持我的家人，如果他们</span></td></tr>
+<tr id="r443" onclick="toggleRow(910.92,915.48,this)"><td class="time">15:10</td><td class="text"><span class="en">were ever in trouble, and in the case of</span><span class="zh">曾经遇到过麻烦，就</span></td></tr>
+<tr id="r444" onclick="toggleRow(913.56,918.84,this)"><td class="time">15:13</td><td class="text"><span class="en">a future family, that would be something</span><span class="zh">而言未来的家庭，那将是</span></td></tr>
+<tr id="r445" onclick="toggleRow(915.48,920.28,this)"><td class="time">15:15</td><td class="text"><span class="en">that I would have to readjust over time.</span><span class="zh">随着时间的推移我必须重新调整。</span></td></tr>
+<tr id="r446" onclick="toggleRow(918.84,922.0,this)"><td class="time">15:18</td><td class="text"><span class="en">Moving here has definitely been worth</span><span class="zh">搬到这里绝对值得</span></td></tr>
+<tr id="r447" onclick="toggleRow(920.28,924.48,this)"><td class="time">15:20</td><td class="text"><span class="en">it. Even though the cost of living is</span><span class="zh">它。尽管生活费用是</span></td></tr>
+<tr id="r448" onclick="toggleRow(922.0,926.48,this)"><td class="time">15:22</td><td class="text"><span class="en">higher, the job compensation and the</span><span class="zh">更高，工作报酬和</span></td></tr>
+<tr id="r449" onclick="toggleRow(924.48,928.36,this)"><td class="time">15:24</td><td class="text"><span class="en">opportunities available here are really</span><span class="zh">这里的机会真的是</span></td></tr>
+<div class="chapter-header">Chapter 7 — 15:00+</div>
+<tr id="r450" onclick="toggleRow(926.48,931.44,this)"><td class="time">15:26</td><td class="text"><span class="en">unmatched. In terms of staying here</span><span class="zh">无与伦比的。就住在这里而言</span></td></tr>
+<tr id="r451" onclick="toggleRow(928.36,931.44,this)"><td class="time">15:28</td><td class="text"><span class="en">long-term, I&#39;m</span><span class="zh">从长远来看，我</span></td></tr>
+<tr id="r452" onclick="toggleRow(931.92,934.69,this)"><td class="time">15:31</td><td class="text"><span class="en">That&#39;s that that that&#39;s a that&#39;s an</span><span class="zh">那是那是那是那是</span></td></tr>
+<tr id="r453" onclick="toggleRow(933.2,935.12,this)"><td class="time">15:33</td><td class="text"><span class="en">existential question.</span><span class="zh">存在主义问题。</span></td></tr>
+<tr id="r454" onclick="toggleRow(934.7,936.2,this)"><td class="time">15:34</td><td class="text"><span class="en">&gt;&gt; [laughter]</span><span class="zh">>> [笑声]</span></td></tr>
+<tr id="r455" onclick="toggleRow(935.12,938.08,this)"><td class="time">15:35</td><td class="text"><span class="en">&gt;&gt; Uh</span><span class="zh">>> 呃</span></td></tr>
+<tr id="r456" onclick="toggleRow(936.2,939.88,this)"><td class="time">15:36</td><td class="text"><span class="en">I think in terms of long-term living, I</span><span class="zh">我认为就长期生活而言，我</span></td></tr>
+<tr id="r457" onclick="toggleRow(938.08,941.44,this)"><td class="time">15:38</td><td class="text"><span class="en">plan to move back to the Los Angeles</span><span class="zh">计划搬回洛杉矶</span></td></tr>
+<tr id="r458" onclick="toggleRow(939.88,942.8,this)"><td class="time">15:39</td><td class="text"><span class="en">area.</span><span class="zh">区域。</span></td></tr>
+<tr id="r459" onclick="toggleRow(941.44,944.4,this)"><td class="time">15:41</td><td class="text"><span class="en">I could definitely see myself in the</span><span class="zh">我绝对可以在</span></td></tr>
+<tr id="r460" onclick="toggleRow(942.8,947.52,this)"><td class="time">15:42</td><td class="text"><span class="en">position of starting a company in the</span><span class="zh">中看到自己在</span></td></tr>
+<tr id="r461" onclick="toggleRow(944.4,949.36,this)"><td class="time">15:44</td><td class="text"><span class="en">next couple of years or decades, but no</span><span class="zh">中创办公司的职位未来几年或几十年，但没有</span></td></tr>
+<tr id="r462" onclick="toggleRow(947.52,950.76,this)"><td class="time">15:47</td><td class="text"><span class="en">plans for that currently.</span><span class="zh">目前的计划。</span></td></tr>
+<tr id="r463" onclick="toggleRow(949.36,952.64,this)"><td class="time">15:49</td><td class="text"><span class="en">My biggest piece of advice is something</span><span class="zh">我最大的建议是</span></td></tr>
+<tr id="r464" onclick="toggleRow(950.76,954.56,this)"><td class="time">15:50</td><td class="text"><span class="en">that&#39;s fairly widely shared among the</span><span class="zh"></span></td></tr>
+<tr id="r465" onclick="toggleRow(952.64,956.28,this)"><td class="time">15:52</td><td class="text"><span class="en">folks in the FIRE community, and it&#39;s</span><span class="zh">之间相当广泛地共享这一点FIRE 社区的人们，这是</span></td></tr>
+<tr id="r466" onclick="toggleRow(954.56,957.2,this)"><td class="time">15:54</td><td class="text"><span class="en">build a life you want and then save for</span><span class="zh">建立你想要的生活，然后存钱</span></td></tr>
+<tr id="r467" onclick="toggleRow(956.28,959.56,this)"><td class="time">15:56</td><td class="text"><span class="en">it.</span><span class="zh">它。</span></td></tr>
+<tr id="r468" onclick="toggleRow(957.2,961.96,this)"><td class="time">15:57</td><td class="text"><span class="en">There may be a situation where you can&#39;t</span><span class="zh">可能有一种情况你不能</span></td></tr>
+<tr id="r469" onclick="toggleRow(959.56,963.36,this)"><td class="time">15:59</td><td class="text"><span class="en">have everything all at once [music] now,</span><span class="zh">现在就拥有一切[音乐]，</span></td></tr>
+<tr id="r470" onclick="toggleRow(961.96,965.08,this)"><td class="time">16:01</td><td class="text"><span class="en">and you just kind of have to pick and</span><span class="zh">你只需要选择</span></td></tr>
+<tr id="r471" onclick="toggleRow(963.36,967.45,this)"><td class="time">16:03</td><td class="text"><span class="en">choose whether or not you want to live</span><span class="zh">选择是否要活下去</span></td></tr>
+<tr id="r472" onclick="toggleRow(965.08,969.68,this)"><td class="time">16:05</td><td class="text"><span class="en">in a favorable location, or you decide</span><span class="zh">在一个有利的位置，或者你决定</span></td></tr>
+<tr id="r473" onclick="toggleRow(969.68,973.72,this)"><td class="time">16:09</td><td class="text"><span class="en">other experiences, or maybe on some of</span><span class="zh">其他经历，或者可能是一些</span></td></tr>
+<tr id="r474" onclick="toggleRow(972.04,976.12,this)"><td class="time">16:12</td><td class="text"><span class="en">the other material goods that you&#39;re</span><span class="zh">你所拥有的其他物质商品</span></td></tr>
+<tr id="r475" onclick="toggleRow(973.72,978.0,this)"><td class="time">16:13</td><td class="text"><span class="en">looking at.</span><span class="zh">看着。</span></td></tr>
+<tr id="r476" onclick="toggleRow(976.12,979.68,this)"><td class="time">16:16</td><td class="text"><span class="en">Oh man.</span><span class="zh">噢，伙计。</span></td></tr>
+<tr id="r477" onclick="toggleRow(978.0,981.44,this)"><td class="time">16:18</td><td class="text"><span class="en">I&#39;m going to I&#39;m going to get roasted by</span><span class="zh">我要我要被</span></td></tr>
+<tr id="r478" onclick="toggleRow(979.68,983.04,this)"><td class="time">16:19</td><td class="text"><span class="en">so many people. It&#39;s going to be the the</span><span class="zh">烤了这么多人。这将是</span></td></tr>
+<tr id="r479" onclick="toggleRow(981.44,984.32,this)"><td class="time">16:21</td><td class="text"><span class="en">people who who are going to comment on</span><span class="zh">即将发表评论的人</span></td></tr>
+<tr id="r480" onclick="toggleRow(983.04,985.72,this)"><td class="time">16:23</td><td class="text"><span class="en">my forum, the people who are going to</span><span class="zh">我的论坛，那些要去</span></td></tr>
+<tr id="r481" onclick="toggleRow(984.32,986.56,this)"><td class="time">16:24</td><td class="text"><span class="en">comment on the furry thing, the people</span><span class="zh">的人评论毛茸茸的东西，人们</span></td></tr>
+<tr id="r482" onclick="toggleRow(985.72,989.4,this)"><td class="time">16:25</td><td class="text"><span class="en">that are going to comment on my</span><span class="zh">将对我的</span></td></tr>
+<tr id="r483" onclick="toggleRow(986.56,989.4,this)"><td class="time">16:26</td><td class="text"><span class="en">apartment.</span><span class="zh">发表评论公寓。</span></td></tr>
+
+</table>
+<footer>Made with Hermes · <a href="../" style="color:#a78bfa">All videos</a> · <a href="index.html" style="color:#a78bfa">Player</a></footer>
+
+<script>
+const audio = document.getElementById('audio');
+let activeRow = null;
+let currentEnd = null;
+let syncOffset = parseFloat(localStorage.getItem('syncOffset') ?? '0.5');
+
+function adjustOffset(delta) {
+  syncOffset = Math.round((syncOffset + delta) * 10) / 10;
+  localStorage.setItem('syncOffset', syncOffset);
+  document.getElementById('offsetDisplay').textContent = (syncOffset >= 0 ? '+' : '') + syncOffset + 's';
+}
+document.getElementById('offsetDisplay').textContent = (syncOffset >= 0 ? '+' : '') + syncOffset + 's';
+
+function toggleRow(start, end, row) {
+  if (activeRow === row) {
+    if (!audio.paused) { audio.pause(); }
+    else { audio.play(); }
+    return;
+  }
+  if (activeRow) { activeRow.classList.remove('playing'); }
+  activeRow = row;
+  row.classList.add('playing');
+  audio.currentTime = Math.max(0, start - syncOffset);
+  currentEnd = end - syncOffset;
+  audio.play();
+}
+
+audio.addEventListener('timeupdate', () => {
+  if (currentEnd !== null && audio.currentTime >= currentEnd) {
+    audio.pause();
+    currentEnd = null;
+    if (activeRow) activeRow.classList.remove('playing');
+    activeRow = null;
+  }
+});
+
+function skip(sec) { audio.currentTime = Math.max(0, audio.currentTime + sec); }
+function setSpeed(rate) {
+  audio.playbackRate = rate;
+  document.querySelectorAll('[data-speed]').forEach(b => b.classList.toggle('active', parseFloat(b.dataset.speed) === rate));
+}
+function toggleZh() {
+  document.getElementById('main-table').classList.toggle('show-zh', document.getElementById('toggle-zh').checked);
+}
+// Init
+document.getElementById('main-table').classList.add('show-zh');
+</script>
+</body>
+</html>
