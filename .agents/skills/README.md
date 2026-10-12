@@ -19,6 +19,13 @@ description: What it does. Use when the user says "trigger phrase", or asks to X
 The description is the only text an agent sees before deciding to load the skill, so name
 the words a user would actually type.
 
+Check the name is not taken somewhere else first — it searches every repo in the
+workspace:
+
+```bash
+python3 ../personal-toolkits/scripts/agents/skills.py whereis my-new-skill
+```
+
 Then generate the discovery links — never hand-write one, and never copy a skill into an
 agent home:
 
