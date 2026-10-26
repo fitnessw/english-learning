@@ -51,4 +51,37 @@ if [ -n "$agent_run_id" ]; then
   set -- "$@" --trailer "Agent-Run-Id:$agent_run_id"
 fi
 
-exec "$@"
+"$@"
+
+# Delivery: this repo commits straight to its default branch, so a commit that stays on this
+# machine is not delivered. On 2026-10-24 the same template commit sat unpushed in four repos
+# for two days because this helper ended at `exec git commit`. Push, verify the remote really
+# has the sha, and fail loudly otherwise. Never force-pushes, rebases or resets.
+#   AGENT_COMMIT_NO_PUSH=1   commit only (someone else pushes).
+sha=$(git rev-parse HEAD)
+short=$(printf '%.9s' "$sha")
+branch=$(git symbolic-ref --quiet --short HEAD || true)
+skip=""
+case "${AGENT_COMMIT_NO_PUSH:-}" in 1|true|yes) skip="AGENT_COMMIT_NO_PUSH is set" ;; esac
+if [ -z "$skip" ] && { [ "${GITHUB_ACTIONS:-}" = "true" ] || [ "${CI:-}" = "true" ]; }; then skip="CI runner"; fi
+if [ -z "$skip" ] && [ -z "$branch" ]; then skip="detached HEAD"; fi
+if [ -z "$skip" ] && ! git remote get-url origin >/dev/null 2>&1; then skip="no origin remote"; fi
+if [ -n "$skip" ]; then
+  echo "not pushed ($skip): $short — deliver it with: git push origin HEAD:<branch>"
+  exit 0
+fi
+
+if ! git push origin "HEAD:refs/heads/$branch"; then
+  {
+    echo "error: commit $short was created but NOT PUSHED to origin/$branch."
+    echo "       Usual causes: origin moved (git pull --rebase origin $branch, then push), or the"
+    echo "       active GitHub account cannot write this repo (gh auth status). Never force-push."
+  } >&2
+  exit 1
+fi
+remote=$(git ls-remote origin "refs/heads/$branch" | cut -f1)
+if [ "$remote" != "$sha" ]; then
+  echo "error: push reported success but origin/$branch is '$remote', not $sha." >&2
+  exit 1
+fi
+echo "delivered: $short is origin/$branch (verified against the remote)"
